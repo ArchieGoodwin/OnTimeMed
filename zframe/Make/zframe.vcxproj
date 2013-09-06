@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B5AC39F2-E3BE-4C19-AC8D-DAF1C3D0817A}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\..\..\..\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\../../..\Intermediate/zframe/Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\..\..\..\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\../../..\Intermediate/zframe/Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</GenerateManifest>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">zframed</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">zframe</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\dll/zframe.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>../Inc;..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;CVLIB_EXPORTS;TESS_IMPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeaderOutputFile>.\../../..\Intermediate/zframe/Release/zframe.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\../../..\Intermediate/zframe/Release/</AssemblerListingLocation>
+      <ObjectFileName>.\../../..\Intermediate/zframe/Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\../../..\Intermediate/zframe/Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0404</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>cvlibbase.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../../bin/zframe.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>.\..\..\..\bin/cvlibmisc.pdb</ProgramDatabaseFile>
+      <ImportLibrary>./../../../lib/zframe.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\..\bin/zframe.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\dll/zframe.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../Inc;..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;CVLIB_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>.\../../..\Intermediate/zframe/Debug/zframe.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\../../..\Intermediate/zframe/Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\../../..\Intermediate/zframe/Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\../../..\Intermediate/zframe/Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0404</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>cvlibbased.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../../bin/zframed.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\..\..\..\bin/cvlibmiscd.pdb</ProgramDatabaseFile>
+      <ImportLibrary>./../../../lib/zframed.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>..\..\..\bin\cvlibmiscddll.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Src\Canny.cpp" />
+    <ClCompile Include="..\Src\ClassifierABC.cpp" />
+    <ClCompile Include="..\Src\ColorSpace.cpp" />
+    <ClCompile Include="..\Src\Contours.cpp" />
+    <ClCompile Include="..\Src\DataSet.cpp" />
+    <ClCompile Include="..\Src\Engine.cpp" />
+    <ClCompile Include="..\Src\FindContour.cpp" />
+    <ClCompile Include="..\Src\GaussianFilter.cpp" />
+    <ClCompile Include="..\Src\Histogram.cpp" />
+    <ClCompile Include="..\Src\ImageList.cpp" />
+    <ClCompile Include="..\Src\ImgProc.cpp" />
+    <ClCompile Include="..\Src\IntegralImage.cpp" />
+    <ClCompile Include="..\Src\ipCoreABC.cpp" />
+    <ClCompile Include="..\Src\ipFilter.cpp" />
+    <ClCompile Include="..\Src\ipMedian.cpp" />
+    <ClCompile Include="..\Src\ipMorphology.cpp" />
+    <ClCompile Include="..\Src\ipThreshold.cpp" />
+    <ClCompile Include="..\Src\ipTransformation.cpp" />
+    <ClCompile Include="..\Src\PackageInfo.cpp" />
+    <ClCompile Include="..\Src\RectangleDetectFromPatternPos.cpp" />
+    <ClCompile Include="..\Src\Regressor.cpp" />
+    <ClCompile Include="..\Src\RegressorTrainer.cpp" />
+    <ClCompile Include="..\Src\ScaleXY.cpp" />
+    <ClCompile Include="..\Src\Sobel.cpp" />
+    <ClCompile Include="..\Src\SparseMat.cpp" />
+    <ClCompile Include="..\Src\thining.cpp" />
+    <ClCompile Include="..\Src\Thresh.cpp" />
+    <ClCompile Include="..\Src\TriangleModel.cpp" />
+    <ClCompile Include="..\Src\FrameDetector.cpp" />
+    <ClCompile Include="..\Src\Warping.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Inc\PackageInfo.h" />
+    <ClInclude Include="..\Inc\RectangleDetectFromPatternPos.h" />
+    <ClInclude Include="..\Inc\FrameDetector.h" />
+    <ClInclude Include="..\Src\Canny.h" />
+    <ClInclude Include="..\Src\ClassifierABC.h" />
+    <ClInclude Include="..\Src\ColorSpace.h" />
+    <ClInclude Include="..\Src\Contours.h" />
+    <ClInclude Include="..\Src\DataSet.h" />
+    <ClInclude Include="..\Src\Engine.h" />
+    <ClInclude Include="..\Src\FindContour.h" />
+    <ClInclude Include="..\Src\GaussianFilter.h" />
+    <ClInclude Include="..\Src\Histogram.h" />
+    <ClInclude Include="..\Src\ImageList.h" />
+    <ClInclude Include="..\Src\ImgProc.h" />
+    <ClInclude Include="..\Src\IntegralImage.h" />
+    <ClInclude Include="..\Src\ipCoreABC.h" />
+    <ClInclude Include="..\Src\ipFilter.h" />
+    <ClInclude Include="..\Src\ipMedian.h" />
+    <ClInclude Include="..\Src\ipMorphology.h" />
+    <ClInclude Include="..\Src\ipThreshold.h" />
+    <ClInclude Include="..\Src\Regressor.h" />
+    <ClInclude Include="..\Src\RegressorTrainer.h" />
+    <ClInclude Include="..\Src\ScaleXY.h" />
+    <ClInclude Include="..\Src\Sobel.h" />
+    <ClInclude Include="..\Src\SparseMat.h" />
+    <ClInclude Include="..\Src\thining.h" />
+    <ClInclude Include="..\Src\thresh.h" />
+    <ClInclude Include="..\Src\TriangleModel.h" />
+    <ClInclude Include="..\Src\Warping.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

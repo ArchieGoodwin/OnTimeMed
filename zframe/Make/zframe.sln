@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zframe", "zframe.vcxproj", "{B5AC39F2-E3BE-4C19-AC8D-DAF1C3D0817A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cvlibbasedll", "..\..\cvlibbase\Make\cvlibbasedll.vcxproj", "{70D2F15B-121E-4425-947D-E9CAA7886894}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5AC39F2-E3BE-4C19-AC8D-DAF1C3D0817A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B5AC39F2-E3BE-4C19-AC8D-DAF1C3D0817A}.Debug|Win32.Build.0 = Debug|Win32
+		{B5AC39F2-E3BE-4C19-AC8D-DAF1C3D0817A}.Release|Win32.ActiveCfg = Release|Win32
+		{B5AC39F2-E3BE-4C19-AC8D-DAF1C3D0817A}.Release|Win32.Build.0 = Release|Win32
+		{70D2F15B-121E-4425-947D-E9CAA7886894}.Debug|Win32.ActiveCfg = Debug|Win32
+		{70D2F15B-121E-4425-947D-E9CAA7886894}.Debug|Win32.Build.0 = Debug|Win32
+		{70D2F15B-121E-4425-947D-E9CAA7886894}.Release|Win32.ActiveCfg = Release|Win32
+		{70D2F15B-121E-4425-947D-E9CAA7886894}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

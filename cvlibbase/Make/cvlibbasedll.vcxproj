@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{70D2F15B-121E-4425-947D-E9CAA7886894}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\..\..\..\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\..\..\..\Intermediate\cvlibbasedll\Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\..\..\..\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\..\..\..\Intermediate\cvlibbasedll\Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cvlibbased</TargetName>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</GenerateManifest>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cvlibbase</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\dll/cvlibbasedll.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\Inc;..\Src\Other\jpeg;..\Src\Other\png;..\Src\Other\zlib;..\Src\Other\tiff;..\Src\Other\jasper\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;CVLIB_EXPORTS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>.\..\..\..\Intermediate\cvlibbasedll\Debug/cvlibbasedll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\..\..\..\Intermediate\cvlibbasedll\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\..\..\..\Intermediate\cvlibbasedll\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\..\..\..\Intermediate\cvlibbasedll\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0404</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>..\..\..\bin\cvlibbased.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\..\..\..\bin\cvlibbased.pdb</ProgramDatabaseFile>
+      <ImportLibrary>.\..\..\..\lib/cvlibbased.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>..\..\..\bin\cvlibbaseddll.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\..\dll/cvlibbasedll.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\Inc;..\Src\Other\jpeg;..\Src\Other\png;..\Src\Other\zlib;..\Src\Other\tiff;..\Src\Other\jasper\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;CVLIB_EXPORTS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeaderOutputFile>.\..\..\..\Intermediate\cvlibbasedll\Release/cvlibbasedll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\..\..\..\Intermediate\cvlibbasedll\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\..\..\..\Intermediate\cvlibbasedll\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\..\..\..\Intermediate\cvlibbasedll\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0404</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>..\..\..\bin\cvlibbase.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>..\..\..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ProgramDatabaseFile>.\..\..\..\bin\cvlibbase.pdb</ProgramDatabaseFile>
+      <ImportLibrary>.\..\..\..\lib/cvlibbase.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\..\bin\cvlibbasedll.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Src\Algorithm.cpp" />
+    <ClCompile Include="..\Src\BitOperation.cpp" />
+    <ClCompile Include="..\Src\CholeskyDecomposition.cpp" />
+    <ClCompile Include="..\Src\CoImage.cpp" />
+    <ClCompile Include="..\Src\CoImageBMP.cpp" />
+    <ClCompile Include="..\Src\CoImageJAS.cpp" />
+    <ClCompile Include="..\Src\CoImageJPG.cpp" />
+    <ClCompile Include="..\Src\CoImagePNG.cpp" />
+    <ClCompile Include="..\Src\CoImageString.cpp" />
+    <ClCompile Include="..\Src\CoImageTIF.cpp" />
+    <ClCompile Include="..\Src\CommandLineParameters.cpp" />
+    <ClCompile Include="..\Src\cvlibbaseVersion.cpp" />
+    <ClCompile Include="..\Src\cvlibMalloc.cpp" />
+    <ClCompile Include="..\Src\cvlibstructs.cpp" />
+    <ClCompile Include="..\Src\cvlibUtil.cpp" />
+    <ClCompile Include="..\Src\EigenvalueDecomposition.cpp" />
+    <ClCompile Include="..\Src\Exception.cpp" />
+    <ClCompile Include="..\Src\FileFinder.cpp" />
+    <ClCompile Include="..\Src\Graph.cpp" />
+    <ClCompile Include="..\Src\IniFile.cpp" />
+    <ClCompile Include="..\Src\LUDecomposition.cpp" />
+    <ClCompile Include="..\Src\Mat.cpp" />
+    <ClCompile Include="..\Src\mat3.cpp" />
+    <ClCompile Include="..\Src\MatDraw.cpp" />
+    <ClCompile Include="..\Src\MathLib.cpp" />
+    <ClCompile Include="..\Src\MatLib.cpp" />
+    <ClCompile Include="..\Src\matoperation.cpp" />
+    <ClCompile Include="..\Src\News.cpp" />
+    <ClCompile Include="..\Src\Object.cpp" />
+    <ClCompile Include="..\Src\ParamABC.cpp" />
+    <ClCompile Include="..\Src\Plex.cpp" />
+    <ClCompile Include="..\Src\PtrArray.cpp" />
+    <ClCompile Include="..\Src\PtrHash.cpp" />
+    <ClCompile Include="..\Src\PtrList.cpp" />
+    <ClCompile Include="..\Src\PtrQueue.cpp" />
+    <ClCompile Include="..\Src\PumpABC.cpp" />
+    <ClCompile Include="..\Src\QRDecomposition.cpp" />
+    <ClCompile Include="..\Src\Queue.cpp" />
+    <ClCompile Include="..\Src\Random.cpp" />
+    <ClCompile Include="..\Src\SingularValueDecomposition.cpp" />
+    <ClCompile Include="..\Src\SString.cpp" />
+    <ClCompile Include="..\Src\Statistics.cpp" />
+    <ClCompile Include="..\Src\StringArray.cpp" />
+    <ClCompile Include="..\Src\Timer.cpp" />
+    <ClCompile Include="..\Src\Tree.cpp" />
+    <ClCompile Include="..\Src\Vec.cpp" />
+    <ClCompile Include="..\Src\XFileDisk.cpp" />
+    <ClCompile Include="..\Src\XFileMem.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\Src\cvlibbasedll.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Inc\mat3.h" />
+    <ClInclude Include="..\Src\resource.h" />
+    <ClInclude Include="..\Inc\Algorithm.h" />
+    <ClInclude Include="..\Inc\AutoBuffer.h" />
+    <ClInclude Include="..\Inc\BitOperation.h" />
+    <ClInclude Include="..\Inc\CholeskyDecomposition.h" />
+    <ClInclude Include="..\Inc\CoImage.h" />
+    <ClInclude Include="..\Inc\CoImageBMP.h" />
+    <ClInclude Include="..\Inc\CoImageCFG.h" />
+    <ClInclude Include="..\Inc\CoImageDef.h" />
+    <ClInclude Include="..\Inc\CoImageJAS.h" />
+    <ClInclude Include="..\Inc\CoImageJPG.h" />
+    <ClInclude Include="..\Inc\CoImagePNG.h" />
+    <ClInclude Include="..\Inc\CoImageTIF.h" />
+    <ClInclude Include="..\Inc\CommandLineParameters.h" />
+    <ClInclude Include="..\Inc\cvlibbaseDef.h" />
+    <ClInclude Include="..\Inc\cvlibbaseVersion.h" />
+    <ClInclude Include="..\Inc\cvlibmacros.h" />
+    <ClInclude Include="..\Inc\cvlibMalloc.h" />
+    <ClInclude Include="..\Inc\cvliboperation.h" />
+    <ClInclude Include="..\Inc\cvlibstructs.h" />
+    <ClInclude Include="..\Inc\cvlibutil.h" />
+    <ClInclude Include="..\Inc\EigenvalueDecomposition.h" />
+    <ClInclude Include="..\Inc\Exception.h" />
+    <ClInclude Include="..\Inc\FileFinder.h" />
+    <ClInclude Include="..\Inc\Graph.h" />
+    <ClInclude Include="..\Inc\ImageIter.h" />
+    <ClInclude Include="..\Inc\IniFile.h" />
+    <ClInclude Include="..\Inc\LUDecomposition.h" />
+    <ClInclude Include="..\Inc\Mat.h" />
+    <ClInclude Include="..\Inc\MathLib.h" />
+    <ClInclude Include="..\Inc\MatLib.h" />
+    <ClInclude Include="..\Inc\MatOperation.h" />
+    <ClInclude Include="..\Inc\MintErrCode.h" />
+    <ClInclude Include="..\Inc\News.h" />
+    <ClInclude Include="..\Inc\Object.h" />
+    <ClInclude Include="..\Inc\ParamABC.h" />
+    <ClInclude Include="..\Inc\Plex.h" />
+    <ClInclude Include="..\Inc\PtrArray.h" />
+    <ClInclude Include="..\Inc\PtrHash.h" />
+    <ClInclude Include="..\Inc\PtrList.h" />
+    <ClInclude Include="..\Inc\PtrQueue.h" />
+    <ClInclude Include="..\Inc\PumpABC.h" />
+    <ClInclude Include="..\Inc\QRDecomposition.h" />
+    <ClInclude Include="..\Inc\Queue.h" />
+    <ClInclude Include="..\Inc\Random.h" />
+    <ClInclude Include="..\Inc\SingularValueDecomposition.h" />
+    <ClInclude Include="..\Inc\SString.h" />
+    <ClInclude Include="..\Inc\Statistics.h" />
+    <ClInclude Include="..\Inc\StringArray.h" />
+    <ClInclude Include="..\Inc\template.h" />
+    <ClInclude Include="..\Inc\TemplateFactory.h" />
+    <ClInclude Include="..\Inc\Timer.h" />
+    <ClInclude Include="..\Inc\Tree.h" />
+    <ClInclude Include="..\Inc\Vec.h" />
+    <ClInclude Include="..\Inc\XFile.h" />
+    <ClInclude Include="..\Inc\XFileDisk.h" />
+    <ClInclude Include="..\Inc\XFileMem.h" />
+    <ClInclude Include="..\Inc\xMat.h" />
+    <ClInclude Include="..\Inc\xVec.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Src\Other\j2k\j2k.vcxproj">
+      <Project>{fe116c8a-4873-40b2-970d-935702092031}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Src\Other\jasper\jasper.vcxproj">
+      <Project>{4f675129-4461-41f5-baec-6d9feae257fa}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Src\Other\jbig\jbig.vcxproj">
+      <Project>{35cf28f9-d8ef-4c6d-b8bf-e209dc22ca0a}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Src\Other\jpeg\Jpeg.vcxproj">
+      <Project>{0ba91897-3928-47cd-9d32-9a9f4741376f}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Src\Other\png\png.vcxproj">
+      <Project>{adf78ac4-7ee1-4b8e-8f68-70258145e833}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Src\Other\tiff\Tiff.vcxproj">
+      <Project>{5f53d579-8fb6-4108-a08d-18a1d96cd7b4}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Src\Other\zlib\zlib.vcxproj">
+      <Project>{af13a582-5dc2-4507-aca5-960a59b5185d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

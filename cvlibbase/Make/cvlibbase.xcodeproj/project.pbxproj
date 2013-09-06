@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C79F34F173F8C7F0065D290 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C79F34E173F8C7F0065D290 /* Foundation.framework */; };
+		3C79F354173F8C7F0065D290 /* cvlibbase.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3C79F353173F8C7F0065D290 /* cvlibbase.h */; };
+		3C79F356173F8C7F0065D290 /* cvlibbase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F355173F8C7F0065D290 /* cvlibbase.m */; };
+		3C79F57B173F8CDC0065D290 /* Algorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F39A173F8CDA0065D290 /* Algorithm.cpp */; };
+		3C79F57C173F8CDC0065D290 /* BitOperation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F39B173F8CDA0065D290 /* BitOperation.cpp */; };
+		3C79F57D173F8CDC0065D290 /* CholeskyDecomposition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F39C173F8CDA0065D290 /* CholeskyDecomposition.cpp */; };
+		3C79F57E173F8CDC0065D290 /* CoImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F39D173F8CDA0065D290 /* CoImage.cpp */; };
+		3C79F57F173F8CDC0065D290 /* CoImageBMP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F39E173F8CDA0065D290 /* CoImageBMP.cpp */; };
+		3C79F580173F8CDC0065D290 /* CoImageJAS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F39F173F8CDA0065D290 /* CoImageJAS.cpp */; };
+		3C79F581173F8CDC0065D290 /* CoImageJPG.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F3A0173F8CDA0065D290 /* CoImageJPG.cpp */; };
+		3C79F582173F8CDC0065D290 /* CoImagePNG.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F3A1173F8CDA0065D290 /* CoImagePNG.cpp */; };
+		3C79F583173F8CDC0065D290 /* CoImageString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F3A2173F8CDA0065D290 /* CoImageString.cpp */; };
+		3C79F584173F8CDC0065D290 /* CoImageTIF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F3A3173F8CDA0065D290 /* CoImageTIF.cpp */; };
+		3C79F585173F8CDC0065D290 /* CommandLineParameters.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F3A4173F8CDA0065D290 /* CommandLineParameters.cpp */; };
+		3C79F586173F8CDC0065D290 /* cvlibbaseVersion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F3A6173F8CDA0065D290 /* cvlibbaseVersion.cpp */; };
+		3C79F587173F8CDC0065D290 /* cvlibMalloc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F3A7173F8CDA0065D290 /* cvlibMalloc.cpp */; };
+		3C79F588173F8CDC0065D290 /* cvlibstructs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F3A8173F8CDA0065D290 /* cvlibstructs.cpp */; };
+		3C79F589173F8CDC0065D290 /* cvlibUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F3A9173F8CDA0065D290 /* cvlibUtil.cpp */; };
+		3C79F58A173F8CDC0065D290 /* EigenvalueDecomposition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F3AA173F8CDA0065D290 /* EigenvalueDecomposition.cpp */; };
+		3C79F58B173F8CDC0065D290 /* Exception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F3AB173F8CDA0065D290 /* Exception.cpp */; };
+		3C79F58C173F8CDC0065D290 /* FileFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F3AC173F8CDA0065D290 /* FileFinder.cpp */; };
+		3C79F58D173F8CDC0065D290 /* Graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F3AD173F8CDA0065D290 /* Graph.cpp */; };
+		3C79F58E173F8CDC0065D290 /* IniFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F3AE173F8CDA0065D290 /* IniFile.cpp */; };
+		3C79F58F173F8CDC0065D290 /* LUDecomposition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F3AF173F8CDA0065D290 /* LUDecomposition.cpp */; };
+		3C79F590173F8CDC0065D290 /* Mat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F3B0173F8CDA0065D290 /* Mat.cpp */; };
+		3C79F591173F8CDC0065D290 /* mat3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F3B1173F8CDA0065D290 /* mat3.cpp */; };
+		3C79F592173F8CDC0065D290 /* MatDraw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F3B2173F8CDA0065D290 /* MatDraw.cpp */; };
+		3C79F593173F8CDC0065D290 /* MathLib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F3B3173F8CDA0065D290 /* MathLib.cpp */; };
+		3C79F594173F8CDC0065D290 /* MatLib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F3B4173F8CDA0065D290 /* MatLib.cpp */; };
+		3C79F595173F8CDC0065D290 /* matoperation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F3B5173F8CDA0065D290 /* matoperation.cpp */; };
+		3C79F596173F8CDC0065D290 /* News.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F3B6173F8CDA0065D290 /* News.cpp */; };
+		3C79F597173F8CDC0065D290 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F3B7173F8CDA0065D290 /* Object.cpp */; };
+		3C79F64A173F8CDC0065D290 /* ParamABC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F567173F8CDC0065D290 /* ParamABC.cpp */; };
+		3C79F64B173F8CDC0065D290 /* Plex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F568173F8CDC0065D290 /* Plex.cpp */; };
+		3C79F64C173F8CDC0065D290 /* PtrArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F569173F8CDC0065D290 /* PtrArray.cpp */; };
+		3C79F64D173F8CDC0065D290 /* PtrHash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F56A173F8CDC0065D290 /* PtrHash.cpp */; };
+		3C79F64E173F8CDC0065D290 /* PtrList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F56B173F8CDC0065D290 /* PtrList.cpp */; };
+		3C79F64F173F8CDC0065D290 /* PtrQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F56C173F8CDC0065D290 /* PtrQueue.cpp */; };
+		3C79F650173F8CDC0065D290 /* PumpABC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F56D173F8CDC0065D290 /* PumpABC.cpp */; };
+		3C79F651173F8CDC0065D290 /* QRDecomposition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F56E173F8CDC0065D290 /* QRDecomposition.cpp */; };
+		3C79F652173F8CDC0065D290 /* Queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F56F173F8CDC0065D290 /* Queue.cpp */; };
+		3C79F653173F8CDC0065D290 /* Random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F570173F8CDC0065D290 /* Random.cpp */; };
+		3C79F654173F8CDC0065D290 /* SingularValueDecomposition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F572173F8CDC0065D290 /* SingularValueDecomposition.cpp */; };
+		3C79F655173F8CDC0065D290 /* SString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F573173F8CDC0065D290 /* SString.cpp */; };
+		3C79F656173F8CDC0065D290 /* Statistics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F574173F8CDC0065D290 /* Statistics.cpp */; };
+		3C79F657173F8CDC0065D290 /* StringArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F575173F8CDC0065D290 /* StringArray.cpp */; };
+		3C79F658173F8CDC0065D290 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F576173F8CDC0065D290 /* Timer.cpp */; };
+		3C79F659173F8CDC0065D290 /* Tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F577173F8CDC0065D290 /* Tree.cpp */; };
+		3C79F65A173F8CDC0065D290 /* Vec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F578173F8CDC0065D290 /* Vec.cpp */; };
+		3C79F65B173F8CDC0065D290 /* XFileDisk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F579173F8CDC0065D290 /* XFileDisk.cpp */; };
+		3C79F65C173F8CDC0065D290 /* XFileMem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C79F57A173F8CDC0065D290 /* XFileMem.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3C79F349173F8C7F0065D290 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				3C79F354173F8C7F0065D290 /* cvlibbase.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3C79F34B173F8C7F0065D290 /* libcvlibbase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcvlibbase.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C79F34E173F8C7F0065D290 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3C79F352173F8C7F0065D290 /* cvlibbase-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cvlibbase-Prefix.pch"; sourceTree = "<group>"; };
+		3C79F353173F8C7F0065D290 /* cvlibbase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cvlibbase.h; sourceTree = "<group>"; };
+		3C79F355173F8C7F0065D290 /* cvlibbase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cvlibbase.m; sourceTree = "<group>"; };
+		3C79F35D173F8CDA0065D290 /* _cvlibbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _cvlibbase.h; sourceTree = "<group>"; };
+		3C79F35E173F8CDA0065D290 /* Algorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
+		3C79F35F173F8CDA0065D290 /* AutoBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoBuffer.h; sourceTree = "<group>"; };
+		3C79F360173F8CDA0065D290 /* BitOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitOperation.h; sourceTree = "<group>"; };
+		3C79F361173F8CDA0065D290 /* CholeskyDecomposition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CholeskyDecomposition.h; sourceTree = "<group>"; };
+		3C79F362173F8CDA0065D290 /* CoImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoImage.h; sourceTree = "<group>"; };
+		3C79F363173F8CDA0065D290 /* CoImageBMP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoImageBMP.h; sourceTree = "<group>"; };
+		3C79F364173F8CDA0065D290 /* CoImageCFG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoImageCFG.h; sourceTree = "<group>"; };
+		3C79F365173F8CDA0065D290 /* CoImageDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoImageDef.h; sourceTree = "<group>"; };
+		3C79F366173F8CDA0065D290 /* CoImageJAS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoImageJAS.h; sourceTree = "<group>"; };
+		3C79F367173F8CDA0065D290 /* CoImageJPG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoImageJPG.h; sourceTree = "<group>"; };
+		3C79F368173F8CDA0065D290 /* CoImagePNG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoImagePNG.h; sourceTree = "<group>"; };
+		3C79F369173F8CDA0065D290 /* CoImageTIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoImageTIF.h; sourceTree = "<group>"; };
+		3C79F36A173F8CDA0065D290 /* CommandLineParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandLineParameters.h; sourceTree = "<group>"; };
+		3C79F36B173F8CDA0065D290 /* cvlibbaseDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cvlibbaseDef.h; sourceTree = "<group>"; };
+		3C79F36C173F8CDA0065D290 /* cvlibbaseVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cvlibbaseVersion.h; sourceTree = "<group>"; };
+		3C79F36D173F8CDA0065D290 /* cvlibmacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cvlibmacros.h; sourceTree = "<group>"; };
+		3C79F36E173F8CDA0065D290 /* cvlibMalloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cvlibMalloc.h; sourceTree = "<group>"; };
+		3C79F36F173F8CDA0065D290 /* cvliboperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cvliboperation.h; sourceTree = "<group>"; };
+		3C79F370173F8CDA0065D290 /* cvlibstructs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cvlibstructs.h; sourceTree = "<group>"; };
+		3C79F371173F8CDA0065D290 /* cvlibutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cvlibutil.h; sourceTree = "<group>"; };
+		3C79F372173F8CDA0065D290 /* EigenvalueDecomposition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EigenvalueDecomposition.h; sourceTree = "<group>"; };
+		3C79F373173F8CDA0065D290 /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
+		3C79F374173F8CDA0065D290 /* FileFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileFinder.h; sourceTree = "<group>"; };
+		3C79F375173F8CDA0065D290 /* Graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Graph.h; sourceTree = "<group>"; };
+		3C79F376173F8CDA0065D290 /* ImageIter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageIter.h; sourceTree = "<group>"; };
+		3C79F377173F8CDA0065D290 /* IniFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IniFile.h; sourceTree = "<group>"; };
+		3C79F378173F8CDA0065D290 /* LUDecomposition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LUDecomposition.h; sourceTree = "<group>"; };
+		3C79F379173F8CDA0065D290 /* Mat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mat.h; sourceTree = "<group>"; };
+		3C79F37A173F8CDA0065D290 /* mat3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mat3.h; sourceTree = "<group>"; };
+		3C79F37B173F8CDA0065D290 /* MathLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathLib.h; sourceTree = "<group>"; };
+		3C79F37C173F8CDA0065D290 /* MatLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatLib.h; sourceTree = "<group>"; };
+		3C79F37D173F8CDA0065D290 /* MatOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatOperation.h; sourceTree = "<group>"; };
+		3C79F37E173F8CDA0065D290 /* MintErrCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MintErrCode.h; sourceTree = "<group>"; };
+		3C79F37F173F8CDA0065D290 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
+		3C79F380173F8CDA0065D290 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
+		3C79F381173F8CDA0065D290 /* ParamABC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParamABC.h; sourceTree = "<group>"; };
+		3C79F382173F8CDA0065D290 /* Plex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plex.h; sourceTree = "<group>"; };
+		3C79F383173F8CDA0065D290 /* PtrArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PtrArray.h; sourceTree = "<group>"; };
+		3C79F384173F8CDA0065D290 /* PtrHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PtrHash.h; sourceTree = "<group>"; };
+		3C79F385173F8CDA0065D290 /* PtrList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PtrList.h; sourceTree = "<group>"; };
+		3C79F386173F8CDA0065D290 /* PtrQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PtrQueue.h; sourceTree = "<group>"; };
+		3C79F387173F8CDA0065D290 /* PumpABC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PumpABC.h; sourceTree = "<group>"; };
+		3C79F388173F8CDA0065D290 /* QRDecomposition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRDecomposition.h; sourceTree = "<group>"; };
+		3C79F389173F8CDA0065D290 /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
+		3C79F38A173F8CDA0065D290 /* Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Random.h; sourceTree = "<group>"; };
+		3C79F38B173F8CDA0065D290 /* SingularValueDecomposition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingularValueDecomposition.h; sourceTree = "<group>"; };
+		3C79F38C173F8CDA0065D290 /* SString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SString.h; sourceTree = "<group>"; };
+		3C79F38D173F8CDA0065D290 /* Statistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Statistics.h; sourceTree = "<group>"; };
+		3C79F38E173F8CDA0065D290 /* StringArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringArray.h; sourceTree = "<group>"; };
+		3C79F38F173F8CDA0065D290 /* template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = template.h; sourceTree = "<group>"; };
+		3C79F390173F8CDA0065D290 /* TemplateFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateFactory.h; sourceTree = "<group>"; };
+		3C79F391173F8CDA0065D290 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
+		3C79F392173F8CDA0065D290 /* Tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tree.h; sourceTree = "<group>"; };
+		3C79F393173F8CDA0065D290 /* Vec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vec.h; sourceTree = "<group>"; };
+		3C79F394173F8CDA0065D290 /* XFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFile.h; sourceTree = "<group>"; };
+		3C79F395173F8CDA0065D290 /* XFileDisk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFileDisk.h; sourceTree = "<group>"; };
+		3C79F396173F8CDA0065D290 /* XFileMem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFileMem.h; sourceTree = "<group>"; };
+		3C79F397173F8CDA0065D290 /* xMat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xMat.h; sourceTree = "<group>"; };
+		3C79F398173F8CDA0065D290 /* xVec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xVec.h; sourceTree = "<group>"; };
+		3C79F39A173F8CDA0065D290 /* Algorithm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Algorithm.cpp; sourceTree = "<group>"; };
+		3C79F39B173F8CDA0065D290 /* BitOperation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BitOperation.cpp; sourceTree = "<group>"; };
+		3C79F39C173F8CDA0065D290 /* CholeskyDecomposition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CholeskyDecomposition.cpp; sourceTree = "<group>"; };
+		3C79F39D173F8CDA0065D290 /* CoImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoImage.cpp; sourceTree = "<group>"; };
+		3C79F39E173F8CDA0065D290 /* CoImageBMP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoImageBMP.cpp; sourceTree = "<group>"; };
+		3C79F39F173F8CDA0065D290 /* CoImageJAS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoImageJAS.cpp; sourceTree = "<group>"; };
+		3C79F3A0173F8CDA0065D290 /* CoImageJPG.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoImageJPG.cpp; sourceTree = "<group>"; };
+		3C79F3A1173F8CDA0065D290 /* CoImagePNG.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoImagePNG.cpp; sourceTree = "<group>"; };
+		3C79F3A2173F8CDA0065D290 /* CoImageString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoImageString.cpp; sourceTree = "<group>"; };
+		3C79F3A3173F8CDA0065D290 /* CoImageTIF.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoImageTIF.cpp; sourceTree = "<group>"; };
+		3C79F3A4173F8CDA0065D290 /* CommandLineParameters.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CommandLineParameters.cpp; sourceTree = "<group>"; };
+		3C79F3A5173F8CDA0065D290 /* cvlibbasedll.rc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cvlibbasedll.rc; sourceTree = "<group>"; };
+		3C79F3A6173F8CDA0065D290 /* cvlibbaseVersion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cvlibbaseVersion.cpp; sourceTree = "<group>"; };
+		3C79F3A7173F8CDA0065D290 /* cvlibMalloc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cvlibMalloc.cpp; sourceTree = "<group>"; };
+		3C79F3A8173F8CDA0065D290 /* cvlibstructs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cvlibstructs.cpp; sourceTree = "<group>"; };
+		3C79F3A9173F8CDA0065D290 /* cvlibUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cvlibUtil.cpp; sourceTree = "<group>"; };
+		3C79F3AA173F8CDA0065D290 /* EigenvalueDecomposition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EigenvalueDecomposition.cpp; sourceTree = "<group>"; };
+		3C79F3AB173F8CDA0065D290 /* Exception.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Exception.cpp; sourceTree = "<group>"; };
+		3C79F3AC173F8CDA0065D290 /* FileFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileFinder.cpp; sourceTree = "<group>"; };
+		3C79F3AD173F8CDA0065D290 /* Graph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Graph.cpp; sourceTree = "<group>"; };
+		3C79F3AE173F8CDA0065D290 /* IniFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IniFile.cpp; sourceTree = "<group>"; };
+		3C79F3AF173F8CDA0065D290 /* LUDecomposition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LUDecomposition.cpp; sourceTree = "<group>"; };
+		3C79F3B0173F8CDA0065D290 /* Mat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mat.cpp; sourceTree = "<group>"; };
+		3C79F3B1173F8CDA0065D290 /* mat3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mat3.cpp; sourceTree = "<group>"; };
+		3C79F3B2173F8CDA0065D290 /* MatDraw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MatDraw.cpp; sourceTree = "<group>"; };
+		3C79F3B3173F8CDA0065D290 /* MathLib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MathLib.cpp; sourceTree = "<group>"; };
+		3C79F3B4173F8CDA0065D290 /* MatLib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MatLib.cpp; sourceTree = "<group>"; };
+		3C79F3B5173F8CDA0065D290 /* matoperation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = matoperation.cpp; sourceTree = "<group>"; };
+		3C79F3B6173F8CDA0065D290 /* News.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = News.cpp; sourceTree = "<group>"; };
+		3C79F3B7173F8CDA0065D290 /* Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Object.cpp; sourceTree = "<group>"; };
+		3C79F567173F8CDC0065D290 /* ParamABC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParamABC.cpp; sourceTree = "<group>"; };
+		3C79F568173F8CDC0065D290 /* Plex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Plex.cpp; sourceTree = "<group>"; };
+		3C79F569173F8CDC0065D290 /* PtrArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PtrArray.cpp; sourceTree = "<group>"; };
+		3C79F56A173F8CDC0065D290 /* PtrHash.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PtrHash.cpp; sourceTree = "<group>"; };
+		3C79F56B173F8CDC0065D290 /* PtrList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PtrList.cpp; sourceTree = "<group>"; };
+		3C79F56C173F8CDC0065D290 /* PtrQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PtrQueue.cpp; sourceTree = "<group>"; };
+		3C79F56D173F8CDC0065D290 /* PumpABC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PumpABC.cpp; sourceTree = "<group>"; };
+		3C79F56E173F8CDC0065D290 /* QRDecomposition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = QRDecomposition.cpp; sourceTree = "<group>"; };
+		3C79F56F173F8CDC0065D290 /* Queue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Queue.cpp; sourceTree = "<group>"; };
+		3C79F570173F8CDC0065D290 /* Random.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Random.cpp; sourceTree = "<group>"; };
+		3C79F571173F8CDC0065D290 /* resource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resource.h; sourceTree = "<group>"; };
+		3C79F572173F8CDC0065D290 /* SingularValueDecomposition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SingularValueDecomposition.cpp; sourceTree = "<group>"; };
+		3C79F573173F8CDC0065D290 /* SString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SString.cpp; sourceTree = "<group>"; };
+		3C79F574173F8CDC0065D290 /* Statistics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Statistics.cpp; sourceTree = "<group>"; };
+		3C79F575173F8CDC0065D290 /* StringArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StringArray.cpp; sourceTree = "<group>"; };
+		3C79F576173F8CDC0065D290 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
+		3C79F577173F8CDC0065D290 /* Tree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tree.cpp; sourceTree = "<group>"; };
+		3C79F578173F8CDC0065D290 /* Vec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vec.cpp; sourceTree = "<group>"; };
+		3C79F579173F8CDC0065D290 /* XFileDisk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XFileDisk.cpp; sourceTree = "<group>"; };
+		3C79F57A173F8CDC0065D290 /* XFileMem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XFileMem.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3C79F348173F8C7F0065D290 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C79F34F173F8C7F0065D290 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C79F342173F8C7F0065D290 = {
+			isa = PBXGroup;
+			children = (
+				3C79F35C173F8CDA0065D290 /* Inc */,
+				3C79F399173F8CDA0065D290 /* Src */,
+				3C79F350173F8C7F0065D290 /* cvlibbase */,
+				3C79F34D173F8C7F0065D290 /* Frameworks */,
+				3C79F34C173F8C7F0065D290 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3C79F34C173F8C7F0065D290 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C79F34B173F8C7F0065D290 /* libcvlibbase.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3C79F34D173F8C7F0065D290 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C79F34E173F8C7F0065D290 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3C79F350173F8C7F0065D290 /* cvlibbase */ = {
+			isa = PBXGroup;
+			children = (
+				3C79F353173F8C7F0065D290 /* cvlibbase.h */,
+				3C79F355173F8C7F0065D290 /* cvlibbase.m */,
+				3C79F351173F8C7F0065D290 /* Supporting Files */,
+			);
+			path = cvlibbase;
+			sourceTree = "<group>";
+		};
+		3C79F351173F8C7F0065D290 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3C79F352173F8C7F0065D290 /* cvlibbase-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3C79F35C173F8CDA0065D290 /* Inc */ = {
+			isa = PBXGroup;
+			children = (
+				3C79F35D173F8CDA0065D290 /* _cvlibbase.h */,
+				3C79F35E173F8CDA0065D290 /* Algorithm.h */,
+				3C79F35F173F8CDA0065D290 /* AutoBuffer.h */,
+				3C79F360173F8CDA0065D290 /* BitOperation.h */,
+				3C79F361173F8CDA0065D290 /* CholeskyDecomposition.h */,
+				3C79F362173F8CDA0065D290 /* CoImage.h */,
+				3C79F363173F8CDA0065D290 /* CoImageBMP.h */,
+				3C79F364173F8CDA0065D290 /* CoImageCFG.h */,
+				3C79F365173F8CDA0065D290 /* CoImageDef.h */,
+				3C79F366173F8CDA0065D290 /* CoImageJAS.h */,
+				3C79F367173F8CDA0065D290 /* CoImageJPG.h */,
+				3C79F368173F8CDA0065D290 /* CoImagePNG.h */,
+				3C79F369173F8CDA0065D290 /* CoImageTIF.h */,
+				3C79F36A173F8CDA0065D290 /* CommandLineParameters.h */,
+				3C79F36B173F8CDA0065D290 /* cvlibbaseDef.h */,
+				3C79F36C173F8CDA0065D290 /* cvlibbaseVersion.h */,
+				3C79F36D173F8CDA0065D290 /* cvlibmacros.h */,
+				3C79F36E173F8CDA0065D290 /* cvlibMalloc.h */,
+				3C79F36F173F8CDA0065D290 /* cvliboperation.h */,
+				3C79F370173F8CDA0065D290 /* cvlibstructs.h */,
+				3C79F371173F8CDA0065D290 /* cvlibutil.h */,
+				3C79F372173F8CDA0065D290 /* EigenvalueDecomposition.h */,
+				3C79F373173F8CDA0065D290 /* Exception.h */,
+				3C79F374173F8CDA0065D290 /* FileFinder.h */,
+				3C79F375173F8CDA0065D290 /* Graph.h */,
+				3C79F376173F8CDA0065D290 /* ImageIter.h */,
+				3C79F377173F8CDA0065D290 /* IniFile.h */,
+				3C79F378173F8CDA0065D290 /* LUDecomposition.h */,
+				3C79F379173F8CDA0065D290 /* Mat.h */,
+				3C79F37A173F8CDA0065D290 /* mat3.h */,
+				3C79F37B173F8CDA0065D290 /* MathLib.h */,
+				3C79F37C173F8CDA0065D290 /* MatLib.h */,
+				3C79F37D173F8CDA0065D290 /* MatOperation.h */,
+				3C79F37E173F8CDA0065D290 /* MintErrCode.h */,
+				3C79F37F173F8CDA0065D290 /* News.h */,
+				3C79F380173F8CDA0065D290 /* Object.h */,
+				3C79F381173F8CDA0065D290 /* ParamABC.h */,
+				3C79F382173F8CDA0065D290 /* Plex.h */,
+				3C79F383173F8CDA0065D290 /* PtrArray.h */,
+				3C79F384173F8CDA0065D290 /* PtrHash.h */,
+				3C79F385173F8CDA0065D290 /* PtrList.h */,
+				3C79F386173F8CDA0065D290 /* PtrQueue.h */,
+				3C79F387173F8CDA0065D290 /* PumpABC.h */,
+				3C79F388173F8CDA0065D290 /* QRDecomposition.h */,
+				3C79F389173F8CDA0065D290 /* Queue.h */,
+				3C79F38A173F8CDA0065D290 /* Random.h */,
+				3C79F38B173F8CDA0065D290 /* SingularValueDecomposition.h */,
+				3C79F38C173F8CDA0065D290 /* SString.h */,
+				3C79F38D173F8CDA0065D290 /* Statistics.h */,
+				3C79F38E173F8CDA0065D290 /* StringArray.h */,
+				3C79F38F173F8CDA0065D290 /* template.h */,
+				3C79F390173F8CDA0065D290 /* TemplateFactory.h */,
+				3C79F391173F8CDA0065D290 /* Timer.h */,
+				3C79F392173F8CDA0065D290 /* Tree.h */,
+				3C79F393173F8CDA0065D290 /* Vec.h */,
+				3C79F394173F8CDA0065D290 /* XFile.h */,
+				3C79F395173F8CDA0065D290 /* XFileDisk.h */,
+				3C79F396173F8CDA0065D290 /* XFileMem.h */,
+				3C79F397173F8CDA0065D290 /* xMat.h */,
+				3C79F398173F8CDA0065D290 /* xVec.h */,
+			);
+			name = Inc;
+			path = ../Inc;
+			sourceTree = "<group>";
+		};
+		3C79F399173F8CDA0065D290 /* Src */ = {
+			isa = PBXGroup;
+			children = (
+				3C79F39A173F8CDA0065D290 /* Algorithm.cpp */,
+				3C79F39B173F8CDA0065D290 /* BitOperation.cpp */,
+				3C79F39C173F8CDA0065D290 /* CholeskyDecomposition.cpp */,
+				3C79F39D173F8CDA0065D290 /* CoImage.cpp */,
+				3C79F39E173F8CDA0065D290 /* CoImageBMP.cpp */,
+				3C79F39F173F8CDA0065D290 /* CoImageJAS.cpp */,
+				3C79F3A0173F8CDA0065D290 /* CoImageJPG.cpp */,
+				3C79F3A1173F8CDA0065D290 /* CoImagePNG.cpp */,
+				3C79F3A2173F8CDA0065D290 /* CoImageString.cpp */,
+				3C79F3A3173F8CDA0065D290 /* CoImageTIF.cpp */,
+				3C79F3A4173F8CDA0065D290 /* CommandLineParameters.cpp */,
+				3C79F3A5173F8CDA0065D290 /* cvlibbasedll.rc */,
+				3C79F3A6173F8CDA0065D290 /* cvlibbaseVersion.cpp */,
+				3C79F3A7173F8CDA0065D290 /* cvlibMalloc.cpp */,
+				3C79F3A8173F8CDA0065D290 /* cvlibstructs.cpp */,
+				3C79F3A9173F8CDA0065D290 /* cvlibUtil.cpp */,
+				3C79F3AA173F8CDA0065D290 /* EigenvalueDecomposition.cpp */,
+				3C79F3AB173F8CDA0065D290 /* Exception.cpp */,
+				3C79F3AC173F8CDA0065D290 /* FileFinder.cpp */,
+				3C79F3AD173F8CDA0065D290 /* Graph.cpp */,
+				3C79F3AE173F8CDA0065D290 /* IniFile.cpp */,
+				3C79F3AF173F8CDA0065D290 /* LUDecomposition.cpp */,
+				3C79F3B0173F8CDA0065D290 /* Mat.cpp */,
+				3C79F3B1173F8CDA0065D290 /* mat3.cpp */,
+				3C79F3B2173F8CDA0065D290 /* MatDraw.cpp */,
+				3C79F3B3173F8CDA0065D290 /* MathLib.cpp */,
+				3C79F3B4173F8CDA0065D290 /* MatLib.cpp */,
+				3C79F3B5173F8CDA0065D290 /* matoperation.cpp */,
+				3C79F3B6173F8CDA0065D290 /* News.cpp */,
+				3C79F3B7173F8CDA0065D290 /* Object.cpp */,
+				3C79F567173F8CDC0065D290 /* ParamABC.cpp */,
+				3C79F568173F8CDC0065D290 /* Plex.cpp */,
+				3C79F569173F8CDC0065D290 /* PtrArray.cpp */,
+				3C79F56A173F8CDC0065D290 /* PtrHash.cpp */,
+				3C79F56B173F8CDC0065D290 /* PtrList.cpp */,
+				3C79F56C173F8CDC0065D290 /* PtrQueue.cpp */,
+				3C79F56D173F8CDC0065D290 /* PumpABC.cpp */,
+				3C79F56E173F8CDC0065D290 /* QRDecomposition.cpp */,
+				3C79F56F173F8CDC0065D290 /* Queue.cpp */,
+				3C79F570173F8CDC0065D290 /* Random.cpp */,
+				3C79F571173F8CDC0065D290 /* resource.h */,
+				3C79F572173F8CDC0065D290 /* SingularValueDecomposition.cpp */,
+				3C79F573173F8CDC0065D290 /* SString.cpp */,
+				3C79F574173F8CDC0065D290 /* Statistics.cpp */,
+				3C79F575173F8CDC0065D290 /* StringArray.cpp */,
+				3C79F576173F8CDC0065D290 /* Timer.cpp */,
+				3C79F577173F8CDC0065D290 /* Tree.cpp */,
+				3C79F578173F8CDC0065D290 /* Vec.cpp */,
+				3C79F579173F8CDC0065D290 /* XFileDisk.cpp */,
+				3C79F57A173F8CDC0065D290 /* XFileMem.cpp */,
+			);
+			name = Src;
+			path = ../Src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3C79F34A173F8C7F0065D290 /* cvlibbase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C79F359173F8C7F0065D290 /* Build configuration list for PBXNativeTarget "cvlibbase" */;
+			buildPhases = (
+				3C79F347173F8C7F0065D290 /* Sources */,
+				3C79F348173F8C7F0065D290 /* Frameworks */,
+				3C79F349173F8C7F0065D290 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cvlibbase;
+			productName = cvlibbase;
+			productReference = 3C79F34B173F8C7F0065D290 /* libcvlibbase.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3C79F343173F8C7F0065D290 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = lion;
+			};
+			buildConfigurationList = 3C79F346173F8C7F0065D290 /* Build configuration list for PBXProject "cvlibbase" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3C79F342173F8C7F0065D290;
+			productRefGroup = 3C79F34C173F8C7F0065D290 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3C79F34A173F8C7F0065D290 /* cvlibbase */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3C79F347173F8C7F0065D290 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C79F356173F8C7F0065D290 /* cvlibbase.m in Sources */,
+				3C79F57B173F8CDC0065D290 /* Algorithm.cpp in Sources */,
+				3C79F57C173F8CDC0065D290 /* BitOperation.cpp in Sources */,
+				3C79F57D173F8CDC0065D290 /* CholeskyDecomposition.cpp in Sources */,
+				3C79F57E173F8CDC0065D290 /* CoImage.cpp in Sources */,
+				3C79F57F173F8CDC0065D290 /* CoImageBMP.cpp in Sources */,
+				3C79F580173F8CDC0065D290 /* CoImageJAS.cpp in Sources */,
+				3C79F581173F8CDC0065D290 /* CoImageJPG.cpp in Sources */,
+				3C79F582173F8CDC0065D290 /* CoImagePNG.cpp in Sources */,
+				3C79F583173F8CDC0065D290 /* CoImageString.cpp in Sources */,
+				3C79F584173F8CDC0065D290 /* CoImageTIF.cpp in Sources */,
+				3C79F585173F8CDC0065D290 /* CommandLineParameters.cpp in Sources */,
+				3C79F586173F8CDC0065D290 /* cvlibbaseVersion.cpp in Sources */,
+				3C79F587173F8CDC0065D290 /* cvlibMalloc.cpp in Sources */,
+				3C79F588173F8CDC0065D290 /* cvlibstructs.cpp in Sources */,
+				3C79F589173F8CDC0065D290 /* cvlibUtil.cpp in Sources */,
+				3C79F58A173F8CDC0065D290 /* EigenvalueDecomposition.cpp in Sources */,
+				3C79F58B173F8CDC0065D290 /* Exception.cpp in Sources */,
+				3C79F58C173F8CDC0065D290 /* FileFinder.cpp in Sources */,
+				3C79F58D173F8CDC0065D290 /* Graph.cpp in Sources */,
+				3C79F58E173F8CDC0065D290 /* IniFile.cpp in Sources */,
+				3C79F58F173F8CDC0065D290 /* LUDecomposition.cpp in Sources */,
+				3C79F590173F8CDC0065D290 /* Mat.cpp in Sources */,
+				3C79F591173F8CDC0065D290 /* mat3.cpp in Sources */,
+				3C79F592173F8CDC0065D290 /* MatDraw.cpp in Sources */,
+				3C79F593173F8CDC0065D290 /* MathLib.cpp in Sources */,
+				3C79F594173F8CDC0065D290 /* MatLib.cpp in Sources */,
+				3C79F595173F8CDC0065D290 /* matoperation.cpp in Sources */,
+				3C79F596173F8CDC0065D290 /* News.cpp in Sources */,
+				3C79F597173F8CDC0065D290 /* Object.cpp in Sources */,
+				3C79F64A173F8CDC0065D290 /* ParamABC.cpp in Sources */,
+				3C79F64B173F8CDC0065D290 /* Plex.cpp in Sources */,
+				3C79F64C173F8CDC0065D290 /* PtrArray.cpp in Sources */,
+				3C79F64D173F8CDC0065D290 /* PtrHash.cpp in Sources */,
+				3C79F64E173F8CDC0065D290 /* PtrList.cpp in Sources */,
+				3C79F64F173F8CDC0065D290 /* PtrQueue.cpp in Sources */,
+				3C79F650173F8CDC0065D290 /* PumpABC.cpp in Sources */,
+				3C79F651173F8CDC0065D290 /* QRDecomposition.cpp in Sources */,
+				3C79F652173F8CDC0065D290 /* Queue.cpp in Sources */,
+				3C79F653173F8CDC0065D290 /* Random.cpp in Sources */,
+				3C79F654173F8CDC0065D290 /* SingularValueDecomposition.cpp in Sources */,
+				3C79F655173F8CDC0065D290 /* SString.cpp in Sources */,
+				3C79F656173F8CDC0065D290 /* Statistics.cpp in Sources */,
+				3C79F657173F8CDC0065D290 /* StringArray.cpp in Sources */,
+				3C79F658173F8CDC0065D290 /* Timer.cpp in Sources */,
+				3C79F659173F8CDC0065D290 /* Tree.cpp in Sources */,
+				3C79F65A173F8CDC0065D290 /* Vec.cpp in Sources */,
+				3C79F65B173F8CDC0065D290 /* XFileDisk.cpp in Sources */,
+				3C79F65C173F8CDC0065D290 /* XFileMem.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3C79F357173F8C7F0065D290 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3C79F358173F8C7F0065D290 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3C79F35A173F8C7F0065D290 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/cvlibbase.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "cvlibbase/cvlibbase-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					CVLIB_IMG_NOCODEC,
+				);
+				HEADER_SEARCH_PATHS = ../inc;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3C79F35B173F8C7F0065D290 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/cvlibbase.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "cvlibbase/cvlibbase-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = CVLIB_IMG_NOCODEC;
+				HEADER_SEARCH_PATHS = ../inc;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3C79F346173F8C7F0065D290 /* Build configuration list for PBXProject "cvlibbase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C79F357173F8C7F0065D290 /* Debug */,
+				3C79F358173F8C7F0065D290 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C79F359173F8C7F0065D290 /* Build configuration list for PBXNativeTarget "cvlibbase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C79F35A173F8C7F0065D290 /* Debug */,
+				3C79F35B173F8C7F0065D290 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3C79F343173F8C7F0065D290 /* Project object */;
+}
