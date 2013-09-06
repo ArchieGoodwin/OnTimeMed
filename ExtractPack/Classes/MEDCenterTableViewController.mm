@@ -320,9 +320,9 @@ typedef NS_ENUM(NSInteger, MMCenterViewControllerSection){
         }
         
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-        [dateFormat setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
+        //[dateFormat setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
         [dateFormat setDateFormat:@"MM-dd-yyyy hh:mma"];
-        NSString *dateStr = [dateFormat stringFromDate:dates[index + 1]];
+        NSString *dateStr = [dateFormat stringFromDate:dates[index]];
         NSString *str = [NSString stringWithFormat:@"%i doses left. \nNext dose time is %@", dates.count - index - 1, dateStr];
         
         UILabel *lblSub = [[UILabel alloc] initWithFrame:CGRectMake(10, 22, 300, 50)];
