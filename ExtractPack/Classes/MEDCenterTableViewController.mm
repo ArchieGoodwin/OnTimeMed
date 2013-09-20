@@ -318,23 +318,41 @@ typedef NS_ENUM(NSInteger, MMCenterViewControllerSection){
                 index++;
             }
         }
-        
-        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-        //[dateFormat setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
-        [dateFormat setDateFormat:@"MM-dd-yyyy hh:mma"];
-        NSString *dateStr = [dateFormat stringFromDate:dates[index]];
-        NSString *str = [NSString stringWithFormat:@"%i doses left. \nNext dose time is %@", dates.count - index - 1, dateStr];
-        
-        UILabel *lblSub = [[UILabel alloc] initWithFrame:CGRectMake(10, 22, 300, 50)];
-        lblSub.backgroundColor = [UIColor clearColor];
-        lblSub.numberOfLines = 0;
-        lblSub.lineBreakMode = NSLineBreakByWordWrapping;
-        lblSub.font = [UIFont systemFontOfSize:13];
-        lblSub.textColor = [UIColor grayColor];
-        
-        lblSub.text = str;
-        
-        [cell.contentView addSubview:lblSub];
+        if(index < dates.count)
+        {
+            NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+            //[dateFormat setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
+            [dateFormat setDateFormat:@"MM-dd-yyyy hh:mma"];
+            NSString *dateStr = [dateFormat stringFromDate:dates[index]];
+            NSString *str = [NSString stringWithFormat:@"%i doses left. \nNext dose time is %@", dates.count - index - 1, dateStr];
+            
+            UILabel *lblSub = [[UILabel alloc] initWithFrame:CGRectMake(10, 22, 300, 50)];
+            lblSub.backgroundColor = [UIColor clearColor];
+            lblSub.numberOfLines = 0;
+            lblSub.lineBreakMode = NSLineBreakByWordWrapping;
+            lblSub.font = [UIFont systemFontOfSize:13];
+            lblSub.textColor = [UIColor grayColor];
+            
+            lblSub.text = str;
+            
+            [cell.contentView addSubview:lblSub];
+        }
+        else
+        {
+            NSString *str = @"Medications period ended";
+            
+            UILabel *lblSub = [[UILabel alloc] initWithFrame:CGRectMake(10, 22, 300, 50)];
+            lblSub.backgroundColor = [UIColor clearColor];
+            lblSub.numberOfLines = 0;
+            lblSub.lineBreakMode = NSLineBreakByWordWrapping;
+            lblSub.font = [UIFont systemFontOfSize:13];
+            lblSub.textColor = [UIColor grayColor];
+            
+            lblSub.text = str;
+            
+            [cell.contentView addSubview:lblSub];
+        }
+       
     }
     else
     {
