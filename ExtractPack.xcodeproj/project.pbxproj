@@ -137,6 +137,8 @@
 		DC1103061761FE3E00F3CCFF /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102FD1761FE3E00F3CCFF /* UIImageView+AFNetworking.m */; };
 		DC6C731917D9AE24004F012B /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6C731817D9AE24004F012B /* Schedule.m */; };
 		DC6C731C17D9AFC4004F012B /* CKCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6C731B17D9AFC4004F012B /* CKCalendarView.m */; };
+		DC9C489C181D273B00A92E20 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC9C489B181D273B00A92E20 /* Images.xcassets */; };
+		DC9C489E181D29E600A92E20 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC9C489D181D29E600A92E20 /* Storyboard.storyboard */; };
 		DCA2281D17672A8A008C33B5 /* OTMhelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA2281C17672A8A008C33B5 /* OTMhelper.m */; };
 		DCA2282117672C0C008C33B5 /* OTMLoginViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = DCA2281F17672C0C008C33B5 /* OTMLoginViewController.mm */; };
 		DCA2282217672C0C008C33B5 /* OTMLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA2282017672C0C008C33B5 /* OTMLoginViewController.xib */; };
@@ -469,6 +471,8 @@
 		DC6C731B17D9AFC4004F012B /* CKCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKCalendarView.m; sourceTree = "<group>"; };
 		DC6C731D17D9B07A004F012B /* DKADefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKADefines.h; sourceTree = "<group>"; };
 		DC76D87C17687360009ED71A /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
+		DC9C489B181D273B00A92E20 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DC9C489D181D29E600A92E20 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		DCA2281B17672A8A008C33B5 /* OTMhelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTMhelper.h; sourceTree = "<group>"; };
 		DCA2281C17672A8A008C33B5 /* OTMhelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTMhelper.m; sourceTree = "<group>"; };
 		DCA2281E17672C0C008C33B5 /* OTMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTMLoginViewController.h; sourceTree = "<group>"; };
@@ -699,6 +703,7 @@
 		BDAED0AC16D002E800D220F7 = {
 			isa = PBXGroup;
 			children = (
+				DC9C489D181D29E600A92E20 /* Storyboard.storyboard */,
 				DC11022D1761ADF700F3CCFF /* externals */,
 				DC1102261761ADD100F3CCFF /* helpers */,
 				3CAB00C91750332A00FC6CC1 /* Resource */,
@@ -746,6 +751,7 @@
 				3C003AD6171B948900D1EE4F /* zframe */,
 				BDAED0E116D006B700D220F7 /* ZBarSDK */,
 				BDAED0D816D0039700D220F7 /* Classes */,
+				DC9C489B181D273B00A92E20 /* Images.xcassets */,
 				BDAED0C216D002E800D220F7 /* Supporting Files */,
 			);
 			path = ExtractPack;
@@ -1184,12 +1190,14 @@
 				BDAED0C616D002E800D220F7 /* InfoPlist.strings in Resources */,
 				BDAED0E016D003C200D220F7 /* ExtractPackViewController.xib in Resources */,
 				BDAED10016D006B700D220F7 /* zbar-back.png in Resources */,
+				DC9C489E181D29E600A92E20 /* Storyboard.storyboard in Resources */,
 				BDAED10116D006B700D220F7 /* zbar-help.html in Resources */,
 				BDAED10216D006B700D220F7 /* zbar-helpicons.png in Resources */,
 				BDAED10316D006B700D220F7 /* zbar-samples.png in Resources */,
 				BDA485C816DFA5CE00E23456 /* CaptureViewController.xib in Resources */,
 				3CFE28A5170C25C60099960D /* Default-568h@2x.png in Resources */,
 				3CAB00C81750292400FC6CC1 /* FrameViewController.xib in Resources */,
+				DC9C489C181D273B00A92E20 /* Images.xcassets in Resources */,
 				3CAB00CB1750332A00FC6CC1 /* beep-7.mp3 in Resources */,
 				3CC51CF21754F41400D6BCFA /* MainViewController.xib in Resources */,
 				3CFE0FA617552F1800EF012A /* MainWindow.xib in Resources */,
@@ -1394,14 +1402,17 @@
 		BDAED0D616D002E800D220F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = NO;
 				CLANG_WARN_ENUM_CONVERSION = NO;
 				CLANG_WARN_INT_CONVERSION = NO;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Sergey Dikarev (A2KE4XLMNK)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sergey Dikarev (A2KE4XLMNK)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sergey Dikarev (M4J98HRQR2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sergey Dikarev (M4J98HRQR2)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -1424,7 +1435,7 @@
 					"../**",
 				);
 				INFOPLIST_FILE = "ExtractPack/ExtractPack-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/ExtractPack/ZBarSDK\"",
@@ -1436,8 +1447,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRELINK_LIBS = "-lcvlibbase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "E87C6766-5F22-4FFE-B373-72D89467030F";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E87C6766-5F22-4FFE-B373-72D89467030F";
+				PROVISIONING_PROFILE = "C14F1299-DE2D-4A62-9A82-97086AFEC3D1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C14F1299-DE2D-4A62-9A82-97086AFEC3D1";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
@@ -1447,14 +1458,17 @@
 		BDAED0D716D002E800D220F7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = NO;
 				CLANG_WARN_ENUM_CONVERSION = NO;
 				CLANG_WARN_INT_CONVERSION = NO;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Sergey Dikarev (A2KE4XLMNK)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sergey Dikarev (A2KE4XLMNK)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sergey Dikarev (M4J98HRQR2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sergey Dikarev (M4J98HRQR2)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -1473,7 +1487,7 @@
 					"../**",
 				);
 				INFOPLIST_FILE = "ExtractPack/ExtractPack-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/ExtractPack/ZBarSDK\"",
@@ -1485,8 +1499,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRELINK_LIBS = "-lcvlibbase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "E87C6766-5F22-4FFE-B373-72D89467030F";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E87C6766-5F22-4FFE-B373-72D89467030F";
+				PROVISIONING_PROFILE = "C14F1299-DE2D-4A62-9A82-97086AFEC3D1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C14F1299-DE2D-4A62-9A82-97086AFEC3D1";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;

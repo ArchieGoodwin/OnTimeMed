@@ -10,12 +10,7 @@
 
 #import "ExtractPackViewController.h"
 #import "FrameViewController.h"
-#import "MMDrawerController.h"
-#import "MEDCenterTableViewController.h"
-#import "MEDLeftSideDrawerViewController.h"
-#import "MEDRightSideDrawerViewController.h"
-#import "MMDrawerVisualState.h"
-#import "MEDDrawerVisualStateManager.h"
+
 #import "TestFlight.h"
 #import <QuartzCore/QuartzCore.h>
 #import "MEDNetworkHelper.h"
@@ -39,7 +34,6 @@
     
     
     
-    application.applicationIconBadgeNumber = 0;
 	
 	// Handle launching from a notification
 	UILocalNotification *localNotif =
@@ -62,8 +56,11 @@
         
 	}
     
+    application.applicationIconBadgeNumber = 0;
+
     
-    UIViewController * leftSideDrawerViewController = [[MEDLeftSideDrawerViewController alloc] init];
+    
+    /*UIViewController * leftSideDrawerViewController = [[MEDLeftSideDrawerViewController alloc] init];
     
     UIViewController * centerViewController = [[MEDCenterTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
     
@@ -87,12 +84,12 @@
              block(drawerController, drawerSide, percentVisible);
          }
      }];
-    
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [self.window setRootViewController:drawerController];
+    */
+    //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+   // [self.window setRootViewController:drawerController];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    //self.window.backgroundColor = [UIColor whiteColor];
+    //[self.window makeKeyAndVisible];
     
 
     
