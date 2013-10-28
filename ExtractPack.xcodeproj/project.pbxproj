@@ -95,6 +95,8 @@
 		DC9C48A6181E339A00A92E20 /* OTMMedicationsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9C48A5181E339A00A92E20 /* OTMMedicationsVC.m */; };
 		DC9C48AB181E438700A92E20 /* OTMSettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9C48AA181E438700A92E20 /* OTMSettingsVC.m */; };
 		DC9C48AE181E471A00A92E20 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9C48AD181E471A00A92E20 /* MBProgressHUD.m */; };
+		DC9C48B2181E66F000A92E20 /* OTMPackageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9C48B1181E66F000A92E20 /* OTMPackageVC.m */; };
+		DC9C48B6181E76A100A92E20 /* OTMHistoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9C48B5181E76A100A92E20 /* OTMHistoryVC.m */; };
 		DCA2281D17672A8A008C33B5 /* OTMhelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA2281C17672A8A008C33B5 /* OTMhelper.m */; };
 		DCA2282117672C0C008C33B5 /* OTMLoginViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = DCA2281F17672C0C008C33B5 /* OTMLoginViewController.mm */; };
 		DCA2282517672C6F008C33B5 /* History.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA2282417672C6F008C33B5 /* History.m */; };
@@ -333,6 +335,10 @@
 		DC9C48AA181E438700A92E20 /* OTMSettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTMSettingsVC.m; sourceTree = "<group>"; };
 		DC9C48AC181E471A00A92E20 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		DC9C48AD181E471A00A92E20 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		DC9C48B0181E66F000A92E20 /* OTMPackageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTMPackageVC.h; sourceTree = "<group>"; };
+		DC9C48B1181E66F000A92E20 /* OTMPackageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTMPackageVC.m; sourceTree = "<group>"; };
+		DC9C48B4181E76A100A92E20 /* OTMHistoryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTMHistoryVC.h; sourceTree = "<group>"; };
+		DC9C48B5181E76A100A92E20 /* OTMHistoryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTMHistoryVC.m; sourceTree = "<group>"; };
 		DCA2281B17672A8A008C33B5 /* OTMhelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTMhelper.h; sourceTree = "<group>"; };
 		DCA2281C17672A8A008C33B5 /* OTMhelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTMhelper.m; sourceTree = "<group>"; };
 		DCA2281E17672C0C008C33B5 /* OTMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTMLoginViewController.h; sourceTree = "<group>"; };
@@ -750,6 +756,8 @@
 		DC1102B41761AEBE00F3CCFF /* MED */ = {
 			isa = PBXGroup;
 			children = (
+				DC9C48B3181E768700A92E20 /* History */,
+				DC9C48AF181E66D200A92E20 /* Package */,
 				DC9C48A8181E436600A92E20 /* Settings */,
 				DC9C48A7181E350600A92E20 /* Schedule */,
 				DC9C48A3181E32F600A92E20 /* Medications */,
@@ -842,6 +850,24 @@
 				DC9C48AA181E438700A92E20 /* OTMSettingsVC.m */,
 			);
 			name = Settings;
+			sourceTree = "<group>";
+		};
+		DC9C48AF181E66D200A92E20 /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				DC9C48B0181E66F000A92E20 /* OTMPackageVC.h */,
+				DC9C48B1181E66F000A92E20 /* OTMPackageVC.m */,
+			);
+			name = Package;
+			sourceTree = "<group>";
+		};
+		DC9C48B3181E768700A92E20 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				DC9C48B4181E76A100A92E20 /* OTMHistoryVC.h */,
+				DC9C48B5181E76A100A92E20 /* OTMHistoryVC.m */,
+			);
+			name = History;
 			sourceTree = "<group>";
 		};
 		DCA2282C17672C75008C33B5 /* Model */ = {
@@ -965,11 +991,13 @@
 				3CAB01751750421400FC6CC1 /* ScaleXY.cpp in Sources */,
 				3CAB01761750421400FC6CC1 /* Sobel.cpp in Sources */,
 				3CAB01771750421400FC6CC1 /* SparseMat.cpp in Sources */,
+				DC9C48B2181E66F000A92E20 /* OTMPackageVC.m in Sources */,
 				DC6C731C17D9AFC4004F012B /* CKCalendarView.m in Sources */,
 				3CAB01781750421400FC6CC1 /* thining.cpp in Sources */,
 				3CAB01791750421400FC6CC1 /* Thresh.cpp in Sources */,
 				3CAB017A1750421400FC6CC1 /* TriangleModel.cpp in Sources */,
 				3CAB017B1750421400FC6CC1 /* Warping.cpp in Sources */,
+				DC9C48B6181E76A100A92E20 /* OTMHistoryVC.m in Sources */,
 				3CB09E4517536F8C0030499A /* PackageInfo.cpp in Sources */,
 				3CC51CE6175489EF00D6BCFA /* MainViewController.mm in Sources */,
 				3CF399951759675300BC5B75 /* CaptureScreenViewController.mm in Sources */,
@@ -1087,8 +1115,8 @@
 				CLANG_WARN_ENUM_CONVERSION = NO;
 				CLANG_WARN_INT_CONVERSION = NO;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Sergey Dikarev (M4J98HRQR2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sergey Dikarev (M4J98HRQR2)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sergey Dikarev (A2KE4XLMNK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sergey Dikarev (A2KE4XLMNK)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -1123,8 +1151,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRELINK_LIBS = "-lcvlibbase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "C14F1299-DE2D-4A62-9A82-97086AFEC3D1";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C14F1299-DE2D-4A62-9A82-97086AFEC3D1";
+				PROVISIONING_PROFILE = "93D23BCE-68D6-403C-8DBF-C3FB5B5F497C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "93D23BCE-68D6-403C-8DBF-C3FB5B5F497C";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
@@ -1143,8 +1171,8 @@
 				CLANG_WARN_ENUM_CONVERSION = NO;
 				CLANG_WARN_INT_CONVERSION = NO;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Sergey Dikarev (M4J98HRQR2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sergey Dikarev (M4J98HRQR2)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sergey Dikarev (A2KE4XLMNK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sergey Dikarev (A2KE4XLMNK)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -1175,8 +1203,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRELINK_LIBS = "-lcvlibbase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "C14F1299-DE2D-4A62-9A82-97086AFEC3D1";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C14F1299-DE2D-4A62-9A82-97086AFEC3D1";
+				PROVISIONING_PROFILE = "93D23BCE-68D6-403C-8DBF-C3FB5B5F497C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "93D23BCE-68D6-403C-8DBF-C3FB5B5F497C";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;

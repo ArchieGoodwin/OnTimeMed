@@ -27,7 +27,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="str-Bq-nGU">
-                    <rect key="frame" x="20" y="20" width="100" height="30"/>
+                    <rect key="frame" x="110" y="301" width="100" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Cancel">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -41,13 +41,53 @@
 }
 
 
--(void)startPackage:(MedPackage *)package
+-(NSString *)returnEvent:(NSInteger)eventType
+{
+    
+
+    switch (eventType) {
+        case EVENTRegisterUserOnDevice:
+            return @"User logged in";
+        case EVENTPullPrescriptionData:
+            return @"Medication info received from server";
+        case EVENTTakeMedication:
+            return @"Medication taking";
+        case EVENTScanBarcode:
+            return @"Bar code scanned";
+        case EVENTTakePictureBefore:
+            return @"Picture taken before start medication";
+        case EVENTTakePictureAfter:
+            return @"Picture taken after start medication";
+        case EVENTSkipMedication:
+            return @"Medication skipped";
+        case EVENTSetMedicationScheduleStartTime:
+            return @"Medication started. Start time set";
+        case EVENTSetMedicationScheduleStopTime:
+            return @"Medication stopped. Start time set";
+        case EVENTHitSnooze:
+            return @"Medication snoozed";
+        case EVENTUsageWarning:
+            return @"Usage warning";
+        case EVENTDeviceAlarmTakeMed:
+            return @"Medication taken after alarm";
+        case EVENTDeviceAlarmNotTakeMed:
+            return @"Medication not taken after alarm";
+        case EVENTDeviceAlarmWrongMedScanned:
+            return @"Wrong medication scanned";
+        case EVENTDeviceAlarmBadImage:
+            return @"Bad image scanned";
+        default:
+            break;
+    }
+}
+
+-(void)startPackage:(MedPackage *)package completionBlock:(HelperResult)completionBlock
 {
     switch ([package.status integerValue]) {
         case PS_opened:
         {
             
-                [[OTMhelper sharedInstance] createNotifications:[NSDate date] package:package completeBlock:^(BOOL result, NSError *error) {
+                [self createNotifications:[NSDate date] package:package completeBlock:^(BOOL result, NSError *error) {
                     
                     package.status = [NSNumber numberWithInt:PS_used];
                     [MedPackage saveDefaultContext];
@@ -56,23 +96,21 @@
                         if(result)
                         {
                             NSLog(@"EVENTSetMedicationScheduleStartTime sent");
-                            
+                            completionBlock(YES, nil);
                         }
                         else
                         {
-                            dispatch_async(dispatch_get_main_queue(),^{
+                           /* dispatch_async(dispatch_get_main_queue(),^{
                                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:error.description delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
                                 [alert show];
                                 
-                            });
+                            });*/
+                            
+                           completionBlock(NO, error);
                         }
                     }];
                     
-                    dispatch_async(dispatch_get_main_queue(),^{
-                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert!" message:[NSString stringWithFormat:@"Package with %@ started!", package.medicationname] delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-                        [alert show];
-                        
-                    });
+                   
                 }];
                 
                 
@@ -178,15 +216,15 @@
     [MedPackage saveDefaultContext];
     //ExtractPackAppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
     //[appDelegate clearNotifications];
-    [[UIApplication sharedApplication] setApplicationIconBadgeNumber: 1];
-    [[UIApplication sharedApplication] setApplicationIconBadgeNumber: 0];
-    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    //[[UIApplication sharedApplication] setApplicationIconBadgeNumber: 1];
+    //[[UIApplication sharedApplication] setApplicationIconBadgeNumber: 0];
+    //[[UIApplication sharedApplication] cancelAllLocalNotifications];
     
     
        
     NSMutableArray *daysArr = [self getMedicationdates:package date:date];
     
-    for(int i = 0; i < daysArr.count; i++)
+    for(int i = 1; i < daysArr.count; i++)
     {
         /*NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
 
@@ -207,7 +245,7 @@
         NSDate *itemDate = [calendar dateFromComponents:dateComps];*/
 
 
-        
+
         UILocalNotification *localNotif = [[UILocalNotification alloc] init];
         if (localNotif == nil)
             return;

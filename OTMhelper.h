@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MEDNetworkHelper.h"
 @class User;
 @class MedPackage;
 
@@ -22,4 +23,6 @@ typedef void (^HelperResult)  (BOOL result, NSError *error);
 -(void)createNotifications:(NSDate *)date package:(MedPackage *)package completeBlock:(HelperResult)completeBlock;
 -(NSMutableArray *)getMedicationdates:(MedPackage *)package date:(NSDate *)date;
 -(void)deleteAll;
+-(void)startPackage:(MedPackage *)package completionBlock:(HelperResult)completionBlock;
+-(NSString *)returnEvent:(NSInteger)eventType;
 @end

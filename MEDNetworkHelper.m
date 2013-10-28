@@ -11,6 +11,7 @@
 #import "User.h"
 #import "NSManagedObject+NWCoreDataHelper.h"
 #import "OTMhelper.h"
+#import "History.h"
 @implementation MEDNetworkHelper
 
 
@@ -149,6 +150,14 @@
     [client postPath:@"Log" parameters:arr success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         NSLog(@"postEvent %@", [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]);
+        
+        History *historyEvent = [History createEntityInContext];
+        historyEvent.packageId = [NSNumber numberWithInt:packageid];
+        historyEvent.date = [NSDate date];
+        historyEvent.event = [NSNumber numberWithInt:eventType];
+        historyEvent.userId = [[OTMhelper sharedInstance] getCurrentUser].userId;
+        [History saveDefaultContext];
+        
         completionBlock(YES, nil);
 
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

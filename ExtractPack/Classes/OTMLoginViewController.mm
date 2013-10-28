@@ -84,6 +84,12 @@
             {
                 if(result)
                 {
+                    
+                    [[MEDNetworkHelper sharedInstance] postEvent:EVENTRegisterUserOnDevice packageid:0 completionBlock:^(BOOL result, NSError *error) {
+                        
+                    }];
+                    
+                    
                     user.userId = [NSString stringWithFormat:@"%@",[result objectForKey:@"Id"]];
                     user.name = [result objectForKey:@"Name"];
                     [[NSUserDefaults standardUserDefaults] setObject:@"done" forKey:@"login"];

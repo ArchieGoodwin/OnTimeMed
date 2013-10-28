@@ -104,6 +104,8 @@
         [view removeFromSuperview];
     }
     
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    
     UIViewController* initialScene = [_initalStoryboard instantiateInitialViewController];
     self.window.rootViewController = initialScene;
 }

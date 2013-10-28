@@ -15,6 +15,7 @@
 #import "MEDNetworkHelper.h"
 #import "MainViewController.h"
 #import "MBProgressHUD.h"
+#import "OTMPackageVC.h"
 @interface OTMMedicationsVC ()
 {
      NSArray *packages;
@@ -46,7 +47,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkBarcodeOnServer:) name:@"checkBarcodeOnServer" object:nil];
 
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(getPackages)];
+    //self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(getPackages)];
 
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPackage)];
@@ -59,6 +60,8 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    [self getPackages];
     
     [UIView animateWithDuration:0.4 animations:^{
         
@@ -277,6 +280,9 @@
     
     MedPackage *p = [packages objectAtIndex:indexPath.row];
     
+    
+    [self performSegueWithIdentifier:@"ShowPackage" sender:p];
+    
     /*MEDAddEditPrescriptionViewController *controller = [[MEDAddEditPrescriptionViewController alloc] init];
     controller.isNew = NO;
     controller.package = p;
@@ -286,7 +292,15 @@
 }
 
 
-
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"ShowPackage"])
+    {
+        MedPackage *pack = (MedPackage *)sender;
+        OTMPackageVC *controller = (OTMPackageVC *)segue.destinationViewController;
+        controller.package = pack;
+    }
+}
 
 - (void)didReceiveMemoryWarning
 {
