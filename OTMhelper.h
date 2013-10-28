@@ -21,4 +21,5 @@ typedef void (^HelperResult)  (BOOL result, NSError *error);
 -(MedPackage *)createPackage:(NSDictionary *)dict;
 -(void)createNotifications:(NSDate *)date package:(MedPackage *)package completeBlock:(HelperResult)completeBlock;
 -(NSMutableArray *)getMedicationdates:(MedPackage *)package date:(NSDate *)date;
+-(void)deleteAll;
 @end

@@ -29,6 +29,8 @@ enum {
 	IBOutlet MainViewController *mainViewController;
     UIWindow *window;
 }
+@property (nonatomic, strong) UIStoryboard *initalStoryboard;
+
 @property (nonatomic, strong) IBOutlet UIWindow *window;
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
@@ -41,5 +43,6 @@ enum {
 - (void)	toggleView: (id) sender nVMode:(int)nVMode nState: (int) nState;
 -(void)showCapture;
 -(void)clearNotifications;
+- (void)resetWindowToInitialView;
 @end
 

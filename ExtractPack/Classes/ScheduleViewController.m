@@ -43,15 +43,20 @@
     
     for(MedPackage *package in _packages)
     {
-        NSMutableArray *dosesDates = [[OTMhelper sharedInstance] getMedicationdates:package date:package.startdate];
         
-        for(NSDate *date in dosesDates)
+        if(package.startdate != nil)
         {
-            Schedule *sc = [[Schedule alloc] init];
-            sc.date = date;
-            sc.package = package;
-            [temp addObject:sc];
+            NSMutableArray *dosesDates = [[OTMhelper sharedInstance] getMedicationdates:package date:package.startdate];
+            
+            for(NSDate *date in dosesDates)
+            {
+                Schedule *sc = [[Schedule alloc] init];
+                sc.date = date;
+                sc.package = package;
+                [temp addObject:sc];
+            }
         }
+        
     }
     
     NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
@@ -81,7 +86,7 @@
     calendar.onlyShowCurrentMonth = NO;
     calendar.adaptHeightToNumberOfWeeksInMonth = NO;
     
-    calendar.frame = CGRectMake(0, 60, 320, 217);
+    calendar.frame = CGRectMake(0, 20, 320, 217);
     
     [self.view addSubview:calendar];
 }

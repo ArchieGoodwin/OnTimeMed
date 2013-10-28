@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "MainViewController.h"
-#import "UIViewController+MMDrawerController.h"
 
 @interface ExtractPackViewController : UIViewController <ZBarReaderDelegate, ZBarReaderViewDelegate >
 {

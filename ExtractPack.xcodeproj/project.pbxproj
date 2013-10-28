@@ -48,7 +48,6 @@
 		3CE76614171CEE4A00CD3948 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE76613171CEE4A00CD3948 /* libz.dylib */; };
 		3CF39992175966A400BC5B75 /* CaptureScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF39991175966A400BC5B75 /* CaptureScreenViewController.xib */; };
 		3CF399951759675300BC5B75 /* CaptureScreenViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3CF399941759675300BC5B75 /* CaptureScreenViewController.mm */; };
-		3CFE0FA617552F1800EF012A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CFE0FA417552F1800EF012A /* MainWindow.xib */; };
 		3CFE28A5170C25C60099960D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CFE28A4170C25C60099960D /* Default-568h@2x.png */; };
 		BDA485C716DFA5CE00E23456 /* CaptureViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BDA485C516DFA5CE00E23456 /* CaptureViewController.mm */; };
 		BDA485C816DFA5CE00E23456 /* CaptureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDA485C616DFA5CE00E23456 /* CaptureViewController.xib */; };
@@ -72,57 +71,10 @@
 		BDAED11116D007B000D220F7 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAED11016D007B000D220F7 /* libiconv.dylib */; };
 		BDAED11316D007FE00D220F7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAED11216D007FE00D220F7 /* AVFoundation.framework */; };
 		BDAED11516D0080B00D220F7 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAED11416D0080B00D220F7 /* CoreFoundation.framework */; };
-		DC11022B1761ADE900F3CCFF /* BPBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102281761ADE900F3CCFF /* BPBarButtonItem.m */; };
 		DC11022C1761ADE900F3CCFF /* NSManagedObject+NWCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11022A1761ADE900F3CCFF /* NSManagedObject+NWCoreDataHelper.m */; };
 		DC1102331761AE0D00F3CCFF /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC11022F1761AE0D00F3CCFF /* libTestFlight.a */; };
 		DC1102341761AE0D00F3CCFF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DC1102301761AE0D00F3CCFF /* README.md */; };
 		DC1102351761AE0D00F3CCFF /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = DC1102311761AE0D00F3CCFF /* release_notes.md */; };
-		DC11026E1761AE3B00F3CCFF /* FKBadgeField.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102391761AE3B00F3CCFF /* FKBadgeField.m */; };
-		DC11026F1761AE3B00F3CCFF /* FKButtonField.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11023B1761AE3B00F3CCFF /* FKButtonField.m */; };
-		DC1102701761AE3B00F3CCFF /* FKDisclosureIndicatorAccessoryField.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11023D1761AE3B00F3CCFF /* FKDisclosureIndicatorAccessoryField.m */; };
-		DC1102711761AE3B00F3CCFF /* FKFloatField.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102421761AE3B00F3CCFF /* FKFloatField.m */; };
-		DC1102721761AE3B00F3CCFF /* FKImageField.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102441761AE3B00F3CCFF /* FKImageField.m */; };
-		DC1102731761AE3B00F3CCFF /* FKIntegerField.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102461761AE3B00F3CCFF /* FKIntegerField.m */; };
-		DC1102741761AE3B00F3CCFF /* FKLabelField.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102481761AE3B00F3CCFF /* FKLabelField.m */; };
-		DC1102751761AE3B00F3CCFF /* FKPasswordTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11024A1761AE3B00F3CCFF /* FKPasswordTextField.m */; };
-		DC1102761761AE3B00F3CCFF /* FKSaveButtonField.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11024C1761AE3B00F3CCFF /* FKSaveButtonField.m */; };
-		DC1102771761AE3B00F3CCFF /* FKSimpleField.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11024E1761AE3B00F3CCFF /* FKSimpleField.m */; };
-		DC1102781761AE3B00F3CCFF /* FKSliderField.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102501761AE3B00F3CCFF /* FKSliderField.m */; };
-		DC1102791761AE3B00F3CCFF /* FKSwitchField.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102521761AE3B00F3CCFF /* FKSwitchField.m */; };
-		DC11027A1761AE3B00F3CCFF /* FKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102541761AE3B00F3CCFF /* FKTextField.m */; };
-		DC11027B1761AE3B00F3CCFF /* FKTextViewField.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102561761AE3B00F3CCFF /* FKTextViewField.m */; };
-		DC11027C1761AE3B00F3CCFF /* FKValueViewField.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102581761AE3B00F3CCFF /* FKValueViewField.m */; };
-		DC11027D1761AE3B00F3CCFF /* FKFormAttributeMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11025B1761AE3B00F3CCFF /* FKFormAttributeMapping.m */; };
-		DC11027E1761AE3B00F3CCFF /* FKFormAttributeValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11025D1761AE3B00F3CCFF /* FKFormAttributeValidation.m */; };
-		DC11027F1761AE3B00F3CCFF /* FKFormMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11025F1761AE3B00F3CCFF /* FKFormMapper.m */; };
-		DC1102801761AE3B00F3CCFF /* FKFormMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102611761AE3B00F3CCFF /* FKFormMapping.m */; };
-		DC1102811761AE3B00F3CCFF /* FKFormModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102631761AE3B00F3CCFF /* FKFormModel.m */; };
-		DC1102821761AE3B00F3CCFF /* FKSectionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102661761AE3B00F3CCFF /* FKSectionObject.m */; };
-		DC1102831761AE3B00F3CCFF /* NSObject+FKFormAttributeMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102691761AE3B00F3CCFF /* NSObject+FKFormAttributeMapping.m */; };
-		DC1102841761AE3B00F3CCFF /* UITableViewCell+FormKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11026B1761AE3B00F3CCFF /* UITableViewCell+FormKit.m */; };
-		DC1102851761AE3B00F3CCFF /* UIView+FormKit.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11026D1761AE3B00F3CCFF /* UIView+FormKit.m */; };
-		DC11028F1761AE6D00F3CCFF /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102881761AE6D00F3CCFF /* MMDrawerBarButtonItem.m */; };
-		DC1102901761AE6D00F3CCFF /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11028A1761AE6D00F3CCFF /* MMDrawerController.m */; };
-		DC1102911761AE6D00F3CCFF /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11028C1761AE6D00F3CCFF /* MMDrawerVisualState.m */; };
-		DC1102921761AE6D00F3CCFF /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11028E1761AE6D00F3CCFF /* UIViewController+MMDrawerController.m */; };
-		DC1102961761AE8200F3CCFF /* MEDDrawerVisualStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102941761AE8200F3CCFF /* MEDDrawerVisualStateManager.m */; };
-		DC1102AC1761AE9C00F3CCFF /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11029A1761AE9C00F3CCFF /* AbstractActionSheetPicker.m */; };
-		DC1102AD1761AE9C00F3CCFF /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11029C1761AE9C00F3CCFF /* ActionSheetCustomPicker.m */; };
-		DC1102AE1761AE9C00F3CCFF /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11029F1761AE9C00F3CCFF /* ActionSheetDatePicker.m */; };
-		DC1102AF1761AE9C00F3CCFF /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102A11761AE9C00F3CCFF /* ActionSheetDistancePicker.m */; };
-		DC1102B01761AE9C00F3CCFF /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102A31761AE9C00F3CCFF /* ActionSheetStringPicker.m */; };
-		DC1102B11761AE9C00F3CCFF /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102A51761AE9C00F3CCFF /* DistancePickerView.m */; };
-		DC1102B21761AE9C00F3CCFF /* BWLongTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102A81761AE9C00F3CCFF /* BWLongTextViewController.m */; };
-		DC1102B31761AE9C00F3CCFF /* BWSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102AB1761AE9C00F3CCFF /* BWSelectViewController.m */; };
-		DC1102BF1761AED200F3CCFF /* MEDCenterTableViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC1102B61761AED200F3CCFF /* MEDCenterTableViewController.mm */; };
-		DC1102C01761AED200F3CCFF /* MEDSideDrawerViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC1102B81761AED200F3CCFF /* MEDSideDrawerViewController.mm */; };
-		DC1102C11761AED200F3CCFF /* MEDLeftSideDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102BA1761AED200F3CCFF /* MEDLeftSideDrawerViewController.m */; };
-		DC1102C21761AED200F3CCFF /* MEDRightSideDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102BC1761AED200F3CCFF /* MEDRightSideDrawerViewController.m */; };
-		DC1102C31761AED200F3CCFF /* MEDAddEditPrescriptionViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC1102BE1761AED200F3CCFF /* MEDAddEditPrescriptionViewController.mm */; };
-		DC1102CD1761AEEF00F3CCFF /* MEDTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102C61761AEEF00F3CCFF /* MEDTableViewCell.m */; };
-		DC1102CE1761AEEF00F3CCFF /* MEDSideDrawerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102C81761AEEF00F3CCFF /* MEDSideDrawerTableViewCell.m */; };
-		DC1102CF1761AEEF00F3CCFF /* MEDCenterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102CA1761AEEF00F3CCFF /* MEDCenterTableViewCell.m */; };
-		DC1102D01761AEEF00F3CCFF /* MEDSideDrawerSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102CC1761AEEF00F3CCFF /* MEDSideDrawerSectionHeaderView.m */; };
 		DC1102D41761AFEB00F3CCFF /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC1102D21761AFEB00F3CCFF /* Model.xcdatamodeld */; };
 		DC1102D61761B04000F3CCFF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1102D51761B04000F3CCFF /* CoreData.framework */; };
 		DC1102E91761FDE700F3CCFF /* MEDNetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102E81761FDE700F3CCFF /* MEDNetworkHelper.m */; };
@@ -139,15 +91,17 @@
 		DC6C731C17D9AFC4004F012B /* CKCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6C731B17D9AFC4004F012B /* CKCalendarView.m */; };
 		DC9C489C181D273B00A92E20 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC9C489B181D273B00A92E20 /* Images.xcassets */; };
 		DC9C489E181D29E600A92E20 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC9C489D181D29E600A92E20 /* Storyboard.storyboard */; };
+		DC9C48A2181E27AB00A92E20 /* OTMTabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9C48A1181E27AB00A92E20 /* OTMTabbarVC.m */; };
+		DC9C48A6181E339A00A92E20 /* OTMMedicationsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9C48A5181E339A00A92E20 /* OTMMedicationsVC.m */; };
+		DC9C48AB181E438700A92E20 /* OTMSettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9C48AA181E438700A92E20 /* OTMSettingsVC.m */; };
+		DC9C48AE181E471A00A92E20 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9C48AD181E471A00A92E20 /* MBProgressHUD.m */; };
 		DCA2281D17672A8A008C33B5 /* OTMhelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA2281C17672A8A008C33B5 /* OTMhelper.m */; };
 		DCA2282117672C0C008C33B5 /* OTMLoginViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = DCA2281F17672C0C008C33B5 /* OTMLoginViewController.mm */; };
-		DCA2282217672C0C008C33B5 /* OTMLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA2282017672C0C008C33B5 /* OTMLoginViewController.xib */; };
 		DCA2282517672C6F008C33B5 /* History.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA2282417672C6F008C33B5 /* History.m */; };
 		DCA2282817672C6F008C33B5 /* MedPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA2282717672C6F008C33B5 /* MedPackage.m */; };
 		DCA2282B17672C6F008C33B5 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA2282A17672C6F008C33B5 /* User.m */; };
 		DCC02B9F17D99C3D002954E6 /* NSDate-Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC02B9E17D99C3D002954E6 /* NSDate-Utilities.m */; };
 		DCC02BA317D9A903002954E6 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC02BA117D9A903002954E6 /* ScheduleViewController.m */; };
-		DCC02BA417D9A903002954E6 /* ScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCC02BA217D9A903002954E6 /* ScheduleViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -283,7 +237,6 @@
 		3CF39991175966A400BC5B75 /* CaptureScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CaptureScreenViewController.xib; sourceTree = "<group>"; };
 		3CF399931759675300BC5B75 /* CaptureScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureScreenViewController.h; sourceTree = "<group>"; };
 		3CF399941759675300BC5B75 /* CaptureScreenViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CaptureScreenViewController.mm; sourceTree = "<group>"; };
-		3CFE0FA417552F1800EF012A /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainWindow.xib; path = ExtractPack/MainWindow.xib; sourceTree = SOURCE_ROOT; };
 		3CFE28A4170C25C60099960D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BDA485C416DFA5CE00E23456 /* CaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureViewController.h; sourceTree = "<group>"; };
 		BDA485C516DFA5CE00E23456 /* CaptureViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CaptureViewController.mm; sourceTree = "<group>"; };
@@ -333,113 +286,12 @@
 		BDAED11016D007B000D220F7 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		BDAED11216D007FE00D220F7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		BDAED11416D0080B00D220F7 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		DC1102271761ADE900F3CCFF /* BPBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPBarButtonItem.h; sourceTree = "<group>"; };
-		DC1102281761ADE900F3CCFF /* BPBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPBarButtonItem.m; sourceTree = "<group>"; };
 		DC1102291761ADE900F3CCFF /* NSManagedObject+NWCoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+NWCoreDataHelper.h"; sourceTree = "<group>"; };
 		DC11022A1761ADE900F3CCFF /* NSManagedObject+NWCoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+NWCoreDataHelper.m"; sourceTree = "<group>"; };
 		DC11022F1761AE0D00F3CCFF /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		DC1102301761AE0D00F3CCFF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		DC1102311761AE0D00F3CCFF /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
 		DC1102321761AE0D00F3CCFF /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
-		DC1102381761AE3B00F3CCFF /* FKBadgeField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKBadgeField.h; sourceTree = "<group>"; };
-		DC1102391761AE3B00F3CCFF /* FKBadgeField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKBadgeField.m; sourceTree = "<group>"; };
-		DC11023A1761AE3B00F3CCFF /* FKButtonField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKButtonField.h; sourceTree = "<group>"; };
-		DC11023B1761AE3B00F3CCFF /* FKButtonField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKButtonField.m; sourceTree = "<group>"; };
-		DC11023C1761AE3B00F3CCFF /* FKDisclosureIndicatorAccessoryField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKDisclosureIndicatorAccessoryField.h; sourceTree = "<group>"; };
-		DC11023D1761AE3B00F3CCFF /* FKDisclosureIndicatorAccessoryField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKDisclosureIndicatorAccessoryField.m; sourceTree = "<group>"; };
-		DC11023E1761AE3B00F3CCFF /* FKFieldErrorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKFieldErrorProtocol.h; sourceTree = "<group>"; };
-		DC11023F1761AE3B00F3CCFF /* FKFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKFields.h; sourceTree = "<group>"; };
-		DC1102401761AE3B00F3CCFF /* FKFieldsBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKFieldsBlocks.h; sourceTree = "<group>"; };
-		DC1102411761AE3B00F3CCFF /* FKFloatField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKFloatField.h; sourceTree = "<group>"; };
-		DC1102421761AE3B00F3CCFF /* FKFloatField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKFloatField.m; sourceTree = "<group>"; };
-		DC1102431761AE3B00F3CCFF /* FKImageField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKImageField.h; sourceTree = "<group>"; };
-		DC1102441761AE3B00F3CCFF /* FKImageField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKImageField.m; sourceTree = "<group>"; };
-		DC1102451761AE3B00F3CCFF /* FKIntegerField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKIntegerField.h; sourceTree = "<group>"; };
-		DC1102461761AE3B00F3CCFF /* FKIntegerField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKIntegerField.m; sourceTree = "<group>"; };
-		DC1102471761AE3B00F3CCFF /* FKLabelField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLabelField.h; sourceTree = "<group>"; };
-		DC1102481761AE3B00F3CCFF /* FKLabelField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLabelField.m; sourceTree = "<group>"; };
-		DC1102491761AE3B00F3CCFF /* FKPasswordTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKPasswordTextField.h; sourceTree = "<group>"; };
-		DC11024A1761AE3B00F3CCFF /* FKPasswordTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKPasswordTextField.m; sourceTree = "<group>"; };
-		DC11024B1761AE3B00F3CCFF /* FKSaveButtonField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKSaveButtonField.h; sourceTree = "<group>"; };
-		DC11024C1761AE3B00F3CCFF /* FKSaveButtonField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKSaveButtonField.m; sourceTree = "<group>"; };
-		DC11024D1761AE3B00F3CCFF /* FKSimpleField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKSimpleField.h; sourceTree = "<group>"; };
-		DC11024E1761AE3B00F3CCFF /* FKSimpleField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKSimpleField.m; sourceTree = "<group>"; };
-		DC11024F1761AE3B00F3CCFF /* FKSliderField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKSliderField.h; sourceTree = "<group>"; };
-		DC1102501761AE3B00F3CCFF /* FKSliderField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKSliderField.m; sourceTree = "<group>"; };
-		DC1102511761AE3B00F3CCFF /* FKSwitchField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKSwitchField.h; sourceTree = "<group>"; };
-		DC1102521761AE3B00F3CCFF /* FKSwitchField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKSwitchField.m; sourceTree = "<group>"; };
-		DC1102531761AE3B00F3CCFF /* FKTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKTextField.h; sourceTree = "<group>"; };
-		DC1102541761AE3B00F3CCFF /* FKTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKTextField.m; sourceTree = "<group>"; };
-		DC1102551761AE3B00F3CCFF /* FKTextViewField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKTextViewField.h; sourceTree = "<group>"; };
-		DC1102561761AE3B00F3CCFF /* FKTextViewField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKTextViewField.m; sourceTree = "<group>"; };
-		DC1102571761AE3B00F3CCFF /* FKValueViewField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKValueViewField.h; sourceTree = "<group>"; };
-		DC1102581761AE3B00F3CCFF /* FKValueViewField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKValueViewField.m; sourceTree = "<group>"; };
-		DC1102591761AE3B00F3CCFF /* FKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKBlocks.h; sourceTree = "<group>"; };
-		DC11025A1761AE3B00F3CCFF /* FKFormAttributeMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKFormAttributeMapping.h; sourceTree = "<group>"; };
-		DC11025B1761AE3B00F3CCFF /* FKFormAttributeMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKFormAttributeMapping.m; sourceTree = "<group>"; };
-		DC11025C1761AE3B00F3CCFF /* FKFormAttributeValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKFormAttributeValidation.h; sourceTree = "<group>"; };
-		DC11025D1761AE3B00F3CCFF /* FKFormAttributeValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKFormAttributeValidation.m; sourceTree = "<group>"; };
-		DC11025E1761AE3B00F3CCFF /* FKFormMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKFormMapper.h; sourceTree = "<group>"; };
-		DC11025F1761AE3B00F3CCFF /* FKFormMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKFormMapper.m; sourceTree = "<group>"; };
-		DC1102601761AE3B00F3CCFF /* FKFormMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKFormMapping.h; sourceTree = "<group>"; };
-		DC1102611761AE3B00F3CCFF /* FKFormMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKFormMapping.m; sourceTree = "<group>"; };
-		DC1102621761AE3B00F3CCFF /* FKFormModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKFormModel.h; sourceTree = "<group>"; };
-		DC1102631761AE3B00F3CCFF /* FKFormModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKFormModel.m; sourceTree = "<group>"; };
-		DC1102641761AE3B00F3CCFF /* FKMacrosDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKMacrosDefinitions.h; sourceTree = "<group>"; };
-		DC1102651761AE3B00F3CCFF /* FKSectionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKSectionObject.h; sourceTree = "<group>"; };
-		DC1102661761AE3B00F3CCFF /* FKSectionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKSectionObject.m; sourceTree = "<group>"; };
-		DC1102671761AE3B00F3CCFF /* FormKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormKit.h; sourceTree = "<group>"; };
-		DC1102681761AE3B00F3CCFF /* NSObject+FKFormAttributeMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FKFormAttributeMapping.h"; sourceTree = "<group>"; };
-		DC1102691761AE3B00F3CCFF /* NSObject+FKFormAttributeMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FKFormAttributeMapping.m"; sourceTree = "<group>"; };
-		DC11026A1761AE3B00F3CCFF /* UITableViewCell+FormKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+FormKit.h"; sourceTree = "<group>"; };
-		DC11026B1761AE3B00F3CCFF /* UITableViewCell+FormKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+FormKit.m"; sourceTree = "<group>"; };
-		DC11026C1761AE3B00F3CCFF /* UIView+FormKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FormKit.h"; sourceTree = "<group>"; };
-		DC11026D1761AE3B00F3CCFF /* UIView+FormKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FormKit.m"; sourceTree = "<group>"; };
-		DC1102871761AE6C00F3CCFF /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
-		DC1102881761AE6D00F3CCFF /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
-		DC1102891761AE6D00F3CCFF /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
-		DC11028A1761AE6D00F3CCFF /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
-		DC11028B1761AE6D00F3CCFF /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
-		DC11028C1761AE6D00F3CCFF /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
-		DC11028D1761AE6D00F3CCFF /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
-		DC11028E1761AE6D00F3CCFF /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
-		DC1102941761AE8200F3CCFF /* MEDDrawerVisualStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDDrawerVisualStateManager.m; sourceTree = "<group>"; };
-		DC1102951761AE8200F3CCFF /* MEDDrawerVisualStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDDrawerVisualStateManager.h; sourceTree = "<group>"; };
-		DC1102991761AE9C00F3CCFF /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractActionSheetPicker.h; sourceTree = "<group>"; };
-		DC11029A1761AE9C00F3CCFF /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractActionSheetPicker.m; sourceTree = "<group>"; };
-		DC11029B1761AE9C00F3CCFF /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPicker.h; sourceTree = "<group>"; };
-		DC11029C1761AE9C00F3CCFF /* ActionSheetCustomPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetCustomPicker.m; sourceTree = "<group>"; };
-		DC11029D1761AE9C00F3CCFF /* ActionSheetCustomPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPickerDelegate.h; sourceTree = "<group>"; };
-		DC11029E1761AE9C00F3CCFF /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetDatePicker.h; sourceTree = "<group>"; };
-		DC11029F1761AE9C00F3CCFF /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDatePicker.m; sourceTree = "<group>"; };
-		DC1102A01761AE9C00F3CCFF /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetDistancePicker.h; sourceTree = "<group>"; };
-		DC1102A11761AE9C00F3CCFF /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDistancePicker.m; sourceTree = "<group>"; };
-		DC1102A21761AE9C00F3CCFF /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetStringPicker.h; sourceTree = "<group>"; };
-		DC1102A31761AE9C00F3CCFF /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetStringPicker.m; sourceTree = "<group>"; };
-		DC1102A41761AE9C00F3CCFF /* DistancePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistancePickerView.h; sourceTree = "<group>"; };
-		DC1102A51761AE9C00F3CCFF /* DistancePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistancePickerView.m; sourceTree = "<group>"; };
-		DC1102A71761AE9C00F3CCFF /* BWLongTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWLongTextViewController.h; sourceTree = "<group>"; };
-		DC1102A81761AE9C00F3CCFF /* BWLongTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWLongTextViewController.m; sourceTree = "<group>"; };
-		DC1102AA1761AE9C00F3CCFF /* BWSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWSelectViewController.h; sourceTree = "<group>"; };
-		DC1102AB1761AE9C00F3CCFF /* BWSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSelectViewController.m; sourceTree = "<group>"; };
-		DC1102B51761AED200F3CCFF /* MEDCenterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDCenterTableViewController.h; sourceTree = "<group>"; };
-		DC1102B61761AED200F3CCFF /* MEDCenterTableViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MEDCenterTableViewController.mm; sourceTree = "<group>"; };
-		DC1102B71761AED200F3CCFF /* MEDSideDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDSideDrawerViewController.h; sourceTree = "<group>"; };
-		DC1102B81761AED200F3CCFF /* MEDSideDrawerViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MEDSideDrawerViewController.mm; sourceTree = "<group>"; };
-		DC1102B91761AED200F3CCFF /* MEDLeftSideDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDLeftSideDrawerViewController.h; sourceTree = "<group>"; };
-		DC1102BA1761AED200F3CCFF /* MEDLeftSideDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDLeftSideDrawerViewController.m; sourceTree = "<group>"; };
-		DC1102BB1761AED200F3CCFF /* MEDRightSideDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDRightSideDrawerViewController.h; sourceTree = "<group>"; };
-		DC1102BC1761AED200F3CCFF /* MEDRightSideDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDRightSideDrawerViewController.m; sourceTree = "<group>"; };
-		DC1102BD1761AED200F3CCFF /* MEDAddEditPrescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDAddEditPrescriptionViewController.h; sourceTree = "<group>"; };
-		DC1102BE1761AED200F3CCFF /* MEDAddEditPrescriptionViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MEDAddEditPrescriptionViewController.mm; sourceTree = "<group>"; };
-		DC1102C51761AEEF00F3CCFF /* MEDTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDTableViewCell.h; sourceTree = "<group>"; };
-		DC1102C61761AEEF00F3CCFF /* MEDTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDTableViewCell.m; sourceTree = "<group>"; };
-		DC1102C71761AEEF00F3CCFF /* MEDSideDrawerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDSideDrawerTableViewCell.h; sourceTree = "<group>"; };
-		DC1102C81761AEEF00F3CCFF /* MEDSideDrawerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDSideDrawerTableViewCell.m; sourceTree = "<group>"; };
-		DC1102C91761AEEF00F3CCFF /* MEDCenterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDCenterTableViewCell.h; sourceTree = "<group>"; };
-		DC1102CA1761AEEF00F3CCFF /* MEDCenterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDCenterTableViewCell.m; sourceTree = "<group>"; };
-		DC1102CB1761AEEF00F3CCFF /* MEDSideDrawerSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDSideDrawerSectionHeaderView.h; sourceTree = "<group>"; };
-		DC1102CC1761AEEF00F3CCFF /* MEDSideDrawerSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDSideDrawerSectionHeaderView.m; sourceTree = "<group>"; };
 		DC1102D31761AFEB00F3CCFF /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		DC1102D51761B04000F3CCFF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		DC1102E71761FDE700F3CCFF /* MEDNetworkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDNetworkHelper.h; sourceTree = "<group>"; };
@@ -473,11 +325,18 @@
 		DC76D87C17687360009ED71A /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
 		DC9C489B181D273B00A92E20 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DC9C489D181D29E600A92E20 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		DC9C48A0181E27AB00A92E20 /* OTMTabbarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTMTabbarVC.h; sourceTree = "<group>"; };
+		DC9C48A1181E27AB00A92E20 /* OTMTabbarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTMTabbarVC.m; sourceTree = "<group>"; };
+		DC9C48A4181E339A00A92E20 /* OTMMedicationsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTMMedicationsVC.h; sourceTree = "<group>"; };
+		DC9C48A5181E339A00A92E20 /* OTMMedicationsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTMMedicationsVC.m; sourceTree = "<group>"; };
+		DC9C48A9181E438700A92E20 /* OTMSettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTMSettingsVC.h; sourceTree = "<group>"; };
+		DC9C48AA181E438700A92E20 /* OTMSettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTMSettingsVC.m; sourceTree = "<group>"; };
+		DC9C48AC181E471A00A92E20 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		DC9C48AD181E471A00A92E20 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		DCA2281B17672A8A008C33B5 /* OTMhelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTMhelper.h; sourceTree = "<group>"; };
 		DCA2281C17672A8A008C33B5 /* OTMhelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTMhelper.m; sourceTree = "<group>"; };
 		DCA2281E17672C0C008C33B5 /* OTMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTMLoginViewController.h; sourceTree = "<group>"; };
 		DCA2281F17672C0C008C33B5 /* OTMLoginViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OTMLoginViewController.mm; sourceTree = "<group>"; };
-		DCA2282017672C0C008C33B5 /* OTMLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OTMLoginViewController.xib; sourceTree = "<group>"; };
 		DCA2282317672C6F008C33B5 /* History.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = History.h; sourceTree = "<group>"; };
 		DCA2282417672C6F008C33B5 /* History.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = History.m; sourceTree = "<group>"; };
 		DCA2282617672C6F008C33B5 /* MedPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedPackage.h; sourceTree = "<group>"; };
@@ -488,7 +347,6 @@
 		DCC02B9E17D99C3D002954E6 /* NSDate-Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate-Utilities.m"; sourceTree = "<group>"; };
 		DCC02BA017D9A903002954E6 /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
 		DCC02BA117D9A903002954E6 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
-		DCC02BA217D9A903002954E6 /* ScheduleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -777,7 +635,6 @@
 			children = (
 				DC1102D11761AF0D00F3CCFF /* Extra */,
 				DC1102B41761AEBE00F3CCFF /* MED */,
-				3CFE0FA417552F1800EF012A /* MainWindow.xib */,
 				BDAED0D916D0039700D220F7 /* ExtractPackAppDelegate.h */,
 				BDAED0DA16D0039700D220F7 /* ExtractPackAppDelegate.mm */,
 			);
@@ -851,15 +708,13 @@
 		DC1102261761ADD100F3CCFF /* helpers */ = {
 			isa = PBXGroup;
 			children = (
+				DC9C48AC181E471A00A92E20 /* MBProgressHUD.h */,
+				DC9C48AD181E471A00A92E20 /* MBProgressHUD.m */,
 				DC6C731D17D9B07A004F012B /* DKADefines.h */,
 				DC6C731A17D9AFC4004F012B /* CKCalendarView.h */,
 				DC6C731B17D9AFC4004F012B /* CKCalendarView.m */,
 				DCC02B9D17D99C3D002954E6 /* NSDate-Utilities.h */,
 				DCC02B9E17D99C3D002954E6 /* NSDate-Utilities.m */,
-				DC1102861761AE5D00F3CCFF /* MMDrawerController */,
-				DC1102361761AE3B00F3CCFF /* FormKit */,
-				DC1102271761ADE900F3CCFF /* BPBarButtonItem.h */,
-				DC1102281761ADE900F3CCFF /* BPBarButtonItem.m */,
 				DC1102291761ADE900F3CCFF /* NSManagedObject+NWCoreDataHelper.h */,
 				DC11022A1761ADE900F3CCFF /* NSManagedObject+NWCoreDataHelper.m */,
 				DC1102E71761FDE700F3CCFF /* MEDNetworkHelper.h */,
@@ -892,186 +747,15 @@
 			name = testflight;
 			sourceTree = "<group>";
 		};
-		DC1102361761AE3B00F3CCFF /* FormKit */ = {
-			isa = PBXGroup;
-			children = (
-				DC1102971761AE9C00F3CCFF /* Vendor */,
-				DC1102371761AE3B00F3CCFF /* Fields */,
-				DC1102591761AE3B00F3CCFF /* FKBlocks.h */,
-				DC11025A1761AE3B00F3CCFF /* FKFormAttributeMapping.h */,
-				DC11025B1761AE3B00F3CCFF /* FKFormAttributeMapping.m */,
-				DC11025C1761AE3B00F3CCFF /* FKFormAttributeValidation.h */,
-				DC11025D1761AE3B00F3CCFF /* FKFormAttributeValidation.m */,
-				DC11025E1761AE3B00F3CCFF /* FKFormMapper.h */,
-				DC11025F1761AE3B00F3CCFF /* FKFormMapper.m */,
-				DC1102601761AE3B00F3CCFF /* FKFormMapping.h */,
-				DC1102611761AE3B00F3CCFF /* FKFormMapping.m */,
-				DC1102621761AE3B00F3CCFF /* FKFormModel.h */,
-				DC1102631761AE3B00F3CCFF /* FKFormModel.m */,
-				DC1102641761AE3B00F3CCFF /* FKMacrosDefinitions.h */,
-				DC1102651761AE3B00F3CCFF /* FKSectionObject.h */,
-				DC1102661761AE3B00F3CCFF /* FKSectionObject.m */,
-				DC1102671761AE3B00F3CCFF /* FormKit.h */,
-				DC1102681761AE3B00F3CCFF /* NSObject+FKFormAttributeMapping.h */,
-				DC1102691761AE3B00F3CCFF /* NSObject+FKFormAttributeMapping.m */,
-				DC11026A1761AE3B00F3CCFF /* UITableViewCell+FormKit.h */,
-				DC11026B1761AE3B00F3CCFF /* UITableViewCell+FormKit.m */,
-				DC11026C1761AE3B00F3CCFF /* UIView+FormKit.h */,
-				DC11026D1761AE3B00F3CCFF /* UIView+FormKit.m */,
-			);
-			path = FormKit;
-			sourceTree = "<group>";
-		};
-		DC1102371761AE3B00F3CCFF /* Fields */ = {
-			isa = PBXGroup;
-			children = (
-				DC1102381761AE3B00F3CCFF /* FKBadgeField.h */,
-				DC1102391761AE3B00F3CCFF /* FKBadgeField.m */,
-				DC11023A1761AE3B00F3CCFF /* FKButtonField.h */,
-				DC11023B1761AE3B00F3CCFF /* FKButtonField.m */,
-				DC11023C1761AE3B00F3CCFF /* FKDisclosureIndicatorAccessoryField.h */,
-				DC11023D1761AE3B00F3CCFF /* FKDisclosureIndicatorAccessoryField.m */,
-				DC11023E1761AE3B00F3CCFF /* FKFieldErrorProtocol.h */,
-				DC11023F1761AE3B00F3CCFF /* FKFields.h */,
-				DC1102401761AE3B00F3CCFF /* FKFieldsBlocks.h */,
-				DC1102411761AE3B00F3CCFF /* FKFloatField.h */,
-				DC1102421761AE3B00F3CCFF /* FKFloatField.m */,
-				DC1102431761AE3B00F3CCFF /* FKImageField.h */,
-				DC1102441761AE3B00F3CCFF /* FKImageField.m */,
-				DC1102451761AE3B00F3CCFF /* FKIntegerField.h */,
-				DC1102461761AE3B00F3CCFF /* FKIntegerField.m */,
-				DC1102471761AE3B00F3CCFF /* FKLabelField.h */,
-				DC1102481761AE3B00F3CCFF /* FKLabelField.m */,
-				DC1102491761AE3B00F3CCFF /* FKPasswordTextField.h */,
-				DC11024A1761AE3B00F3CCFF /* FKPasswordTextField.m */,
-				DC11024B1761AE3B00F3CCFF /* FKSaveButtonField.h */,
-				DC11024C1761AE3B00F3CCFF /* FKSaveButtonField.m */,
-				DC11024D1761AE3B00F3CCFF /* FKSimpleField.h */,
-				DC11024E1761AE3B00F3CCFF /* FKSimpleField.m */,
-				DC11024F1761AE3B00F3CCFF /* FKSliderField.h */,
-				DC1102501761AE3B00F3CCFF /* FKSliderField.m */,
-				DC1102511761AE3B00F3CCFF /* FKSwitchField.h */,
-				DC1102521761AE3B00F3CCFF /* FKSwitchField.m */,
-				DC1102531761AE3B00F3CCFF /* FKTextField.h */,
-				DC1102541761AE3B00F3CCFF /* FKTextField.m */,
-				DC1102551761AE3B00F3CCFF /* FKTextViewField.h */,
-				DC1102561761AE3B00F3CCFF /* FKTextViewField.m */,
-				DC1102571761AE3B00F3CCFF /* FKValueViewField.h */,
-				DC1102581761AE3B00F3CCFF /* FKValueViewField.m */,
-			);
-			path = Fields;
-			sourceTree = "<group>";
-		};
-		DC1102861761AE5D00F3CCFF /* MMDrawerController */ = {
-			isa = PBXGroup;
-			children = (
-				DC1102931761AE7700F3CCFF /* VisualStateManager */,
-				DC1102871761AE6C00F3CCFF /* MMDrawerBarButtonItem.h */,
-				DC1102881761AE6D00F3CCFF /* MMDrawerBarButtonItem.m */,
-				DC1102891761AE6D00F3CCFF /* MMDrawerController.h */,
-				DC11028A1761AE6D00F3CCFF /* MMDrawerController.m */,
-				DC11028B1761AE6D00F3CCFF /* MMDrawerVisualState.h */,
-				DC11028C1761AE6D00F3CCFF /* MMDrawerVisualState.m */,
-				DC11028D1761AE6D00F3CCFF /* UIViewController+MMDrawerController.h */,
-				DC11028E1761AE6D00F3CCFF /* UIViewController+MMDrawerController.m */,
-			);
-			name = MMDrawerController;
-			sourceTree = "<group>";
-		};
-		DC1102931761AE7700F3CCFF /* VisualStateManager */ = {
-			isa = PBXGroup;
-			children = (
-				DC1102941761AE8200F3CCFF /* MEDDrawerVisualStateManager.m */,
-				DC1102951761AE8200F3CCFF /* MEDDrawerVisualStateManager.h */,
-			);
-			name = VisualStateManager;
-			sourceTree = "<group>";
-		};
-		DC1102971761AE9C00F3CCFF /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				DC1102981761AE9C00F3CCFF /* ActionSheetPicker */,
-				DC1102A61761AE9C00F3CCFF /* BWLongTextViewController */,
-				DC1102A91761AE9C00F3CCFF /* BWSelectViewController */,
-			);
-			path = Vendor;
-			sourceTree = "<group>";
-		};
-		DC1102981761AE9C00F3CCFF /* ActionSheetPicker */ = {
-			isa = PBXGroup;
-			children = (
-				DC1102991761AE9C00F3CCFF /* AbstractActionSheetPicker.h */,
-				DC11029A1761AE9C00F3CCFF /* AbstractActionSheetPicker.m */,
-				DC11029B1761AE9C00F3CCFF /* ActionSheetCustomPicker.h */,
-				DC11029C1761AE9C00F3CCFF /* ActionSheetCustomPicker.m */,
-				DC11029D1761AE9C00F3CCFF /* ActionSheetCustomPickerDelegate.h */,
-				DC11029E1761AE9C00F3CCFF /* ActionSheetDatePicker.h */,
-				DC11029F1761AE9C00F3CCFF /* ActionSheetDatePicker.m */,
-				DC1102A01761AE9C00F3CCFF /* ActionSheetDistancePicker.h */,
-				DC1102A11761AE9C00F3CCFF /* ActionSheetDistancePicker.m */,
-				DC1102A21761AE9C00F3CCFF /* ActionSheetStringPicker.h */,
-				DC1102A31761AE9C00F3CCFF /* ActionSheetStringPicker.m */,
-				DC1102A41761AE9C00F3CCFF /* DistancePickerView.h */,
-				DC1102A51761AE9C00F3CCFF /* DistancePickerView.m */,
-			);
-			path = ActionSheetPicker;
-			sourceTree = "<group>";
-		};
-		DC1102A61761AE9C00F3CCFF /* BWLongTextViewController */ = {
-			isa = PBXGroup;
-			children = (
-				DC1102A71761AE9C00F3CCFF /* BWLongTextViewController.h */,
-				DC1102A81761AE9C00F3CCFF /* BWLongTextViewController.m */,
-			);
-			path = BWLongTextViewController;
-			sourceTree = "<group>";
-		};
-		DC1102A91761AE9C00F3CCFF /* BWSelectViewController */ = {
-			isa = PBXGroup;
-			children = (
-				DC1102AA1761AE9C00F3CCFF /* BWSelectViewController.h */,
-				DC1102AB1761AE9C00F3CCFF /* BWSelectViewController.m */,
-			);
-			path = BWSelectViewController;
-			sourceTree = "<group>";
-		};
 		DC1102B41761AEBE00F3CCFF /* MED */ = {
 			isa = PBXGroup;
 			children = (
-				DC1102C41761AEE000F3CCFF /* TableViewHelpers */,
-				DC1102B51761AED200F3CCFF /* MEDCenterTableViewController.h */,
-				DC1102B61761AED200F3CCFF /* MEDCenterTableViewController.mm */,
-				DC1102B71761AED200F3CCFF /* MEDSideDrawerViewController.h */,
-				DC1102B81761AED200F3CCFF /* MEDSideDrawerViewController.mm */,
-				DC1102B91761AED200F3CCFF /* MEDLeftSideDrawerViewController.h */,
-				DC1102BA1761AED200F3CCFF /* MEDLeftSideDrawerViewController.m */,
-				DC1102BB1761AED200F3CCFF /* MEDRightSideDrawerViewController.h */,
-				DC1102BC1761AED200F3CCFF /* MEDRightSideDrawerViewController.m */,
-				DC1102BD1761AED200F3CCFF /* MEDAddEditPrescriptionViewController.h */,
-				DC1102BE1761AED200F3CCFF /* MEDAddEditPrescriptionViewController.mm */,
-				DCA2281E17672C0C008C33B5 /* OTMLoginViewController.h */,
-				DCA2281F17672C0C008C33B5 /* OTMLoginViewController.mm */,
-				DCA2282017672C0C008C33B5 /* OTMLoginViewController.xib */,
-				DCC02BA017D9A903002954E6 /* ScheduleViewController.h */,
-				DCC02BA117D9A903002954E6 /* ScheduleViewController.m */,
-				DCC02BA217D9A903002954E6 /* ScheduleViewController.xib */,
+				DC9C48A8181E436600A92E20 /* Settings */,
+				DC9C48A7181E350600A92E20 /* Schedule */,
+				DC9C48A3181E32F600A92E20 /* Medications */,
+				DC9C489F181E277C00A92E20 /* Login and Tabbar */,
 			);
 			name = MED;
-			sourceTree = "<group>";
-		};
-		DC1102C41761AEE000F3CCFF /* TableViewHelpers */ = {
-			isa = PBXGroup;
-			children = (
-				DC1102C51761AEEF00F3CCFF /* MEDTableViewCell.h */,
-				DC1102C61761AEEF00F3CCFF /* MEDTableViewCell.m */,
-				DC1102C71761AEEF00F3CCFF /* MEDSideDrawerTableViewCell.h */,
-				DC1102C81761AEEF00F3CCFF /* MEDSideDrawerTableViewCell.m */,
-				DC1102C91761AEEF00F3CCFF /* MEDCenterTableViewCell.h */,
-				DC1102CA1761AEEF00F3CCFF /* MEDCenterTableViewCell.m */,
-				DC1102CB1761AEEF00F3CCFF /* MEDSideDrawerSectionHeaderView.h */,
-				DC1102CC1761AEEF00F3CCFF /* MEDSideDrawerSectionHeaderView.m */,
-			);
-			name = TableViewHelpers;
 			sourceTree = "<group>";
 		};
 		DC1102D11761AF0D00F3CCFF /* Extra */ = {
@@ -1120,6 +804,44 @@
 				DC1102FD1761FE3E00F3CCFF /* UIImageView+AFNetworking.m */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		DC9C489F181E277C00A92E20 /* Login and Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				DCA2281E17672C0C008C33B5 /* OTMLoginViewController.h */,
+				DCA2281F17672C0C008C33B5 /* OTMLoginViewController.mm */,
+				DC9C48A0181E27AB00A92E20 /* OTMTabbarVC.h */,
+				DC9C48A1181E27AB00A92E20 /* OTMTabbarVC.m */,
+			);
+			name = "Login and Tabbar";
+			sourceTree = "<group>";
+		};
+		DC9C48A3181E32F600A92E20 /* Medications */ = {
+			isa = PBXGroup;
+			children = (
+				DC9C48A4181E339A00A92E20 /* OTMMedicationsVC.h */,
+				DC9C48A5181E339A00A92E20 /* OTMMedicationsVC.m */,
+			);
+			name = Medications;
+			sourceTree = "<group>";
+		};
+		DC9C48A7181E350600A92E20 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				DCC02BA017D9A903002954E6 /* ScheduleViewController.h */,
+				DCC02BA117D9A903002954E6 /* ScheduleViewController.m */,
+			);
+			name = Schedule;
+			sourceTree = "<group>";
+		};
+		DC9C48A8181E436600A92E20 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DC9C48A9181E438700A92E20 /* OTMSettingsVC.h */,
+				DC9C48AA181E438700A92E20 /* OTMSettingsVC.m */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		DCA2282C17672C75008C33B5 /* Model */ = {
@@ -1200,12 +922,9 @@
 				DC9C489C181D273B00A92E20 /* Images.xcassets in Resources */,
 				3CAB00CB1750332A00FC6CC1 /* beep-7.mp3 in Resources */,
 				3CC51CF21754F41400D6BCFA /* MainViewController.xib in Resources */,
-				3CFE0FA617552F1800EF012A /* MainWindow.xib in Resources */,
 				3CF39992175966A400BC5B75 /* CaptureScreenViewController.xib in Resources */,
 				DC1102341761AE0D00F3CCFF /* README.md in Resources */,
 				DC1102351761AE0D00F3CCFF /* release_notes.md in Resources */,
-				DCA2282217672C0C008C33B5 /* OTMLoginViewController.xib in Resources */,
-				DCC02BA417D9A903002954E6 /* ScheduleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1254,61 +973,17 @@
 				3CB09E4517536F8C0030499A /* PackageInfo.cpp in Sources */,
 				3CC51CE6175489EF00D6BCFA /* MainViewController.mm in Sources */,
 				3CF399951759675300BC5B75 /* CaptureScreenViewController.mm in Sources */,
-				DC11022B1761ADE900F3CCFF /* BPBarButtonItem.m in Sources */,
 				DC11022C1761ADE900F3CCFF /* NSManagedObject+NWCoreDataHelper.m in Sources */,
-				DC11026E1761AE3B00F3CCFF /* FKBadgeField.m in Sources */,
-				DC11026F1761AE3B00F3CCFF /* FKButtonField.m in Sources */,
-				DC1102701761AE3B00F3CCFF /* FKDisclosureIndicatorAccessoryField.m in Sources */,
-				DC1102711761AE3B00F3CCFF /* FKFloatField.m in Sources */,
-				DC1102721761AE3B00F3CCFF /* FKImageField.m in Sources */,
-				DC1102731761AE3B00F3CCFF /* FKIntegerField.m in Sources */,
-				DC1102741761AE3B00F3CCFF /* FKLabelField.m in Sources */,
-				DC1102751761AE3B00F3CCFF /* FKPasswordTextField.m in Sources */,
-				DC1102761761AE3B00F3CCFF /* FKSaveButtonField.m in Sources */,
-				DC1102771761AE3B00F3CCFF /* FKSimpleField.m in Sources */,
-				DC1102781761AE3B00F3CCFF /* FKSliderField.m in Sources */,
-				DC1102791761AE3B00F3CCFF /* FKSwitchField.m in Sources */,
-				DC11027A1761AE3B00F3CCFF /* FKTextField.m in Sources */,
-				DC11027B1761AE3B00F3CCFF /* FKTextViewField.m in Sources */,
-				DC11027C1761AE3B00F3CCFF /* FKValueViewField.m in Sources */,
-				DC11027D1761AE3B00F3CCFF /* FKFormAttributeMapping.m in Sources */,
-				DC11027E1761AE3B00F3CCFF /* FKFormAttributeValidation.m in Sources */,
-				DC11027F1761AE3B00F3CCFF /* FKFormMapper.m in Sources */,
-				DC1102801761AE3B00F3CCFF /* FKFormMapping.m in Sources */,
-				DC1102811761AE3B00F3CCFF /* FKFormModel.m in Sources */,
-				DC1102821761AE3B00F3CCFF /* FKSectionObject.m in Sources */,
-				DC1102831761AE3B00F3CCFF /* NSObject+FKFormAttributeMapping.m in Sources */,
-				DC1102841761AE3B00F3CCFF /* UITableViewCell+FormKit.m in Sources */,
-				DC1102851761AE3B00F3CCFF /* UIView+FormKit.m in Sources */,
-				DC11028F1761AE6D00F3CCFF /* MMDrawerBarButtonItem.m in Sources */,
-				DC1102901761AE6D00F3CCFF /* MMDrawerController.m in Sources */,
-				DC1102911761AE6D00F3CCFF /* MMDrawerVisualState.m in Sources */,
-				DC1102921761AE6D00F3CCFF /* UIViewController+MMDrawerController.m in Sources */,
-				DC1102961761AE8200F3CCFF /* MEDDrawerVisualStateManager.m in Sources */,
-				DC1102AC1761AE9C00F3CCFF /* AbstractActionSheetPicker.m in Sources */,
-				DC1102AD1761AE9C00F3CCFF /* ActionSheetCustomPicker.m in Sources */,
-				DC1102AE1761AE9C00F3CCFF /* ActionSheetDatePicker.m in Sources */,
-				DC1102AF1761AE9C00F3CCFF /* ActionSheetDistancePicker.m in Sources */,
-				DC1102B01761AE9C00F3CCFF /* ActionSheetStringPicker.m in Sources */,
-				DC1102B11761AE9C00F3CCFF /* DistancePickerView.m in Sources */,
+				DC9C48A6181E339A00A92E20 /* OTMMedicationsVC.m in Sources */,
+				DC9C48AB181E438700A92E20 /* OTMSettingsVC.m in Sources */,
 				DC6C731917D9AE24004F012B /* Schedule.m in Sources */,
-				DC1102B21761AE9C00F3CCFF /* BWLongTextViewController.m in Sources */,
-				DC1102B31761AE9C00F3CCFF /* BWSelectViewController.m in Sources */,
-				DC1102BF1761AED200F3CCFF /* MEDCenterTableViewController.mm in Sources */,
-				DC1102C01761AED200F3CCFF /* MEDSideDrawerViewController.mm in Sources */,
-				DC1102C11761AED200F3CCFF /* MEDLeftSideDrawerViewController.m in Sources */,
-				DC1102C21761AED200F3CCFF /* MEDRightSideDrawerViewController.m in Sources */,
-				DC1102C31761AED200F3CCFF /* MEDAddEditPrescriptionViewController.mm in Sources */,
-				DC1102CD1761AEEF00F3CCFF /* MEDTableViewCell.m in Sources */,
-				DC1102CE1761AEEF00F3CCFF /* MEDSideDrawerTableViewCell.m in Sources */,
-				DC1102CF1761AEEF00F3CCFF /* MEDCenterTableViewCell.m in Sources */,
-				DC1102D01761AEEF00F3CCFF /* MEDSideDrawerSectionHeaderView.m in Sources */,
 				DC1102D41761AFEB00F3CCFF /* Model.xcdatamodeld in Sources */,
 				DC1102E91761FDE700F3CCFF /* MEDNetworkHelper.m in Sources */,
 				DC1102FE1761FE3E00F3CCFF /* AFHTTPClient.m in Sources */,
 				DC1102FF1761FE3E00F3CCFF /* AFHTTPRequestOperation.m in Sources */,
 				DC1103001761FE3E00F3CCFF /* AFImageRequestOperation.m in Sources */,
 				DC1103011761FE3E00F3CCFF /* AFJSONRequestOperation.m in Sources */,
+				DC9C48A2181E27AB00A92E20 /* OTMTabbarVC.m in Sources */,
 				DC1103021761FE3E00F3CCFF /* AFNetworkActivityIndicatorManager.m in Sources */,
 				DC1103031761FE3E00F3CCFF /* AFPropertyListRequestOperation.m in Sources */,
 				DC1103041761FE3E00F3CCFF /* AFURLConnectionOperation.m in Sources */,
@@ -1319,6 +994,7 @@
 				DCA2282517672C6F008C33B5 /* History.m in Sources */,
 				DCA2282817672C6F008C33B5 /* MedPackage.m in Sources */,
 				DCA2282B17672C6F008C33B5 /* User.m in Sources */,
+				DC9C48AE181E471A00A92E20 /* MBProgressHUD.m in Sources */,
 				DCC02B9F17D99C3D002954E6 /* NSDate-Utilities.m in Sources */,
 				DCC02BA317D9A903002954E6 /* ScheduleViewController.m in Sources */,
 			);

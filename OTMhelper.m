@@ -11,10 +11,23 @@
 #import "NSManagedObject+NWCoreDataHelper.h"
 #import "MedPackage.h"
 #import "MEDNetworkHelper.h"
+#import "History.h"
 @implementation OTMhelper
 
 
-
+-(void)deleteAll
+{
+    for(MedPackage *pack in [MedPackage getAllRecords])
+    {
+        [MedPackage deleteInContext:pack];
+    }
+    for(History *pack in [History getAllRecords])
+    {
+        [History deleteInContext:pack];
+    }
+    
+    [MedPackage saveDefaultContext];
+}
 
 -(User *)getCurrentUser
 {
@@ -25,6 +38,57 @@
     }
     return nil;
 
+}
+
+
+-(void)startPackage:(MedPackage *)package
+{
+    switch ([package.status integerValue]) {
+        case PS_opened:
+        {
+            
+                [[OTMhelper sharedInstance] createNotifications:[NSDate date] package:package completeBlock:^(BOOL result, NSError *error) {
+                    
+                    package.status = [NSNumber numberWithInt:PS_used];
+                    [MedPackage saveDefaultContext];
+                    
+                    [[MEDNetworkHelper sharedInstance] postEvent:EVENTSetMedicationScheduleStartTime packageid:[package.packageid integerValue] completionBlock:^(BOOL result, NSError *error) {
+                        if(result)
+                        {
+                            NSLog(@"EVENTSetMedicationScheduleStartTime sent");
+                            
+                        }
+                        else
+                        {
+                            dispatch_async(dispatch_get_main_queue(),^{
+                                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:error.description delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                                [alert show];
+                                
+                            });
+                        }
+                    }];
+                    
+                    dispatch_async(dispatch_get_main_queue(),^{
+                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert!" message:[NSString stringWithFormat:@"Package with %@ started!", package.medicationname] delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                        [alert show];
+                        
+                    });
+                }];
+                
+                
+            break;
+            
+        }
+        case PS_used:
+        {
+
+            break;
+            
+        }
+            
+        default:
+            break;
+    }
 }
 
 -(MedPackage *)createPackage:(NSDictionary *)dict

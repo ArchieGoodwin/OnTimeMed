@@ -7,14 +7,15 @@
 //
 
 #import "OTMLoginViewController.h"
-#import "FormKit.h"
 #import "User.h"
 #import "NSManagedObject+NWCoreDataHelper.h"
 #import "MEDNetworkHelper.h"
+#import "MBProgressHUD.h"
 @interface OTMLoginViewController ()
 {
-    FKFormModel *formModel;
 
+    UITextField *txtLogin;
+    UITextField *txtPwd;
     User *user;
 }
 @end
@@ -34,7 +35,11 @@
 {
     [super viewDidLoad];
 
-    
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"login"] != nil)
+    {
+        [self performSegueWithIdentifier:@"mainEntrance" sender:user];
+
+    }
     
 
     // Uncomment the following line to preserve selection between presentations.
@@ -58,99 +63,143 @@
     [self.tableView setBackgroundView:backView];
     
     
-    formModel = [FKFormModel formTableModelForTableView:self.tableView
-                                   navigationController:self.navigationController];
     
-    
-    [self loadModel];
 }
 
--(void)loadModel
+-(void)loginMe
 {
 
-     
-     
-     [FKFormMapping mappingForClass:[User class] block:^(FKFormMapping *formMapping) {
-     
-         [formMapping sectionWithTitle:@"   " footer:@"" identifier:@"drugname"];
+    
+    
+    if(![txtLogin.text isEqualToString:@""] && ![txtPwd.text isEqualToString:@""])
+    {
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 
-
-         [formMapping sectionWithTitle:@"   " footer:@"" identifier:@"drugname1"];
-         
-         [formMapping mapAttribute:@"login" title:@"Login:" type:FKFormAttributeMappingTypeText];
-         
-         [formMapping sectionWithTitle:@"   " identifier:@"drugtype3"];
-         
-         [formMapping mapAttribute:@"password" title:@"Password:" type:FKFormAttributeMappingTypePassword];
-
-         
-         /*[formMapping mapAttribute:@"drugtype"
-         title:@"Type"
-         showInPicker:YES
-         selectValuesBlock:^NSArray *(id value, id object, NSInteger *selectedValueIndex){
-         *selectedValueIndex = 1;
-         return [NSArray arrayWithObjects:@"Pill", @"Spray", @"Liquid", nil];
-         
-         } valueFromSelectBlock:^id(id value, id object, NSInteger selectedValueIndex) {
-         return value;
-         
-         } labelValueBlock:^id(id value, id object) {
-         return value;
-         
-         }];*/
-         
-         [formMapping sectionWithTitle:@"   " identifier:@"drugtype2"];
-
-         
-         
-
-         [formMapping buttonSave:@"Login" handler:^{
-         
-             
-             NSLog(@"%@ %@", user.login, user.password);
-             user.login = @"User12345";
-             user.password = @"pass12345";
-             [[MEDNetworkHelper sharedInstance] loginUser:user.login password:user.password completionBlock:^(NSDictionary *result, NSError *error) {
-                 if(result)
-                 {
-                     user.userId = [NSString stringWithFormat:@"%@",[result objectForKey:@"Id"]];
-                     user.name = [result objectForKey:@"Name"];
-                     [[NSUserDefaults standardUserDefaults] setObject:@"done" forKey:@"login"];
-                     [[NSUserDefaults standardUserDefaults] synchronize];
-                     [formModel save];
-                     [User saveDefaultContext];
-                     
-                     [self dismissViewControllerAnimated:YES completion:^{
-                        
-                          [[NSNotificationCenter defaultCenter] postNotificationName:@"logindone" object:self userInfo:nil];
-                     }];
-                 }
-                 else
-                 {
-                     [User deleteInContext:user];
-                     [User saveDefaultContext];
-                 }
-                 
-                 
-             }];
-             
-         
-         }];
-         
-
-         
-         
-         [formModel registerMapping:formMapping];
-     }];
-     
-     [formModel setDidChangeValueWithBlock:^(id object, id value, NSString *keyPath) {
-         NSLog(@"did change model value");
-     }];
-    formModel.editable = YES;
-     [formModel loadFieldsWithObject:user];
+        
+        [[MEDNetworkHelper sharedInstance] loginUser:txtLogin.text password:txtPwd.text completionBlock:^(NSDictionary *result, NSError *error) {
+            
+            [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+            
+            if(!error)
+            {
+                if(result)
+                {
+                    user.userId = [NSString stringWithFormat:@"%@",[result objectForKey:@"Id"]];
+                    user.name = [result objectForKey:@"Name"];
+                    [[NSUserDefaults standardUserDefaults] setObject:@"done" forKey:@"login"];
+                    [[NSUserDefaults standardUserDefaults] synchronize];
+                    [User saveDefaultContext];
+                    
+                    [self performSegueWithIdentifier:@"mainEntrance" sender:user];
+                }
+                else
+                {
+                    [User deleteInContext:user];
+                    [User saveDefaultContext];
+                }
+            }
+            else
+            {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:error.localizedDescription delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+                [alert show];
+            }
+            
+            
+        }];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Please enter valid login and password to continue!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+    }
+    
 }
 
 
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.
+    return 4;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.row) {
+        case 0:
+            return 95;
+        case 1:
+        case 2:
+            return 70;
+        case 3:
+            return 44;
+                default:
+            break;
+    }
+    
+    return 44;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"LogoCell"];
+    
+    if(indexPath.row == 0)
+    {
+        UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"LogoCell"];
+        
+        return cell;
+        
+    }
+    
+    if(indexPath.row == 1)
+    {
+        UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"LoginCell"];
+        txtLogin = (UITextField *)[cell.contentView viewWithTag:101];
+        
+        return cell;
+        
+    }
+    
+    if(indexPath.row == 2)
+    {
+        UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"PwdCell"];
+        txtPwd = (UITextField *)[cell.contentView viewWithTag:102];
+        
+        return cell;
+        
+    }
+    
+    if(indexPath.row == 3)
+    {
+        UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"BtnCell"];
+        
+
+        
+        return cell;
+        
+    }
+    
+    
+    
+    // Configure the cell...
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.row == 3)
+    {
+        [self loginMe];
+    }
+}
 
 - (void)didReceiveMemoryWarning
 {

@@ -19,9 +19,7 @@
     RCCompleteBlockWithDictResult completeBlock = completionBlock;
 
     NSString *urlString = [NSString stringWithFormat:@"http://ontimemed.incoding.biz/Account/SignIn?Login=%@&Password=%@", login, password];
-    //http://ontimemed.incoding.biz/Account/SignIn?Login=User12345&Password=pass12345
     NSURL *url = [NSURL URLWithString:urlString];
-    
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {

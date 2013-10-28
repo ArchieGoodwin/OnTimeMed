@@ -11,7 +11,6 @@
 #import "ExtractPackAppDelegate.h"
 #import "FrameViewController.h"
 #import "MEDNetworkHelper.h"
-#import "UIViewController+MMDrawerController.h"
 
 @interface ExtractPackViewController ()
 {
@@ -68,21 +67,30 @@
 - (IBAction) scanButtonTapped
 {
     
-    // ADD: present a barcode reader that scans from the camera feed
-    ZBarReaderViewController *reader = [ZBarReaderViewController new];
-    reader.readerDelegate = self;
-    reader.supportedOrientationsMask = ZBarOrientationMaskAll;
     
-    ZBarImageScanner *scanner = reader.scanner;
-    // TODO: (optional) additional reader configuration here
+        //self.hidesBottomBarWhenPushed = NO;
+        
+        // ADD: present a barcode reader that scans from the camera feed
+        ZBarReaderViewController *reader = [ZBarReaderViewController new];
+        reader.readerDelegate = self;
+        reader.supportedOrientationsMask = ZBarOrientationMaskAll;
+        
+        ZBarImageScanner *scanner = reader.scanner;
+        // TODO: (optional) additional reader configuration here
+        
+        // EXAMPLE: disable rarely used I2/5 to improve performance
+        [scanner setSymbology: ZBAR_I25
+                       config: ZBAR_CFG_ENABLE
+                           to: 0];
+        
+        // present and release the controller
+        //[self presentModalViewController:reader animated:NO];
+        [self presentViewController:reader animated:YES completion:^{
+            
+        }];
     
-    // EXAMPLE: disable rarely used I2/5 to improve performance
-    [scanner setSymbology: ZBAR_I25
-                   config: ZBAR_CFG_ENABLE
-                       to: 0];
     
-    // present and release the controller
-    [self presentModalViewController:reader animated:NO];
+    
     
 }
 - (IBAction)btnCancel:(id)sender {
@@ -118,12 +126,15 @@
     NSLog(@"%@", [NSString stringWithFormat:@"Package Baracode ID %@ was scanned.", packageID]);
     _parentController.keptBarCode = packageID;
     
-    [reader dismissModalViewControllerAnimated:NO];
+    //[reader dismissModalViewControllerAnimated:NO];
+    [self dismissViewControllerAnimated:YES completion:^{
+        [self presentCaptureViewController];
+
+    }];
     //[_parentController closeMeWithBarcode:packageID];
     // ADD: dismiss the controller (NB dismiss from the *reader*!)
     //[reader dismissViewControllerAnimated:NO completion:nil];
 
-    [self presentCaptureViewController];
 }
 
 - (void)presentCaptureViewController

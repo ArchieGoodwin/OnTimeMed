@@ -58,7 +58,8 @@
     
     application.applicationIconBadgeNumber = 0;
 
-    
+    _initalStoryboard = self.window.rootViewController.storyboard;
+
     
     /*UIViewController * leftSideDrawerViewController = [[MEDLeftSideDrawerViewController alloc] init];
     
@@ -94,6 +95,17 @@
 
     
     return YES;
+}
+
+- (void)resetWindowToInitialView
+{
+    for (UIView* view in self.window.subviews)
+    {
+        [view removeFromSuperview];
+    }
+    
+    UIViewController* initialScene = [_initalStoryboard instantiateInitialViewController];
+    self.window.rootViewController = initialScene;
 }
 
 -(void)clearNotifications

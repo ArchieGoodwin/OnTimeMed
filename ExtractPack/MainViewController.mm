@@ -12,7 +12,6 @@
 #import "FrameViewController.h"
 #import "CaptureScreenViewController.h"
 #import "ExtractPackViewController.h"
-#import "UIViewController+MMDrawerController.h"
 #import "MEDCenterTableViewController.h"
 @interface MainViewController ()
 {
@@ -71,15 +70,9 @@
 {
     
     [self dismissViewControllerAnimated:YES completion:nil];
-    MEDCenterTableViewController * center = [[MEDCenterTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
     
     
-    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:center];
-    
-    [self.mm_drawerController
-     setCenterViewController:nav
-     withCloseAnimation:YES
-     completion:nil];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 -(void)closeMeWithBarcode:(NSString *)barcode
@@ -111,16 +104,13 @@
 {
     NSLog(@"closeAndReturn");
 
-    MEDCenterTableViewController * center = [[MEDCenterTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
     
-    [center checkBarcodeOnServer:_keptBarCode];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"checkBarcodeOnServer" object:_keptBarCode];
     
-    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:center];
+    [self.navigationController popToRootViewControllerAnimated:YES];
     
-    [self.mm_drawerController
-     setCenterViewController:nav
-     withCloseAnimation:YES
-     completion:nil];
+
+
 }
 
 - (void) toggleView: (int)nVMode nState: (int) nState {
