@@ -45,6 +45,8 @@
     
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkBarcodeOnServer:) name:@"checkBarcodeOnServer" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveTakingMedStep:) name:@"takingMed" object:nil];
+
 
     
     //self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(getPackages)];
@@ -100,10 +102,61 @@
         [self.navigationController pushViewController:controller animated:YES];
     }];
     
-   
-  
+
 }
 
+-(void)saveTakingMedStep:(NSNotification *)notification
+{
+    MedPackage * pack = (MedPackage *) [notification object];
+
+    [[MEDNetworkHelper sharedInstance] postEvent:EVENTTakePictureAfter packageid:pack.packageid.integerValue completionBlock:^(BOOL result, NSError *error) {
+        NSLog(@"EVENTTakePictureAfter sent");
+        if(result)
+        {
+            if(pack.startdate == nil)
+            {
+                pack.status = [NSNumber numberWithInt:PS_used];
+                pack.startdate = [NSDate date];
+                [MedPackage saveDefaultContext];
+                
+                [[MEDNetworkHelper sharedInstance] postEvent:EVENTSetMedicationScheduleStartTime packageid:[pack.packageid integerValue] completionBlock:^(BOOL result, NSError *error) {
+                    if(result)
+                    {
+                        NSLog(@"EVENTSetMedicationScheduleStartTime sent");
+                        [self getPackages];
+
+                    }
+                    else
+                    {
+                         dispatch_async(dispatch_get_main_queue(),^{
+                         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:error.description delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                         [alert show];
+                         
+                         });
+                        
+                    }
+                }];
+            }
+            else
+            {
+                [self getPackages];
+            }
+            
+            
+        }
+        else
+        {
+            dispatch_async(dispatch_get_main_queue(),^{
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:error.localizedDescription delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                [alert show];
+                
+            });
+        }
+        
+        
+    }];
+    
+}
 
 
 -(void)checkBarcodeOnServer:(NSNotification *)notification
@@ -180,10 +233,7 @@
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [alert  show];
         }
-        
-        
-        
-        
+
         
     }];
 }

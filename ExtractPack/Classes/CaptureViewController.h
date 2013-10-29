@@ -6,6 +6,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <CoreVideo/CoreVideo.h>
 #import "MainViewController.h"
+#import "MedPackage.h"
 #define HAS_VIDEO_CAPTURE (__IPHONE_OS_VERSION_MIN_REQUIRED >= 40000 && TARGET_OS_EMBEDDED)
 
 
@@ -14,6 +15,7 @@
     NSTimer* _timer;
     CVLib::FrameDetector _frameDetector;
 }
+@property (nonatomic, strong) MedPackage *package;
 @property (nonatomic, strong) CALayer *overlayLayer;
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *previewLayer;
 @property (nonatomic, strong) AVCaptureSession *session;

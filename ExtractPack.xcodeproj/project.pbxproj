@@ -97,6 +97,8 @@
 		DC9C48AE181E471A00A92E20 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9C48AD181E471A00A92E20 /* MBProgressHUD.m */; };
 		DC9C48B2181E66F000A92E20 /* OTMPackageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9C48B1181E66F000A92E20 /* OTMPackageVC.m */; };
 		DC9C48B6181E76A100A92E20 /* OTMHistoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9C48B5181E76A100A92E20 /* OTMHistoryVC.m */; };
+		DC9C48BA181F8A4700A92E20 /* InstructionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9C48B8181F8A4700A92E20 /* InstructionsVC.m */; };
+		DC9C48BB181F8A4700A92E20 /* InstructionsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC9C48B9181F8A4700A92E20 /* InstructionsVC.xib */; };
 		DCA2281D17672A8A008C33B5 /* OTMhelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA2281C17672A8A008C33B5 /* OTMhelper.m */; };
 		DCA2282117672C0C008C33B5 /* OTMLoginViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = DCA2281F17672C0C008C33B5 /* OTMLoginViewController.mm */; };
 		DCA2282517672C6F008C33B5 /* History.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA2282417672C6F008C33B5 /* History.m */; };
@@ -339,6 +341,9 @@
 		DC9C48B1181E66F000A92E20 /* OTMPackageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTMPackageVC.m; sourceTree = "<group>"; };
 		DC9C48B4181E76A100A92E20 /* OTMHistoryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTMHistoryVC.h; sourceTree = "<group>"; };
 		DC9C48B5181E76A100A92E20 /* OTMHistoryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTMHistoryVC.m; sourceTree = "<group>"; };
+		DC9C48B7181F8A4700A92E20 /* InstructionsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstructionsVC.h; sourceTree = "<group>"; };
+		DC9C48B8181F8A4700A92E20 /* InstructionsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstructionsVC.m; sourceTree = "<group>"; };
+		DC9C48B9181F8A4700A92E20 /* InstructionsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstructionsVC.xib; sourceTree = "<group>"; };
 		DCA2281B17672A8A008C33B5 /* OTMhelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTMhelper.h; sourceTree = "<group>"; };
 		DCA2281C17672A8A008C33B5 /* OTMhelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTMhelper.m; sourceTree = "<group>"; };
 		DCA2281E17672C0C008C33B5 /* OTMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTMLoginViewController.h; sourceTree = "<group>"; };
@@ -784,6 +789,9 @@
 				BDA485C416DFA5CE00E23456 /* CaptureViewController.h */,
 				BDA485C516DFA5CE00E23456 /* CaptureViewController.mm */,
 				BDA485C616DFA5CE00E23456 /* CaptureViewController.xib */,
+				DC9C48B7181F8A4700A92E20 /* InstructionsVC.h */,
+				DC9C48B8181F8A4700A92E20 /* InstructionsVC.m */,
+				DC9C48B9181F8A4700A92E20 /* InstructionsVC.xib */,
 			);
 			name = Extra;
 			sourceTree = "<group>";
@@ -941,6 +949,7 @@
 				DC9C489E181D29E600A92E20 /* Storyboard.storyboard in Resources */,
 				BDAED10116D006B700D220F7 /* zbar-help.html in Resources */,
 				BDAED10216D006B700D220F7 /* zbar-helpicons.png in Resources */,
+				DC9C48BB181F8A4700A92E20 /* InstructionsVC.xib in Resources */,
 				BDAED10316D006B700D220F7 /* zbar-samples.png in Resources */,
 				BDA485C816DFA5CE00E23456 /* CaptureViewController.xib in Resources */,
 				3CFE28A5170C25C60099960D /* Default-568h@2x.png in Resources */,
@@ -1004,6 +1013,7 @@
 				DC11022C1761ADE900F3CCFF /* NSManagedObject+NWCoreDataHelper.m in Sources */,
 				DC9C48A6181E339A00A92E20 /* OTMMedicationsVC.m in Sources */,
 				DC9C48AB181E438700A92E20 /* OTMSettingsVC.m in Sources */,
+				DC9C48BA181F8A4700A92E20 /* InstructionsVC.m in Sources */,
 				DC6C731917D9AE24004F012B /* Schedule.m in Sources */,
 				DC1102D41761AFEB00F3CCFF /* Model.xcdatamodeld in Sources */,
 				DC1102E91761FDE700F3CCFF /* MEDNetworkHelper.m in Sources */,
@@ -1115,8 +1125,8 @@
 				CLANG_WARN_ENUM_CONVERSION = NO;
 				CLANG_WARN_INT_CONVERSION = NO;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Sergey Dikarev (A2KE4XLMNK)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sergey Dikarev (A2KE4XLMNK)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sergey Dikarev (M4J98HRQR2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sergey Dikarev (M4J98HRQR2)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -1151,8 +1161,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRELINK_LIBS = "-lcvlibbase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "93D23BCE-68D6-403C-8DBF-C3FB5B5F497C";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "93D23BCE-68D6-403C-8DBF-C3FB5B5F497C";
+				PROVISIONING_PROFILE = "C14F1299-DE2D-4A62-9A82-97086AFEC3D1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C14F1299-DE2D-4A62-9A82-97086AFEC3D1";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
@@ -1171,8 +1181,8 @@
 				CLANG_WARN_ENUM_CONVERSION = NO;
 				CLANG_WARN_INT_CONVERSION = NO;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Sergey Dikarev (A2KE4XLMNK)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sergey Dikarev (A2KE4XLMNK)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sergey Dikarev (M4J98HRQR2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sergey Dikarev (M4J98HRQR2)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -1203,8 +1213,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRELINK_LIBS = "-lcvlibbase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "93D23BCE-68D6-403C-8DBF-C3FB5B5F497C";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "93D23BCE-68D6-403C-8DBF-C3FB5B5F497C";
+				PROVISIONING_PROFILE = "C14F1299-DE2D-4A62-9A82-97086AFEC3D1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C14F1299-DE2D-4A62-9A82-97086AFEC3D1";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;

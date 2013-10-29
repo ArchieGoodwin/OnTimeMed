@@ -13,6 +13,7 @@
 #import "CaptureScreenViewController.h"
 #import "ExtractPackViewController.h"
 #import "MEDCenterTableViewController.h"
+#import "InstructionsVC.h"
 @interface MainViewController ()
 {
 }
@@ -45,6 +46,10 @@
 - (UIViewController*) loadExtractPackViewController {
 	ExtractPackViewController *viewController = [ExtractPackViewController alloc];
     viewController.parentController = self;
+    if(_package)
+    {
+        viewController.package = _package;
+    }
 	return viewController;
 }
 
@@ -56,14 +61,30 @@
 - (UIViewController*) loadCaptureViewController {
 	CaptureViewController *viewController = [CaptureViewController alloc];
     viewController.parentController = self;
+    if(_package)
+    {
+        viewController.package = _package;
+    }
 	return viewController;
 }
 
 - (UIViewController*) loadFrameViewContoller {
 	FrameViewController *viewController = [FrameViewController alloc];
     viewController.parentController = self;
+    if(_package)
+    {
+        viewController.package = _package;
+    }
 	return viewController;
 }
+
+- (UIViewController*) loadInstructions {
+	InstructionsVC *viewController = [InstructionsVC alloc];
+    viewController.parentController = self;
+    viewController.package = _package;
+	return viewController;
+}
+
 
 
 -(void)closeMe
@@ -93,6 +114,15 @@
     [self toggleView:VMODE_CAMERA nState:0];
 }
 
+-(void)showInstructions
+{
+    ExtractPackAppDelegate* appdelegate = [UIApplication sharedApplication].delegate;
+    appdelegate.m_fCapturing = YES;
+    
+    [self toggleView:VMODE_INSTRUCTIONS nState:0];
+}
+
+
 -(void)showFrame
 {
     ExtractPackAppDelegate* appdelegate = [UIApplication sharedApplication].delegate;
@@ -104,14 +134,23 @@
 {
     NSLog(@"closeAndReturn");
 
-    
     [[NSNotificationCenter defaultCenter] postNotificationName:@"checkBarcodeOnServer" object:_keptBarCode];
     
     [self.navigationController popToRootViewControllerAnimated:YES];
     
-
-
 }
+
+-(void)closeAndReturnWhenTakingMed
+{
+    NSLog(@"closeAndReturnWhenTakingMed");
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"takingMed" object:_package];
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    
+}
+
+
 
 - (void) toggleView: (int)nVMode nState: (int) nState {
 	m_nVMode = nVMode;
@@ -142,6 +181,10 @@
 		case VMODE_FRAME:
 			pResult = [self loadFrameViewContoller];
 			break;
+        case VMODE_INSTRUCTIONS: ;
+            pResult = [self loadInstructions];
+			break;
+            
 	}
 	
 	return pResult;

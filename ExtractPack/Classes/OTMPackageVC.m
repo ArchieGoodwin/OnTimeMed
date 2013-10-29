@@ -10,6 +10,7 @@
 #import "MedPackage.h"
 #import "MBProgressHUD.h"
 #import "OTMhelper.h"
+#import "MainViewController.h"
 @interface OTMPackageVC ()
 
 @end
@@ -149,7 +150,23 @@
 {
     if(indexPath.section == 4)
     {
-        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        
+        [UIView animateWithDuration:0.4 animations:^{
+            
+            self.tabBarController.tabBar.hidden = YES;
+            
+            self.navigationController.navigationBarHidden = YES;
+            
+            MainViewController *controller = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
+            
+            controller.package = _package;
+            
+            [self.navigationController pushViewController:controller animated:YES];
+        }];
+        
+        
+        
+        /*[MBProgressHUD showHUDAddedTo:self.view animated:YES];
         [[OTMhelper sharedInstance] startPackage:_package completionBlock:^(BOOL result, NSError *error) {
             [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
             if(!error)
@@ -171,7 +188,7 @@
                     
                 });
             }
-        }];
+        }];*/
     }
 }
 

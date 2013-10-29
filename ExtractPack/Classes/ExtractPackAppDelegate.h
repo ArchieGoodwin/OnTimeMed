@@ -15,6 +15,7 @@ enum {
     VMODE_CAPTURE,
 	VMODE_CAMERA,
 	VMODE_FRAME,
+    VMODE_INSTRUCTIONS
 };
 
 @class ExtractPackViewController;

@@ -86,8 +86,16 @@ AVAudioPlayer* mplayer;
         ExtractPackAppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
         appDelegate.m_fCapturing=false;
         
-        
-        [_parentController closeAndReturn];
+        if(_package)
+        {
+            [_parentController closeAndReturnWhenTakingMed];
+
+        }
+        else
+        {
+            [_parentController closeAndReturn];
+
+        }
         [self dismissViewControllerAnimated:YES completion:^{
             
         }];

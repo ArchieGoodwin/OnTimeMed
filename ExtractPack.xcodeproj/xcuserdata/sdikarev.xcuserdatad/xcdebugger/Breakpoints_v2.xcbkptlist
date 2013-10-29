@@ -25,7 +25,7 @@
                   symbolName = "-[MEDNetworkHelper getPackagesByUserId:completionBlock:]"
                   moduleName = "ExtractPack"
                   urlString = "file:///Users/sdikarev/Dropbox/Incoding/Apple%20coding/ExtractPack_v2_130603/MEDNetworkHelper.m"
-                  timestampString = "404651745.020122"
+                  timestampString = "404735546.609839"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "59"
@@ -39,7 +39,7 @@
                   symbolName = "-[MEDNetworkHelper getPackagesByUserId:completionBlock:]"
                   moduleName = "ExtractPack"
                   urlString = "file:///Users/sdikarev/Dropbox/Incoding/Apple%20coding/ExtractPack_v2_130603/MEDNetworkHelper.m"
-                  timestampString = "404651745.020357"
+                  timestampString = "404735546.610071"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "59"
@@ -53,7 +53,7 @@
                   symbolName = "__56-[MEDNetworkHelper getPackagesByUserId:completionBlock:]_block_invoke"
                   moduleName = "ExtractPack"
                   urlString = "file:///Users/sdikarev/Dropbox/Incoding/Apple%20coding/ExtractPack_v2_130603/MEDNetworkHelper.m"
-                  timestampString = "404651745.020548"
+                  timestampString = "404735546.610237"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "59"
@@ -67,72 +67,12 @@
                   symbolName = "__56-[MEDNetworkHelper getPackagesByUserId:completionBlock:]_block_invoke"
                   moduleName = "ExtractPack"
                   urlString = "file:///Users/sdikarev/Dropbox/Incoding/Apple%20coding/ExtractPack_v2_130603/MEDNetworkHelper.m"
-                  timestampString = "404651745.020727"
+                  timestampString = "404735546.610394"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "59"
                   endingLineNumber = "59"
                   offsetFromSymbolStart = "170">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ExtractPack/MainViewController.mm"
-            timestampString = "404640584.429033"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "-closeMeWithBarcode:"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[MainViewController closeMeWithBarcode:]"
-                  moduleName = "ExtractPack"
-                  urlString = "file:///Users/sdikarev/Dropbox/Incoding/Apple%20coding/ExtractPack_v2_130603/ExtractPack/MainViewController.mm"
-                  timestampString = "404651745.020928"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[MainViewController closeMeWithBarcode:]"
-                  moduleName = "ExtractPack"
-                  urlString = "file:///Users/sdikarev/Dropbox/Incoding/Apple%20coding/ExtractPack_v2_130603/ExtractPack/MainViewController.mm"
-                  timestampString = "404651745.021098"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "214">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[MainViewController closeMeWithBarcode:]"
-                  moduleName = "ExtractPack"
-                  urlString = "file:///Users/sdikarev/Dropbox/Incoding/Apple%20coding/ExtractPack_v2_130603/ExtractPack/MainViewController.mm"
-                  timestampString = "404651745.021272"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "244">
                </Location>
             </Locations>
          </BreakpointContent>

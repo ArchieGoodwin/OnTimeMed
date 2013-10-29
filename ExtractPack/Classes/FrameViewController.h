@@ -11,10 +11,11 @@
 
 @interface FrameViewController : UIViewController <UIAlertViewDelegate>
 {
-//    IBOutlet UIImageView *resultImageView;
+    
 }
 @property (nonatomic, strong) IBOutlet UIImageView *resultImageView;
 @property (nonatomic, strong) MainViewController *parentController;
+@property (nonatomic, strong) MedPackage *package;
 
 - (IBAction) continueButtonTapped;
 - (IBAction) retryButtonTapped;

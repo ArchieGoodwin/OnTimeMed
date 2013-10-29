@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MedPackage.h"
 
 @interface MainViewController : UIViewController
 {
@@ -19,7 +19,7 @@
     
 @public	UIViewController* activeViewController;
 }
-
+@property (nonatomic, strong) MedPackage *package;
 @property (nonatomic, strong) NSString *keptBarCode;
 - (void) changeView: (int) nVMode;
 - (void) showWindow;
@@ -30,6 +30,7 @@
 -(void)closeMeWithBarcode:(NSString *)barcode;
 -(void)closeMe;
 -(void)closeAndReturn;
+-(void)closeAndReturnWhenTakingMed;
 -(void)showFrame;
 -(void)showCaptureView;
 @end;

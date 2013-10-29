@@ -33,6 +33,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    if(_package)
+    {
+        _lblMessage.text = [NSString stringWithFormat:@"Taking medication %@", _package.medicationname];
+    }
+    else
+    {
+        _lblMessage.text = @"";
+
+    }
+    
 	// Do any additional setup after loading the view, typically from a nib.
     ExtractPackAppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
     
@@ -111,7 +122,7 @@
     }
     
     
-    NSLog (@"%@", symbol.data);
+    //NSLog (@"%@", symbol.data);
     const char* szBuf=[symbol.data UTF8String];
     
     ExtractPackAppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
@@ -123,17 +134,72 @@
     
     
     _resultText.text=[NSString stringWithFormat:@"Package Baracode ID %@ was scanned.", packageID];
-    NSLog(@"%@", [NSString stringWithFormat:@"Package Baracode ID %@ was scanned.", packageID]);
-    _parentController.keptBarCode = packageID;
+    NSLog(@"%@", [NSString stringWithFormat:@"Package Baracode ID %@ was scanned. _package.packageid = %@", packageID, _package.barcode]);
     
-    //[reader dismissModalViewControllerAnimated:NO];
-    [self dismissViewControllerAnimated:YES completion:^{
-        [self presentCaptureViewController];
+    if(_package)
+    {
+        if([_package.barcode isEqual:packageID])
+        {
+            _parentController.keptBarCode = packageID;
+            
+            [[MEDNetworkHelper sharedInstance] postEvent:EVENTScanBarcode packageid:_package.packageid.integerValue completionBlock:^(BOOL result, NSError *error) {
+                NSLog(@"EVENTScanBarcode sent");
+                if(result)
+                {
+                }
+                else
+                {
+                    dispatch_async(dispatch_get_main_queue(),^{
+                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:error.localizedDescription delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                        [alert show];
+                        
+                    });
+                }
+                
+                
+            }];
 
-    }];
-    //[_parentController closeMeWithBarcode:packageID];
-    // ADD: dismiss the controller (NB dismiss from the *reader*!)
-    //[reader dismissViewControllerAnimated:NO completion:nil];
+            
+            [self dismissViewControllerAnimated:YES completion:^{
+                [_parentController toggleView: VMODE_INSTRUCTIONS nState:0];
+                
+            }];
+        }
+        else
+        {
+            [self dismissViewControllerAnimated:YES completion:^{
+                _lblMessage.text = [NSString stringWithFormat:@"Wrong medications scanned! Please scan bar code for %@", _package.medicationname];
+
+                [[MEDNetworkHelper sharedInstance] postEvent:EVENTDeviceAlarmWrongMedScanned packageid:_package.packageid.integerValue completionBlock:^(BOOL result, NSError *error) {
+                    NSLog(@"EVENTDeviceAlarmWrongMedScanned sent");
+                    if(result)
+                    {
+                    }
+                    else
+                    {
+                        dispatch_async(dispatch_get_main_queue(),^{
+                            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:error.localizedDescription delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                            [alert show];
+                            
+                        });
+                    }
+                    
+                    
+                }];
+            }];
+        }
+    }
+    else
+    {
+        _parentController.keptBarCode = packageID;
+        
+        [self dismissViewControllerAnimated:YES completion:^{
+            [self presentCaptureViewController];
+            
+        }];
+    }
+   
+
 
 }
 

@@ -88,8 +88,7 @@
         case 0:
         {
             UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"LogOutCell"];
-
-            break;
+            return cell;
         }
             
         default:
@@ -100,6 +99,36 @@
     return cell;
 }
 
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(alertView.tag == 1001)
+    {
+        if(buttonIndex == 1)
+        {
+            [self logOut];
+        }
+    }
+}
+
+-(void)logOut
+{
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"login"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    User *user = [[OTMhelper sharedInstance] getCurrentUser];
+    
+    if(user != nil)
+    {
+        [User deleteInContext:user];
+        [User saveDefaultContext];
+    }
+    
+    [[OTMhelper sharedInstance] deleteAll];
+    
+    ExtractPackAppDelegate *appDelegate =  (ExtractPackAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate resetWindowToInitialView];
+}
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     switch (indexPath.section) {
@@ -107,21 +136,9 @@
         {
             if(indexPath.row == 0)
             {
-                [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"login"];
-                [[NSUserDefaults standardUserDefaults] synchronize];
-                
-                User *user = [[OTMhelper sharedInstance] getCurrentUser];
-                
-                if(user != nil)
-                {
-                    [User deleteInContext:user];
-                    [User saveDefaultContext];
-                }
-                
-                [[OTMhelper sharedInstance] deleteAll];
-                
-                ExtractPackAppDelegate *appDelegate =  (ExtractPackAppDelegate *)[[UIApplication sharedApplication] delegate];
-                [appDelegate resetWindowToInitialView];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Are you sure you want to log out? You data will deleted." delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
+                alert.tag = 1001;
+                [alert show];
             }
             
             break;

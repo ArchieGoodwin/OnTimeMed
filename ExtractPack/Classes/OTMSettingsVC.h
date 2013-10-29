@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OTMSettingsVC : UITableViewController
+@interface OTMSettingsVC : UITableViewController <UIAlertViewDelegate>
 
 @end
