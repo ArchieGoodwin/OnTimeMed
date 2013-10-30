@@ -46,6 +46,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkBarcodeOnServer:) name:@"checkBarcodeOnServer" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveTakingMedStep:) name:@"takingMed" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(alreadyTakingMedStep:) name:@"alreadyTakingMed" object:nil];
 
 
     
@@ -104,6 +105,10 @@
     
 
 }
+
+
+
+
 
 -(void)saveTakingMedStep:(NSNotification *)notification
 {

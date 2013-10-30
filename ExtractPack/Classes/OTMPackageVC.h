@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MedPackage.h"
-@interface OTMPackageVC : UITableViewController
+@interface OTMPackageVC : UITableViewController 
 
 
 @property (nonatomic, strong) MedPackage *package;
