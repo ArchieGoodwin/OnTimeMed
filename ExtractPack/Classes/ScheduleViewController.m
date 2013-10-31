@@ -35,6 +35,9 @@
 
     self.navigationItem.title = @"Medication Schedule";
     
+    self.table.separatorInset = UIEdgeInsetsMake(0, 10, 0, 10);
+
+    
     User *user = [[OTMhelper sharedInstance] getCurrentUser];
     
     _packages = [user.medpackages allObjects];

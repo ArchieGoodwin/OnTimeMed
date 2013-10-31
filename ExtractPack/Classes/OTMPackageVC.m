@@ -55,9 +55,10 @@
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:6]];
     
     pickerShownSkip = NO;
+    [self showHidePickerSkipControls:cell];
+
     [self.tableView beginUpdates];
     [self.tableView endUpdates];
-    [self showHidePickerControls:cell];
     
 }
 - (IBAction)btnDoneSkip:(id)sender {
@@ -65,9 +66,10 @@
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:6]];
     
     pickerShownSkip = NO;
+    [self showHidePickerSkipControls:cell];
+
     [self.tableView beginUpdates];
     [self.tableView endUpdates];
-    [self showHidePickerSkipControls:cell];
     
     
     [self skipTakingMedStep];
@@ -77,9 +79,10 @@
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:5]];
 
     pickerShown = NO;
+    [self showHidePickerControls:cell];
+
     [self.tableView beginUpdates];
     [self.tableView endUpdates];
-    [self showHidePickerControls:cell];
     
     
     [self alreadyTakingMedStep];
@@ -123,7 +126,6 @@
                 [self.navigationController popToRootViewControllerAnimated:YES];
             }
             
-            
         }
         else
         {
@@ -133,7 +135,6 @@
                 
             });
         }
-        
         
     }];
     
@@ -146,10 +147,7 @@
         NSLog(@"EVENTTakeMedication sent");
         if(result)
         {
-            
-            
-            
-            
+
         }
         else
         {
@@ -159,7 +157,6 @@
                 
             });
         }
-        
         
     }];
     
@@ -172,9 +169,10 @@
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:5]];
     
     pickerShown = NO;
+    [self showHidePickerControls:cell];
+
     [self.tableView beginUpdates];
     [self.tableView endUpdates];
-    [self showHidePickerControls:cell];
 }
 
 -(void)showPickerFromTextField:(UITableViewCell *)cell
@@ -185,7 +183,6 @@
     
     picker.datePickerMode = UIDatePickerModeDateAndTime;
 	picker.date = [NSDate date];
-	[picker addTarget:self action:@selector(changeDateInLabel:) forControlEvents:UIControlEventValueChanged];
     
     [picker setFrame: CGRectMake(0, 35, cell.contentView.frame.size.width, 180)];
     
@@ -210,7 +207,7 @@
     
     
     
-    pickerSkip.tag = 1001;
+    pickerSkip.tag = 1002;
     
     
     [cell.contentView addSubview: pickerSkip];
@@ -288,6 +285,14 @@
     btnCancel.hidden = !pickerShown;
     btnDone.hidden = !pickerShown;
     lblLabel.hidden = pickerShown;
+    if(!pickerShown)
+    {
+        UIView *v = [cell.contentView viewWithTag:1001];
+        if(v)
+        {
+            [v removeFromSuperview];
+        }
+    }
 }
 
 -(void)showHidePickerSkipControls:(UITableViewCell *)cell
@@ -298,6 +303,14 @@
     btnCancel.hidden = !pickerShownSkip;
     btnDone.hidden = !pickerShownSkip;
     lblLabel.hidden = pickerShownSkip;
+    if(!pickerShownSkip)
+    {
+        UIView *v = [cell.contentView viewWithTag:1002];
+        if(v)
+        {
+            [v removeFromSuperview];
+        }
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -405,8 +418,7 @@
             
             [self.navigationController pushViewController:controller animated:YES];
         }];
-        
-        
+
         
         /*[MBProgressHUD showHUDAddedTo:self.view animated:YES];
         [[OTMhelper sharedInstance] startPackage:_package completionBlock:^(BOOL result, NSError *error) {
