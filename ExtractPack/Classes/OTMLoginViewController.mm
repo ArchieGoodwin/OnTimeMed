@@ -11,6 +11,7 @@
 #import "NSManagedObject+NWCoreDataHelper.h"
 #import "MEDNetworkHelper.h"
 #import "MBProgressHUD.h"
+#import "OTMhelper.h"
 @interface OTMLoginViewController ()
 {
 
@@ -84,17 +85,29 @@
             {
                 if(result)
                 {
-                    
-                    [[MEDNetworkHelper sharedInstance] postEvent:EVENTRegisterUserOnDevice packageid:0 completionBlock:^(BOOL result, NSError *error) {
-                        
-                    }];
-                    
+ 
                     
                     user.userId = [NSString stringWithFormat:@"%@",[result objectForKey:@"Id"]];
                     user.name = [result objectForKey:@"Name"];
                     [[NSUserDefaults standardUserDefaults] setObject:@"done" forKey:@"login"];
                     [[NSUserDefaults standardUserDefaults] synchronize];
                     [User saveDefaultContext];
+                    
+                    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+                    [formatter setDateFormat:@"hh:mm:ss a"];
+                    NSString *time = [formatter stringFromDate:[NSDate date]];
+                    [formatter setDateFormat:@"MM/dd/yyyy"];
+                    NSString *date = [formatter stringFromDate:[NSDate date]];
+                    
+                    
+                    
+                    NSString *xml = [[OTMhelper sharedInstance] returnEventXML:EVENTRegisterUserOnDevice];
+                    xml = [NSString stringWithFormat:xml, time, date, user.userId];
+                    
+                    
+                    [[MEDNetworkHelper sharedInstance] postEvent:EVENTRegisterUserOnDevice packageid:0 xmlString:xml obj:nil completionBlock:^(BOOL result, NSError *error) {
+                        
+                    }];
                     
                     [self performSegueWithIdentifier:@"mainEntrance" sender:user];
                 }

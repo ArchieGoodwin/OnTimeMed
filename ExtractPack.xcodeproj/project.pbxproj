@@ -72,9 +72,6 @@
 		BDAED11316D007FE00D220F7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAED11216D007FE00D220F7 /* AVFoundation.framework */; };
 		BDAED11516D0080B00D220F7 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAED11416D0080B00D220F7 /* CoreFoundation.framework */; };
 		DC11022C1761ADE900F3CCFF /* NSManagedObject+NWCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DC11022A1761ADE900F3CCFF /* NSManagedObject+NWCoreDataHelper.m */; };
-		DC1102331761AE0D00F3CCFF /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC11022F1761AE0D00F3CCFF /* libTestFlight.a */; };
-		DC1102341761AE0D00F3CCFF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DC1102301761AE0D00F3CCFF /* README.md */; };
-		DC1102351761AE0D00F3CCFF /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = DC1102311761AE0D00F3CCFF /* release_notes.md */; };
 		DC1102D41761AFEB00F3CCFF /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC1102D21761AFEB00F3CCFF /* Model.xcdatamodeld */; };
 		DC1102D61761B04000F3CCFF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1102D51761B04000F3CCFF /* CoreData.framework */; };
 		DC1102E91761FDE700F3CCFF /* MEDNetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102E81761FDE700F3CCFF /* MEDNetworkHelper.m */; };
@@ -292,10 +289,6 @@
 		BDAED11416D0080B00D220F7 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		DC1102291761ADE900F3CCFF /* NSManagedObject+NWCoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+NWCoreDataHelper.h"; sourceTree = "<group>"; };
 		DC11022A1761ADE900F3CCFF /* NSManagedObject+NWCoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+NWCoreDataHelper.m"; sourceTree = "<group>"; };
-		DC11022F1761AE0D00F3CCFF /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
-		DC1102301761AE0D00F3CCFF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		DC1102311761AE0D00F3CCFF /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
-		DC1102321761AE0D00F3CCFF /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		DC1102D31761AFEB00F3CCFF /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		DC1102D51761B04000F3CCFF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		DC1102E71761FDE700F3CCFF /* MEDNetworkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDNetworkHelper.h; sourceTree = "<group>"; };
@@ -381,7 +374,6 @@
 				BDAED0C016D002E800D220F7 /* CoreGraphics.framework in Frameworks */,
 				BDAED0FF16D006B700D220F7 /* libzbar.a in Frameworks */,
 				3CAB017D1750422900FC6CC1 /* libcvlibbase.a in Frameworks */,
-				DC1102331761AE0D00F3CCFF /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,20 +734,8 @@
 			isa = PBXGroup;
 			children = (
 				DC1102EA1761FE3E00F3CCFF /* AFNetworking */,
-				DC11022E1761ADFE00F3CCFF /* testflight */,
 			);
 			name = externals;
-			sourceTree = "<group>";
-		};
-		DC11022E1761ADFE00F3CCFF /* testflight */ = {
-			isa = PBXGroup;
-			children = (
-				DC11022F1761AE0D00F3CCFF /* libTestFlight.a */,
-				DC1102301761AE0D00F3CCFF /* README.md */,
-				DC1102311761AE0D00F3CCFF /* release_notes.md */,
-				DC1102321761AE0D00F3CCFF /* TestFlight.h */,
-			);
-			name = testflight;
 			sourceTree = "<group>";
 		};
 		DC1102B41761AEBE00F3CCFF /* MED */ = {
@@ -958,8 +938,6 @@
 				3CAB00CB1750332A00FC6CC1 /* beep-7.mp3 in Resources */,
 				3CC51CF21754F41400D6BCFA /* MainViewController.xib in Resources */,
 				3CF39992175966A400BC5B75 /* CaptureScreenViewController.xib in Resources */,
-				DC1102341761AE0D00F3CCFF /* README.md in Resources */,
-				DC1102351761AE0D00F3CCFF /* release_notes.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

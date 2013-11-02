@@ -25,4 +25,5 @@ typedef void (^HelperResult)  (BOOL result, NSError *error);
 -(void)deleteAll;
 -(void)startPackage:(MedPackage *)package completionBlock:(HelperResult)completionBlock;
 -(NSString *)returnEvent:(NSInteger)eventType;
+-(NSString *)returnEventXML:(NSInteger)eventType;
 @end

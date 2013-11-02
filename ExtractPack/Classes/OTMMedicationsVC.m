@@ -114,7 +114,20 @@
 {
     MedPackage * pack = (MedPackage *) [notification object];
 
-    [[MEDNetworkHelper sharedInstance] postEvent:EVENTTakePictureAfter packageid:pack.packageid.integerValue completionBlock:^(BOOL result, NSError *error) {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"hh:mm:ss a"];
+    NSString *time = [formatter stringFromDate:[NSDate date]];
+    [formatter setDateFormat:@"MM/dd/yyyy"];
+    NSString *date = [formatter stringFromDate:[NSDate date]];
+    
+    
+    
+    NSString *xml = [[OTMhelper sharedInstance] returnEventXML:EVENTTakePictureAfter];
+    xml = [NSString stringWithFormat:xml, time, date, pack.packageid, pack.barcode, [[OTMhelper sharedInstance] getCurrentUser].userId];
+    
+    
+    
+    [[MEDNetworkHelper sharedInstance] postEvent:EVENTTakePictureAfter packageid:pack.packageid.integerValue xmlString:xml obj:nil completionBlock:^(BOOL result, NSError *error) {
         NSLog(@"EVENTTakePictureAfter sent");
         if(result)
         {
@@ -124,7 +137,10 @@
                 pack.startdate = [NSDate date];
                 [MedPackage saveDefaultContext];
                 
-                [[MEDNetworkHelper sharedInstance] postEvent:EVENTSetMedicationScheduleStartTime packageid:[pack.packageid integerValue] completionBlock:^(BOOL result, NSError *error) {
+                NSString *xml = [[OTMhelper sharedInstance] returnEventXML:EVENTSetMedicationScheduleStartTime];
+                xml = [NSString stringWithFormat:xml, time, date, pack.packageid, pack.barcode, [[OTMhelper sharedInstance] getCurrentUser].userId];
+                
+                [[MEDNetworkHelper sharedInstance] postEvent:EVENTSetMedicationScheduleStartTime packageid:[pack.packageid integerValue] xmlString:xml obj:nil completionBlock:^(BOOL result, NSError *error) {
                     if(result)
                     {
                         NSLog(@"EVENTSetMedicationScheduleStartTime sent");
@@ -181,14 +197,40 @@
         {
             if([[OTMhelper sharedInstance] getPackageById:[result objectForKey:@"Id"]] == nil)
             {
-                [[OTMhelper sharedInstance] createPackage:result];
+                MedPackage *pack = [[OTMhelper sharedInstance] createPackage:result];
                 
                 int packageId = [[result objectForKey:@"Id"] integerValue];
-                [[MEDNetworkHelper sharedInstance] postEvent:EVENTScanBarcode packageid:packageId completionBlock:^(BOOL result, NSError *error) {
+                
+                NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+                [formatter setDateFormat:@"hh:mm:ss a"];
+                NSString *time = [formatter stringFromDate:[NSDate date]];
+                [formatter setDateFormat:@"MM/dd/yyyy"];
+                NSString *date = [formatter stringFromDate:[NSDate date]];
+                
+                //<GOODSCAN><time>%@</time><date>%@</date><order_number>%@</order_number><correct_code>%@</correct_code><userid>%@</userid></GOODSCAN>
+                
+                NSString *xml = [[OTMhelper sharedInstance] returnEventXML:EVENTScanBarcode];
+                xml = [NSString stringWithFormat:xml, time, date, pack.packageid, pack.barcode, [[OTMhelper sharedInstance] getCurrentUser].userId];
+                
+                
+                [[MEDNetworkHelper sharedInstance] postEvent:EVENTScanBarcode packageid:packageId xmlString:xml obj:nil completionBlock:^(BOOL result, NSError *error) {
                     NSLog(@"EVENTScanBarcode sent");
                     if(result)
                     {
-                        [[MEDNetworkHelper sharedInstance] postEvent:EVENTTakePictureBefore packageid:packageId completionBlock:^(BOOL result, NSError *error) {
+                        
+                        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+                        [formatter setDateFormat:@"hh:mm:ss a"];
+                        NSString *time = [formatter stringFromDate:[NSDate date]];
+                        [formatter setDateFormat:@"MM/dd/yyyy"];
+                        NSString *date = [formatter stringFromDate:[NSDate date]];
+                        
+                        
+                        NSString *xml = [[OTMhelper sharedInstance] returnEventXML:EVENTTakePictureBefore];
+                        xml = [NSString stringWithFormat:xml, time, date, pack.packageid, pack.barcode, [[OTMhelper sharedInstance] getCurrentUser].userId];
+                        
+                        
+                        
+                        [[MEDNetworkHelper sharedInstance] postEvent:EVENTTakePictureBefore packageid:packageId xmlString:xml obj:nil completionBlock:^(BOOL result, NSError *error) {
                             NSLog(@"EVENTTakePictureBefore sent");
                         }];
                         
@@ -210,8 +252,21 @@
             }
             else
             {
+                MedPackage *pack = [[OTMhelper sharedInstance] getPackageById:[result objectForKey:@"Id"]];
                 int packageId = [[result objectForKey:@"Id"] integerValue];
-                [[MEDNetworkHelper sharedInstance] postEvent:EVENTDeviceAlarmWrongMedScanned packageid:packageId completionBlock:^(BOOL result, NSError *error) {
+
+                
+                NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+                [formatter setDateFormat:@"hh:mm:ss a"];
+                NSString *time = [formatter stringFromDate:[NSDate date]];
+                [formatter setDateFormat:@"MM/dd/yyyy"];
+                NSString *date = [formatter stringFromDate:[NSDate date]];
+                
+                NSString *xml = [[OTMhelper sharedInstance] returnEventXML:EVENTDeviceAlarmWrongMedScanned];
+                xml = [NSString stringWithFormat:xml, time, date, pack.barcode, barcodeId, [[OTMhelper sharedInstance] getCurrentUser].userId];
+                
+                
+                [[MEDNetworkHelper sharedInstance] postEvent:EVENTDeviceAlarmWrongMedScanned packageid:packageId xmlString:xml obj:nil completionBlock:^(BOOL result, NSError *error) {
                     
                     if(result)
                     {

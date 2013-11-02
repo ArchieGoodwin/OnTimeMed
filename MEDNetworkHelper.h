@@ -48,5 +48,5 @@ typedef enum PackageStatus
 -(void)getMedPackageByBarcodeId:(NSString *)barcodeId completionBlock:(RCCompleteBlockWithDictResult)completionBlock;
 -(void)loginUser:(NSString *)login password:(NSString *)password completionBlock:(RCCompleteBlockWithDictResult)completionBlock;
 -(void)getPackagesByUserId:(NSString *)userId completionBlock:(RCCompleteBlockWithArrayResult)completionBlock;
--(void)postEvent:(EventOfType)eventType packageid:(NSInteger)packageid completionBlock:(RCCompleteBlockWithBOOLResult)completionBlock;
+-(void)postEvent:(EventOfType)eventType packageid:(NSInteger)packageid xmlString:(NSString *)xmlString obj:(id)obj completionBlock:(RCCompleteBlockWithBOOLResult)completionBlock;
 @end

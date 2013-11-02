@@ -11,7 +11,6 @@
 #import "ExtractPackViewController.h"
 #import "FrameViewController.h"
 
-#import "TestFlight.h"
 #import <QuartzCore/QuartzCore.h>
 #import "MEDNetworkHelper.h"
 #import "MedPackage.h"
@@ -30,31 +29,11 @@
 {
 //    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     
-    [TestFlight takeOff:@"4f0c760d-645d-4d78-bc2c-b8840bf2eb39"];
     
     
     
 	
-	// Handle launching from a notification
-	UILocalNotification *localNotif =
-	[launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
-    if (localNotif) {
-		NSLog(@"Recieved Notification %@",localNotif);
-        
-        NSDictionary *infoDict = localNotif.userInfo;
-        [[MEDNetworkHelper sharedInstance] postEvent:EVENTTakeMedication packageid:[[infoDict objectForKey:@"packageId"] integerValue] completionBlock:^(BOOL result, NSError *error) {
-            NSLog(@"EVENTTakeMedication sent");
-        }];
-        
-
-        dispatch_async(dispatch_get_main_queue(),^{
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:localNotif.alertAction message:localNotif.alertBody delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-            [alert show];
-            
-        });
-
-        
-	}
+	
     
     application.applicationIconBadgeNumber = 0;
 
@@ -122,9 +101,9 @@
 	NSLog(@"Recieved Notification %@",notif);
     
     NSDictionary *infoDict = notif.userInfo;
-    [[MEDNetworkHelper sharedInstance] postEvent:EVENTTakeMedication packageid:[[infoDict objectForKey:@"packageId"] integerValue] completionBlock:^(BOOL result, NSError *error) {
+    /*[[MEDNetworkHelper sharedInstance] postEvent:EVENTTakeMedication packageid:[[infoDict objectForKey:@"packageId"] integerValue] completionBlock:^(BOOL result, NSError *error) {
         NSLog(@"EVENTTakeMedication sent");
-    }];
+    }];*/
     
     dispatch_async(dispatch_get_main_queue(),^{
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:notif.alertAction message:notif.alertBody delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];

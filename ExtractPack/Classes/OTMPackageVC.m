@@ -12,6 +12,7 @@
 #import "OTMhelper.h"
 #import "MainViewController.h"
 #import "NSManagedObject+NWCoreDataHelper.h"
+#import "User.h"
 @interface OTMPackageVC ()
 {
     UIDatePicker *picker;
@@ -19,6 +20,9 @@
 
     BOOL pickerShown;
     BOOL pickerShownSkip;
+    
+    NSDate *selDate;
+    NSDate *selSkipDate;
 }
 @end
 
@@ -93,7 +97,18 @@
 -(void)alreadyTakingMedStep
 {
     
-    [[MEDNetworkHelper sharedInstance] postEvent:EVENTTakeMedication packageid:_package.packageid.integerValue completionBlock:^(BOOL result, NSError *error) {
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"hh:mm:ss a"];
+    NSString *time = [formatter stringFromDate:[NSDate date]];
+    [formatter setDateFormat:@"MM/dd/yyyy"];
+    NSString *date = [formatter stringFromDate:[NSDate date]];
+    
+    NSString *xml = [[OTMhelper sharedInstance] returnEventXML:EVENTTakeMedication];
+    xml = [NSString stringWithFormat:xml, time, date, _package.packageid, _package.barcode, [[OTMhelper sharedInstance] getCurrentUser].userId];
+    
+    
+    [[MEDNetworkHelper sharedInstance] postEvent:EVENTTakeMedication packageid:_package.packageid.integerValue xmlString:xml obj:nil completionBlock:^(BOOL result, NSError *error) {
         NSLog(@"EVENTTakeMedication sent");
         if(result)
         {
@@ -103,7 +118,15 @@
                 _package.startdate = [NSDate date];
                 [MedPackage saveDefaultContext];
                 
-                [[MEDNetworkHelper sharedInstance] postEvent:EVENTSetMedicationScheduleStartTime packageid:[_package.packageid integerValue] completionBlock:^(BOOL result, NSError *error) {
+                NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+                [formatter setDateFormat:@"hh:mm:ss a"];
+                NSString *time = [formatter stringFromDate:[NSDate date]];
+                [formatter setDateFormat:@"MM/dd/yyyy"];
+                NSString *date = [formatter stringFromDate:[NSDate date]];
+                NSString *xml = [[OTMhelper sharedInstance] returnEventXML:EVENTSetMedicationScheduleStartTime];
+                xml = [NSString stringWithFormat:xml, time, date, _package.packageid, _package.barcode, [[OTMhelper sharedInstance] getCurrentUser].userId];
+                
+                [[MEDNetworkHelper sharedInstance] postEvent:EVENTSetMedicationScheduleStartTime packageid:[_package.packageid integerValue] xmlString:xml obj:nil completionBlock:^(BOOL result, NSError *error) {
                     if(result)
                     {
                         NSLog(@"EVENTSetMedicationScheduleStartTime sent");
@@ -142,8 +165,23 @@
 
 -(void)skipTakingMedStep
 {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"hh:mm:ss a"];
+    NSString *time = [formatter stringFromDate:[NSDate date]];
+    [formatter setDateFormat:@"MM/dd/yyyy"];
+    NSString *date = [formatter stringFromDate:[NSDate date]];
+    NSString *xml = [[OTMhelper sharedInstance] returnEventXML:EVENTSkipMedication];
+    //<SKIP><time>%@</time><date>%@</date><entered_time>%@</entered_time><entered_date>%@</entered_date><scheduled_time>%@</scheduled_time><scheduled_date>%@</scheduled_date><order_number>%@</order_number><userid>%@</userid></SKIP>
+    [formatter setDateFormat:@"hh:mm:ss a"];
+    NSString *timeS = [formatter stringFromDate:selSkipDate];
+    [formatter setDateFormat:@"MM/dd/yyyy"];
+    NSString *dateS = [formatter stringFromDate:selSkipDate];
     
-    [[MEDNetworkHelper sharedInstance] postEvent:EVENTSkipMedication packageid:_package.packageid.integerValue completionBlock:^(BOOL result, NSError *error) {
+    
+    xml = [NSString stringWithFormat:xml, time, date, timeS, dateS,  timeS, dateS,  _package.packageid, [[OTMhelper sharedInstance] getCurrentUser].userId];
+    
+    
+    [[MEDNetworkHelper sharedInstance] postEvent:EVENTSkipMedication packageid:_package.packageid.integerValue xmlString:xml obj:nil completionBlock:^(BOOL result, NSError *error) {
         NSLog(@"EVENTTakeMedication sent");
         if(result)
         {
@@ -183,7 +221,8 @@
     
     picker.datePickerMode = UIDatePickerModeDateAndTime;
 	picker.date = [NSDate date];
-    
+    picker.tag = 809;
+
     [picker setFrame: CGRectMake(0, 35, cell.contentView.frame.size.width, 180)];
     
 
@@ -202,6 +241,8 @@
     
     pickerSkip.datePickerMode = UIDatePickerModeDateAndTime;
 	pickerSkip.date = [NSDate date];
+    pickerSkip.tag = 808;
+    [pickerSkip addTarget:self action:@selector(changeDateInLabel:) forControlEvents:UIControlEventValueChanged];
     
     [pickerSkip setFrame: CGRectMake(0, 35, cell.contentView.frame.size.width, 180)];
     
@@ -215,7 +256,16 @@
 
 -(IBAction)changeDateInLabel:(id)sender
 {
+    UIDatePicker *pick = (UIDatePicker *)sender;
     
+    if(pick.tag == 808)
+    {
+        selSkipDate = [pick  date];
+    }
+    if(pick.tag == 809)
+    {
+        selDate = [pick  date];
+    }
 }
 
 

@@ -41,6 +41,42 @@
 }
 
 
+-(NSString *)returnEventXML:(NSInteger)eventType
+{
+    switch (eventType) {
+        case EVENTDeviceAlarmWrongMedScanned:
+            return @"<FAILEDSCAN><time>%@</time><date>%@</date><correct_code>%@</correct_code><incorrect_code>%@</incorrect_code><userid>%@</userid></FAILEDSCAN>";
+        case EVENTScanBarcode:
+            return @"<GOODSCAN><time>%@</time><date>%@</date><order_number>%@</order_number><correct_code>%@</correct_code><userid>%@</userid></GOODSCAN>";
+        case EVENTHitSnooze:
+            return @"<TAKEX><time>%@</time><date>%@</date><order_number>%@</order_number><correct_code>%@</correct_code><userid>%@</userid></TAKEX>";
+        case EVENTTakeMedication:
+            return @"<TOOK><time>%@</time><date>%@</date><order_number>%@</order_number><correct_code>%@</correct_code><userid>%@</userid></TOOK>";
+        case EVENTDeviceAlarmTakeMed:
+            return @"<TOOKO><time>%@</time><date>%@</date><entered_time>%@</entered_time><entered_date>%@</entered_date><scheduled_time>%@</scheduled_time><scheduled_date>%@</scheduled_date><order_number>%@</order_number><userid>%@</userid></TOOKO>";
+        case EVENTSkipMedication:
+            return @"<SKIP><time>%@</time><date>%@</date><entered_time>%@</entered_time><entered_date>%@</entered_date><scheduled_time>%@</scheduled_time><scheduled_date>%@</scheduled_date><order_number>%@</order_number><userid>%@</userid></SKIP>";
+        case EVENTTakePictureAfter:
+            return @"<TOOKPICT><time>%@</time><date>%@</date><order_number>%@</order_number><correct_code>%@</correct_code><userid>%@</userid></TOOKPICT>";
+        case EVENTTakePictureBefore:
+            return @"<TOOKPICTBEFORE><time>%@</time><date>%@</date><order_number>%@</order_number><correct_code>%@</correct_code><userid>%@</userid></TOOKPICTBEFORE>";
+        case EVENTSetMedicationScheduleStartTime:
+            return @"<START><time>%@</time><date>%@</date><order_number>%@</order_number><correct_code>%@</correct_code><userid>%@</userid></START>";
+        case EVENTRegisterUserOnDevice:
+            return @"<REGISTER><time>%@</time><date>%@</date><userid>%@</userid></REGISTER>";
+
+            
+        default:
+            break;
+    }
+    
+    return @"";
+}
+
+
+
+
+
 -(NSString *)returnEvent:(NSInteger)eventType
 {
     
@@ -91,8 +127,17 @@
                     
                     package.status = [NSNumber numberWithInt:PS_used];
                     [MedPackage saveDefaultContext];
+                    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+                    [formatter setDateFormat:@"hh:mm:ss a"];
+                    NSString *time = [formatter stringFromDate:[NSDate date]];
+                    [formatter setDateFormat:@"MM/dd/yyyy"];
+                    NSString *date = [formatter stringFromDate:[NSDate date]];
                     
-                    [[MEDNetworkHelper sharedInstance] postEvent:EVENTSetMedicationScheduleStartTime packageid:[package.packageid integerValue] completionBlock:^(BOOL result, NSError *error) {
+                    NSString *xml = [self returnEventXML:EVENTSetMedicationScheduleStartTime];
+                    xml = [NSString stringWithFormat:xml, time, date, package.packageid, package.barcode, [self getCurrentUser].userId];
+                    
+                    
+                    [[MEDNetworkHelper sharedInstance] postEvent:EVENTSetMedicationScheduleStartTime packageid:[package.packageid integerValue] xmlString:xml obj:nil completionBlock:^(BOOL result, NSError *error) {
                         if(result)
                         {
                             NSLog(@"EVENTSetMedicationScheduleStartTime sent");

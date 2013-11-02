@@ -10,6 +10,8 @@
 #import "ExtractPackAppDelegate.h"
 #import "MEDNetworkHelper.h"
 #import "MedPackage.h"
+#import "OTMhelper.h"
+#import "User.h"
 @interface InstructionsVC ()
 
 @end
@@ -35,8 +37,19 @@
 }
 
 - (IBAction)btnTookMedication:(id)sender {
+    //<TOOK><time>%@</time><date>%@</date><order_number>%@</order_number><correct_code>%@</correct_code><userid>%@</userid></TOOK>
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"hh:mm:ss a"];
+    NSString *time = [formatter stringFromDate:[NSDate date]];
+    [formatter setDateFormat:@"MM/dd/yyyy"];
+    NSString *date = [formatter stringFromDate:[NSDate date]];
     
-    [[MEDNetworkHelper sharedInstance] postEvent:EVENTTakeMedication packageid:_package.packageid.integerValue completionBlock:^(BOOL result, NSError *error) {
+    
+    
+    NSString *xml = [[OTMhelper sharedInstance] returnEventXML:EVENTTakeMedication];
+    xml = [NSString stringWithFormat:xml, time, date, _package.packageid, _package.barcode, [[OTMhelper sharedInstance] getCurrentUser].userId];
+    
+    [[MEDNetworkHelper sharedInstance] postEvent:EVENTTakeMedication packageid:_package.packageid.integerValue xmlString:xml obj:nil completionBlock:^(BOOL result, NSError *error) {
         NSLog(@"EVENTTakeMedication sent");
         if(result)
         {
@@ -63,8 +76,17 @@
 
 - (IBAction)btnCancel:(id)sender {
     
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"hh:mm:ss a"];
+    NSString *time = [formatter stringFromDate:[NSDate date]];
+    [formatter setDateFormat:@"MM/dd/yyyy"];
+    NSString *date = [formatter stringFromDate:[NSDate date]];
     
-    [[MEDNetworkHelper sharedInstance] postEvent:EVENTSkipMedication packageid:_package.packageid.integerValue completionBlock:^(BOOL result, NSError *error) {
+    
+    NSString *xml = [[OTMhelper sharedInstance] returnEventXML:EVENTHitSnooze];
+    xml = [NSString stringWithFormat:xml, time, date, _package.packageid, _package.barcode, [[OTMhelper sharedInstance] getCurrentUser].userId];
+    
+    [[MEDNetworkHelper sharedInstance] postEvent:EVENTHitSnooze packageid:_package.packageid.integerValue xmlString:xml obj:nil completionBlock:^(BOOL result, NSError *error) {
         NSLog(@"EVENTSkipMedication sent");
         if(result)
         {

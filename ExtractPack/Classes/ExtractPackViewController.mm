@@ -11,7 +11,8 @@
 #import "ExtractPackAppDelegate.h"
 #import "FrameViewController.h"
 #import "MEDNetworkHelper.h"
-
+#import "OTMhelper.h"
+#import "User.h"
 @interface ExtractPackViewController ()
 {
 }
@@ -141,8 +142,18 @@
         if([_package.barcode isEqual:packageID])
         {
             _parentController.keptBarCode = packageID;
+            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+            [formatter setDateFormat:@"hh:mm:ss a"];
+            NSString *time = [formatter stringFromDate:[NSDate date]];
+            [formatter setDateFormat:@"MM/dd/yyyy"];
+            NSString *date = [formatter stringFromDate:[NSDate date]];
             
-            [[MEDNetworkHelper sharedInstance] postEvent:EVENTScanBarcode packageid:_package.packageid.integerValue completionBlock:^(BOOL result, NSError *error) {
+            //<GOODSCAN><time>%@</time><date>%@</date><order_number>%@</order_number><correct_code>%@</correct_code><userid>%@</userid></GOODSCAN>
+            
+            NSString *xml = [[OTMhelper sharedInstance] returnEventXML:EVENTScanBarcode];
+            xml = [NSString stringWithFormat:xml, time, date, packageID, _package.barcode, [[OTMhelper sharedInstance] getCurrentUser].userId];
+
+            [[MEDNetworkHelper sharedInstance] postEvent:EVENTScanBarcode packageid:_package.packageid.integerValue xmlString:xml obj:nil completionBlock:^(BOOL result, NSError *error) {
                 NSLog(@"EVENTScanBarcode sent");
                 if(result)
                 {
@@ -170,7 +181,18 @@
             [self dismissViewControllerAnimated:YES completion:^{
                 _lblMessage.text = [NSString stringWithFormat:@"Wrong medications scanned! Please scan bar code for %@", _package.medicationname];
 
-                [[MEDNetworkHelper sharedInstance] postEvent:EVENTDeviceAlarmWrongMedScanned packageid:_package.packageid.integerValue completionBlock:^(BOOL result, NSError *error) {
+                NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+                [formatter setDateFormat:@"hh:mm:ss a"];
+                NSString *time = [formatter stringFromDate:[NSDate date]];
+                [formatter setDateFormat:@"MM/dd/yyyy"];
+                NSString *date = [formatter stringFromDate:[NSDate date]];
+                
+                NSString *xml = [[OTMhelper sharedInstance] returnEventXML:EVENTDeviceAlarmWrongMedScanned];
+                xml = [NSString stringWithFormat:xml, time, date, packageID, _package.barcode, [[OTMhelper sharedInstance] getCurrentUser].userId];
+                
+                
+                
+                [[MEDNetworkHelper sharedInstance] postEvent:EVENTDeviceAlarmWrongMedScanned packageid:_package.packageid.integerValue xmlString:xml obj:nil completionBlock:^(BOOL result, NSError *error) {
                     NSLog(@"EVENTDeviceAlarmWrongMedScanned sent");
                     if(result)
                     {

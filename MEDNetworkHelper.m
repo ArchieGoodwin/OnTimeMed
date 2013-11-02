@@ -126,7 +126,7 @@
 }
 
 
--(void)postEvent:(EventOfType)eventType packageid:(NSInteger)packageid completionBlock:(RCCompleteBlockWithBOOLResult)completionBlock
+-(void)postEvent:(EventOfType)eventType packageid:(NSInteger)packageid xmlString:(NSString *)xmlString obj:(id)obj completionBlock:(RCCompleteBlockWithBOOLResult)completionBlock
 {
     
     NSString *urlString = [NSString stringWithFormat:@"http://ontimemed.incoding.biz/EventLog/"];
@@ -143,7 +143,7 @@
     [formatter setDateFormat:@"MM/dd/yyyy hh:mm:ssa"];
     NSString *date = [formatter stringFromDate:inputDate];
     
-    NSDictionary *arr = @{@"DeviceId":[[[UIDevice currentDevice] identifierForVendor] UUIDString],@"DeviceDate":date, @"Type":[NSNumber numberWithInteger:eventType], @"PackageId":[NSNumber numberWithInteger:packageid],@"EventXml":@""};
+    NSDictionary *arr = @{@"DeviceId":[[[UIDevice currentDevice] identifierForVendor] UUIDString],@"DeviceDate":date, @"Type":[NSNumber numberWithInteger:eventType], @"PackageId":[NSNumber numberWithInteger:packageid],@"EventXml":xmlString};
     NSLog(@"%@", arr);
     
     [client setDefaultHeader:@"X-Requested-With" value:@"XMLHttpRequest"];
