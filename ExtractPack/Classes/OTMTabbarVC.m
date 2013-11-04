@@ -27,6 +27,21 @@
     
     self.navigationController.interactivePopGestureRecognizer.enabled = NO;
 
+   
+
+    
+}
+
+
+
+
+
+-(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+{
+    
+   
+    
+    
 }
 /*
 // Only override drawRect: if you perform custom drawing.

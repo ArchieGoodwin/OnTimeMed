@@ -84,6 +84,7 @@
 		DC1103041761FE3E00F3CCFF /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102F91761FE3E00F3CCFF /* AFURLConnectionOperation.m */; };
 		DC1103051761FE3E00F3CCFF /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102FB1761FE3E00F3CCFF /* AFXMLRequestOperation.m */; };
 		DC1103061761FE3E00F3CCFF /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102FD1761FE3E00F3CCFF /* UIImageView+AFNetworking.m */; };
+		DC5827381827AFEB00BDB562 /* OTMSettingsNavVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5827371827AFEB00BDB562 /* OTMSettingsNavVC.m */; };
 		DC6C731917D9AE24004F012B /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6C731817D9AE24004F012B /* Schedule.m */; };
 		DC6C731C17D9AFC4004F012B /* CKCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6C731B17D9AFC4004F012B /* CKCalendarView.m */; };
 		DC9C489C181D273B00A92E20 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC9C489B181D273B00A92E20 /* Images.xcassets */; };
@@ -314,6 +315,8 @@
 		DC1102FD1761FE3E00F3CCFF /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		DC18CBDD1768745A005A0903 /* User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		DC18CBDE1768745A005A0903 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		DC5827361827AFEB00BDB562 /* OTMSettingsNavVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTMSettingsNavVC.h; sourceTree = "<group>"; };
+		DC5827371827AFEB00BDB562 /* OTMSettingsNavVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTMSettingsNavVC.m; sourceTree = "<group>"; };
 		DC6C731717D9AE24004F012B /* Schedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schedule.h; sourceTree = "<group>"; };
 		DC6C731817D9AE24004F012B /* Schedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schedule.m; sourceTree = "<group>"; };
 		DC6C731A17D9AFC4004F012B /* CKCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCalendarView.h; sourceTree = "<group>"; };
@@ -836,6 +839,8 @@
 			children = (
 				DC9C48A9181E438700A92E20 /* OTMSettingsVC.h */,
 				DC9C48AA181E438700A92E20 /* OTMSettingsVC.m */,
+				DC5827361827AFEB00BDB562 /* OTMSettingsNavVC.h */,
+				DC5827371827AFEB00BDB562 /* OTMSettingsNavVC.m */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -962,6 +967,7 @@
 				3CAB01651750421400FC6CC1 /* FindContour.cpp in Sources */,
 				3CAB01661750421400FC6CC1 /* FrameDetector.cpp in Sources */,
 				3CAB01671750421400FC6CC1 /* GaussianFilter.cpp in Sources */,
+				DC5827381827AFEB00BDB562 /* OTMSettingsNavVC.m in Sources */,
 				3CAB01681750421400FC6CC1 /* Histogram.cpp in Sources */,
 				3CAB01691750421400FC6CC1 /* ImageList.cpp in Sources */,
 				3CAB016A1750421400FC6CC1 /* ImgProc.cpp in Sources */,

@@ -549,11 +549,11 @@
             </objects>
             <point key="canvasLocation" x="941" y="-547"/>
         </scene>
-        <!--Navigation Controller - Settings-->
+        <!--Settings NavVC - Settings-->
         <scene sceneID="BPN-Om-Sul">
             <objects>
-                <navigationController definesPresentationContext="YES" id="3f7-Aq-Xwy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="740-gear" id="B7O-aI-XXs"/>
+                <navigationController definesPresentationContext="YES" id="3f7-Aq-Xwy" customClass="OTMSettingsNavVC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="912-gears-selected" id="B7O-aI-XXs"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HoF-Aa-9EW">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -609,8 +609,8 @@
     </scenes>
     <resources>
         <image name="729-top-list" width="28" height="22"/>
-        <image name="740-gear" width="28" height="28"/>
         <image name="741-box" width="28" height="26"/>
+        <image name="912-gears-selected" width="28" height="28"/>
         <image name="Tabbar" width="28" height="28"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
