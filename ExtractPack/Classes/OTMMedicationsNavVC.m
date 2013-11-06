@@ -1,18 +1,18 @@
 //
-//  OTMSettingsNavVC.m
+//  OTMMedicationsNavVC.m
 //  ExtractPack
 //
-//  Created by Nero Wolfe on 04/11/13.
+//  Created by Nero Wolfe on 06/11/13.
 //  Copyright (c) 2013 ChangShiYuan. All rights reserved.
 //
 
-#import "OTMSettingsNavVC.h"
+#import "OTMMedicationsNavVC.h"
 
-@interface OTMSettingsNavVC ()
+@interface OTMMedicationsNavVC ()
 
 @end
 
-@implementation OTMSettingsNavVC
+@implementation OTMMedicationsNavVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,11 +29,8 @@
     
     
     
-   
     
-    //self.tabBarItem.image = [[UIImage imageNamed:@"912-gears-selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-
-
+	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning

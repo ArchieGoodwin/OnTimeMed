@@ -85,6 +85,7 @@
 		DC1103051761FE3E00F3CCFF /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102FB1761FE3E00F3CCFF /* AFXMLRequestOperation.m */; };
 		DC1103061761FE3E00F3CCFF /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1102FD1761FE3E00F3CCFF /* UIImageView+AFNetworking.m */; };
 		DC5827381827AFEB00BDB562 /* OTMSettingsNavVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5827371827AFEB00BDB562 /* OTMSettingsNavVC.m */; };
+		DC58275A182CBE6100BDB562 /* OTMMedicationsNavVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DC582759182CBE6100BDB562 /* OTMMedicationsNavVC.m */; };
 		DC6C731917D9AE24004F012B /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6C731817D9AE24004F012B /* Schedule.m */; };
 		DC6C731C17D9AFC4004F012B /* CKCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6C731B17D9AFC4004F012B /* CKCalendarView.m */; };
 		DC9C489C181D273B00A92E20 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC9C489B181D273B00A92E20 /* Images.xcassets */; };
@@ -317,6 +318,8 @@
 		DC18CBDE1768745A005A0903 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		DC5827361827AFEB00BDB562 /* OTMSettingsNavVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTMSettingsNavVC.h; sourceTree = "<group>"; };
 		DC5827371827AFEB00BDB562 /* OTMSettingsNavVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTMSettingsNavVC.m; sourceTree = "<group>"; };
+		DC582758182CBE6100BDB562 /* OTMMedicationsNavVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTMMedicationsNavVC.h; sourceTree = "<group>"; };
+		DC582759182CBE6100BDB562 /* OTMMedicationsNavVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTMMedicationsNavVC.m; sourceTree = "<group>"; };
 		DC6C731717D9AE24004F012B /* Schedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schedule.h; sourceTree = "<group>"; };
 		DC6C731817D9AE24004F012B /* Schedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schedule.m; sourceTree = "<group>"; };
 		DC6C731A17D9AFC4004F012B /* CKCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKCalendarView.h; sourceTree = "<group>"; };
@@ -821,6 +824,8 @@
 			children = (
 				DC9C48A4181E339A00A92E20 /* OTMMedicationsVC.h */,
 				DC9C48A5181E339A00A92E20 /* OTMMedicationsVC.m */,
+				DC582758182CBE6100BDB562 /* OTMMedicationsNavVC.h */,
+				DC582759182CBE6100BDB562 /* OTMMedicationsNavVC.m */,
 			);
 			name = Medications;
 			sourceTree = "<group>";
@@ -902,9 +907,9 @@
 		BDAED0AE16D002E800D220F7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = ExtractPack;
+				CLASSPREFIX = OTM;
 				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = ChangShiYuan;
+				ORGANIZATIONNAME = Incoding;
 			};
 			buildConfigurationList = BDAED0B116D002E800D220F7 /* Build configuration list for PBXProject "ExtractPack" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -988,6 +993,7 @@
 				DC6C731C17D9AFC4004F012B /* CKCalendarView.m in Sources */,
 				3CAB01781750421400FC6CC1 /* thining.cpp in Sources */,
 				3CAB01791750421400FC6CC1 /* Thresh.cpp in Sources */,
+				DC58275A182CBE6100BDB562 /* OTMMedicationsNavVC.m in Sources */,
 				3CAB017A1750421400FC6CC1 /* TriangleModel.cpp in Sources */,
 				3CAB017B1750421400FC6CC1 /* Warping.cpp in Sources */,
 				DC9C48B6181E76A100A92E20 /* OTMHistoryVC.m in Sources */,
@@ -1109,8 +1115,8 @@
 				CLANG_WARN_ENUM_CONVERSION = NO;
 				CLANG_WARN_INT_CONVERSION = NO;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Sergey Dikarev (M4J98HRQR2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sergey Dikarev (M4J98HRQR2)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sergey Dikarev (A2KE4XLMNK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sergey Dikarev (A2KE4XLMNK)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -1145,8 +1151,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRELINK_LIBS = "-lcvlibbase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "C14F1299-DE2D-4A62-9A82-97086AFEC3D1";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C14F1299-DE2D-4A62-9A82-97086AFEC3D1";
+				PROVISIONING_PROFILE = "93D23BCE-68D6-403C-8DBF-C3FB5B5F497C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "93D23BCE-68D6-403C-8DBF-C3FB5B5F497C";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
@@ -1165,8 +1171,8 @@
 				CLANG_WARN_ENUM_CONVERSION = NO;
 				CLANG_WARN_INT_CONVERSION = NO;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Sergey Dikarev (M4J98HRQR2)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sergey Dikarev (M4J98HRQR2)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sergey Dikarev (A2KE4XLMNK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sergey Dikarev (A2KE4XLMNK)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -1197,8 +1203,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRELINK_LIBS = "-lcvlibbase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "C14F1299-DE2D-4A62-9A82-97086AFEC3D1";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C14F1299-DE2D-4A62-9A82-97086AFEC3D1";
+				PROVISIONING_PROFILE = "93D23BCE-68D6-403C-8DBF-C3FB5B5F497C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "93D23BCE-68D6-403C-8DBF-C3FB5B5F497C";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;

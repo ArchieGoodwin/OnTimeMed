@@ -25,7 +25,7 @@
             <objects>
                 <tableViewController id="a93-cE-wzO" customClass="OTMHistoryVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="wFJ-Y1-QPx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -65,11 +65,11 @@
             </objects>
             <point key="canvasLocation" x="950" y="-2701"/>
         </scene>
-        <!--Navigation Controller - Medications-->
+        <!--Medications NavVC - Medications-->
         <scene sceneID="nB0-E3-HaN">
             <objects>
-                <navigationController definesPresentationContext="YES" id="qNl-Cz-ai8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Medications" image="729-top-list" id="Avq-oq-W6V"/>
+                <navigationController definesPresentationContext="YES" id="qNl-Cz-ai8" customClass="OTMMedicationsNavVC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Medications" image="960-pill-selected" id="Avq-oq-W6V"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zge-GU-J0O">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -86,7 +86,7 @@
             <objects>
                 <tableViewController id="4v6-sT-Fk3" customClass="OTMPackageVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="0rc-ND-pTT">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -345,7 +345,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <tabBarItem key="tabBarItem" title="Medications" id="J7a-hs-POD"/>
+                    <tabBarItem key="tabBarItem" title="Medications" image="960-pill" id="J7a-hs-POD"/>
                     <navigationItem key="navigationItem" id="1AH-pQ-nY8">
                         <barButtonItem key="backBarButtonItem" title="Back" id="eRC-UT-uYs"/>
                     </navigationItem>
@@ -490,7 +490,7 @@
                 <tabBarController definesPresentationContext="YES" id="VWP-eX-H9g" customClass="OTMTabbarVC" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="mlE-nt-o0D"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="EKh-IZ-f84">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="EKh-IZ-f84">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -514,7 +514,7 @@
             <objects>
                 <tableViewController id="AdF-5t-h2n" customClass="OTMSettingsVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="v5t-xa-aSe">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -542,7 +542,7 @@
                             <outlet property="delegate" destination="AdF-5t-h2n" id="eGT-Y7-YgG"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Settings" id="60a-1a-w9l"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="912-gears" id="60a-1a-w9l"/>
                     <navigationItem key="navigationItem" id="Fca-IY-EwW"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LOW-0y-NNf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -553,7 +553,7 @@
         <scene sceneID="BPN-Om-Sul">
             <objects>
                 <navigationController definesPresentationContext="YES" id="3f7-Aq-Xwy" customClass="OTMSettingsNavVC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="912-gears-selected" id="B7O-aI-XXs"/>
+                    <tabBarItem key="tabBarItem" tag="4" title="Settings" image="912-gears" id="B7O-aI-XXs"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HoF-Aa-9EW">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -574,11 +574,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wnW-0r-TNR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ONf-gu-aGA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="f9X-lh-rAL">
-                                <rect key="frame" x="0.0" y="265" width="320" height="323"/>
+                            <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="f9X-lh-rAL">
+                                <rect key="frame" x="0.0" y="265" width="320" height="274"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -608,9 +608,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="729-top-list" width="28" height="22"/>
         <image name="741-box" width="28" height="26"/>
-        <image name="912-gears-selected" width="28" height="28"/>
+        <image name="912-gears" width="28" height="28"/>
+        <image name="960-pill" width="28" height="12"/>
+        <image name="960-pill-selected" width="28" height="12"/>
         <image name="Tabbar" width="28" height="28"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
