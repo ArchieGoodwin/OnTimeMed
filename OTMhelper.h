@@ -26,4 +26,5 @@ typedef void (^HelperResult)  (BOOL result, NSError *error);
 -(void)startPackage:(MedPackage *)package completionBlock:(HelperResult)completionBlock;
 -(NSString *)returnEvent:(NSInteger)eventType;
 -(NSString *)returnEventXML:(NSInteger)eventType;
+-(BOOL)isIphone5;
 @end

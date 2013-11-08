@@ -385,6 +385,9 @@ static int delayParam=0;
                 //[self.overlayLayer removeFromSuperlayer];
                 [self closing];
                 
+                //[self performSelector:@selector(dismissViewController) withObject:self afterDelay:0.2];
+
+                
                 [_parentController toggleView:VMODE_FRAME nState:0];
                 //[appDelegate->mainViewController closeMe];
                 //[appDelegate->mainViewController toggleView:VMODE_FRAME nState:0];

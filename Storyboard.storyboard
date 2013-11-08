@@ -473,6 +473,7 @@
         <scene sceneID="5Ut-8R-7Zp">
             <objects>
                 <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="9tk-9d-30y" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kzt-sR-4m5">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -500,7 +501,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="qNl-Cz-ai8" kind="relationship" relationship="viewControllers" id="kQK-xF-jpw"/>
-                        <segue destination="jPs-WS-Aza" kind="relationship" relationship="viewControllers" id="mGg-fP-7FQ"/>
+                        <segue destination="Ygm-Ke-Aav" kind="relationship" relationship="viewControllers" id="pvP-QN-091"/>
                         <segue destination="qOG-IQ-jjG" kind="relationship" relationship="viewControllers" id="i2G-rb-Pgj"/>
                         <segue destination="3f7-Aq-Xwy" kind="relationship" relationship="viewControllers" id="KAM-Fe-Nvm"/>
                     </connections>
@@ -565,6 +566,22 @@
             </objects>
             <point key="canvasLocation" x="513" y="-547"/>
         </scene>
+        <!--Navigation Controller - Schedule-->
+        <scene sceneID="hGj-fO-5zG">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Ygm-Ke-Aav" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Schedule" image="Tabbar" id="yOh-0w-RUK"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="shL-Ik-f5S">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="jPs-WS-Aza" kind="relationship" relationship="rootViewController" id="4ew-lA-zie"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Rf-kg-DR8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="546" y="-1270"/>
+        </scene>
         <!--Schedule View Controller - Schedule-->
         <scene sceneID="1DT-tQ-fyR">
             <objects>
@@ -577,8 +594,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="f9X-lh-rAL">
-                                <rect key="frame" x="0.0" y="265" width="320" height="274"/>
+                            <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="f9X-lh-rAL">
+                                <rect key="frame" x="0.0" y="244" width="320" height="275"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -591,20 +608,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="f9X-lh-rAL" secondAttribute="trailing" id="BEy-49-Mru"/>
-                            <constraint firstItem="wnW-0r-TNR" firstAttribute="top" secondItem="f9X-lh-rAL" secondAttribute="bottom" constant="-69" id="KnE-K3-0zx"/>
-                            <constraint firstItem="f9X-lh-rAL" firstAttribute="leading" secondItem="ONf-gu-aGA" secondAttribute="leading" id="mOu-R5-iJC"/>
-                            <constraint firstItem="f9X-lh-rAL" firstAttribute="top" secondItem="uae-fG-QLn" secondAttribute="bottom" constant="245" id="r0d-uX-sId"/>
+                            <constraint firstItem="wnW-0r-TNR" firstAttribute="top" secondItem="f9X-lh-rAL" secondAttribute="bottom" id="Fxb-MA-iX6"/>
+                            <constraint firstItem="f9X-lh-rAL" firstAttribute="top" secondItem="uae-fG-QLn" secondAttribute="bottom" constant="180" id="Gor-cr-BcY"/>
+                            <constraint firstAttribute="trailing" secondItem="f9X-lh-rAL" secondAttribute="trailing" id="fJw-6p-tX4"/>
+                            <constraint firstItem="f9X-lh-rAL" firstAttribute="leading" secondItem="ONf-gu-aGA" secondAttribute="leading" id="p2p-re-bEa"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Schedule" image="Tabbar" id="NZX-jY-iQ2"/>
+                    <navigationItem key="navigationItem" id="XrP-DB-7Sa"/>
                     <connections>
                         <outlet property="table" destination="f9X-lh-rAL" id="ZfW-fN-IlT"/>
+                        <segue destination="4v6-sT-Fk3" kind="push" identifier="showPackageFromSchedule" id="6fW-gp-I2i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eo0-Pw-ZGi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="513" y="-1258"/>
+            <point key="canvasLocation" x="950" y="-1270"/>
         </scene>
     </scenes>
     <resources>
@@ -619,4 +638,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="6fW-gp-I2i"/>
+    </inferredMetricsTieBreakers>
 </document>

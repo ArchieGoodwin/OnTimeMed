@@ -14,6 +14,7 @@
 #import "ExtractPackViewController.h"
 #import "MEDCenterTableViewController.h"
 #import "InstructionsVC.h"
+#import "OTMhelper.h"
 @interface MainViewController ()
 {
 }
@@ -26,6 +27,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //self.tabBarController.tabBar.hidden = YES;
+    
+    //self.view.frame = CGRectMake(0, 0, 320, [[OTMhelper sharedInstance] isIphone5] ? 568 : 480) ;
+    
 	// Do any additional setup after loading the view, typically from a nib.
    
     m_nVMode = VMODE_FIRST;

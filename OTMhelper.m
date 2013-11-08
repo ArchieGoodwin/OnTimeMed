@@ -213,6 +213,35 @@
 }
 
 
+
+-(BOOL)isIphone5
+{
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
+        if ([[UIScreen mainScreen] respondsToSelector: @selector(scale)]) {
+            CGSize result = [[UIScreen mainScreen] bounds].size;
+            CGFloat scale = [UIScreen mainScreen].scale;
+            result = CGSizeMake(result.width * scale, result.height * scale);
+            
+            if(result.height == 960) {
+                //NSLog(@"iPhone 4 Resolution");
+                return NO;
+            }
+            if(result.height == 1136) {
+                //NSLog(@"iPhone 5 Resolution");
+                //[[UIScreen mainScreen] bounds].size =result;
+                return YES;
+            }
+        }
+        else{
+            // NSLog(@"Standard Resolution");
+            return NO;
+        }
+    }
+    return NO;
+}
+
+
+
 -(NSMutableArray *)getNumberOfDays:(NSInteger)number_of_days  freq:(int)freq fromdate:(NSDate *)fromdate
 {
     NSMutableArray *arr = [[NSMutableArray alloc] init];

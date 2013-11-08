@@ -125,6 +125,11 @@
     [operation start];
 }
 
+-(NSString*)stringWithPercentEscape:(NSString *)str {
+    return (NSString *) CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)[str mutableCopy], NULL, CFSTR("￼=,!$&'()*+;@?\n\"<>#\t :/"),kCFStringEncodingUTF8));
+}
+
+
 
 -(void)postEvent:(EventOfType)eventType packageid:(NSInteger)packageid xmlString:(NSString *)xmlString obj:(id)obj completionBlock:(RCCompleteBlockWithBOOLResult)completionBlock
 {
@@ -143,7 +148,7 @@
     [formatter setDateFormat:@"MM/dd/yyyy hh:mm:ssa"];
     NSString *date = [formatter stringFromDate:inputDate];
     
-    NSDictionary *arr = @{@"DeviceId":[[[UIDevice currentDevice] identifierForVendor] UUIDString],@"DeviceDate":date, @"Type":[NSNumber numberWithInteger:eventType], @"PackageId":[NSNumber numberWithInteger:packageid],@"EventXml":xmlString};
+    NSDictionary *arr = @{@"DeviceId":[[[UIDevice currentDevice] identifierForVendor] UUIDString],@"DeviceDate":date, @"Type":[NSNumber numberWithInteger:eventType], @"PackageId":[NSNumber numberWithInteger:packageid],@"EventXml":[self stringWithPercentEscape:xmlString]};
     NSLog(@"%@", arr);
     
     [client setDefaultHeader:@"X-Requested-With" value:@"XMLHttpRequest"];

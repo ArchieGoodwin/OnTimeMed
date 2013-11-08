@@ -14,6 +14,7 @@
 #import "CKCalendarView.h"
 #import "NSDate-Utilities.h"
 #import "DKADefines.h"
+#import "OTMPackageVC.h"
 @interface ScheduleViewController () <CKCalendarDelegate>
 {
     NSMutableArray *dates;
@@ -33,6 +34,10 @@
 {
     [super viewDidLoad];
 
+    
+
+    
+    
     self.navigationItem.title = @"Medication Schedule";
     
     self.table.separatorInset = UIEdgeInsetsMake(0, 10, 0, 10);
@@ -89,7 +94,7 @@
     calendar.onlyShowCurrentMonth = NO;
     calendar.adaptHeightToNumberOfWeeksInMonth = NO;
     
-    calendar.frame = CGRectMake(0, 20, 320, 217);
+    calendar.frame = CGRectMake(0, 60, 320, 217);
     
     [self.view addSubview:calendar];
 }
@@ -136,6 +141,7 @@
     NSString *dateStr = [dateFormat stringFromDate:sc.date];
     NSString *str = [NSString stringWithFormat:@"Package %@", sc.package.medicationname];
     
+    
     UILabel *lblTitle = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, 300, 25)];
     lblTitle.backgroundColor = [UIColor clearColor];
     lblTitle.numberOfLines = 0;
@@ -170,14 +176,26 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    Schedule *sc = [dates objectAtIndex:indexPath.row];
+
+    
+    
+    [self performSegueWithIdentifier:@"showPackageFromSchedule" sender:sc.package];
 }
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"showPackageFromSchedule"])
+    {
+        MedPackage *pack = (MedPackage *)sender;
+        OTMPackageVC *controller = (OTMPackageVC *)segue.destinationViewController;
+        controller.package = pack;
+    }
+}
+
 
 #pragma mark - CKCalendarDelegate
 
@@ -212,7 +230,7 @@
         if([date isEqualToDateIgnoringTime:sc.date])
         {
             
-            CGPoint offset = CGPointMake(0, 50 * (i - 1));
+            CGPoint offset = CGPointMake(0, 50 * i - 50);
             [self.table setContentOffset:offset animated:YES];
             
             return;

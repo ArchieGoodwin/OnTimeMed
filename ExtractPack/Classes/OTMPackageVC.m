@@ -458,7 +458,7 @@
         
         [UIView animateWithDuration:0.4 animations:^{
             
-            self.tabBarController.tabBar.hidden = YES;
+            //self.tabBarController.tabBar.hidden = YES;
             
             self.navigationController.navigationBarHidden = YES;
             

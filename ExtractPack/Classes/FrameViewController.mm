@@ -11,7 +11,7 @@
 #import "ExtractPackAppDelegate.h"
 #import <OpenAL/al.h>
 #import <AVFoundation/AVFoundation.h>
-
+#import "OTMhelper.h"
 //UInt32 beepSound;
 AVAudioPlayer* mplayer;
 
@@ -38,6 +38,9 @@ AVAudioPlayer* mplayer;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.view.frame = CGRectMake(0, 0, 320, [[OTMhelper sharedInstance] isIphone5] ? 568 : 480) ;
+
     
     ExtractPackAppDelegate* appdelegate = [UIApplication sharedApplication].delegate;
     _resultImageView.image = appdelegate.m_cropedImage;
