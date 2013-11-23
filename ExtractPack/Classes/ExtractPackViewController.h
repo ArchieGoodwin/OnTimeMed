@@ -19,7 +19,6 @@
 @property (nonatomic, retain) IBOutlet UITextView *resultText;
 @property (nonatomic, strong) MainViewController *parentController;
 - (IBAction) scanButtonTapped;
-- (IBAction) caputreImageButtonTapped;
 
 - (NSString*) saveImageFile: (UIImage*) image;
 @end;

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9tk-9d-30y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9tk-9d-30y">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller - History-->
         <scene sceneID="vUU-IO-Orf">
             <objects>
                 <navigationController definesPresentationContext="YES" id="qOG-IQ-jjG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="History" image="741-box" id="106-CB-YtB"/>
+                    <tabBarItem key="tabBarItem" title="History" image="1018-box" id="106-CB-YtB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kGq-Jw-6yw">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -570,7 +570,7 @@
         <scene sceneID="hGj-fO-5zG">
             <objects>
                 <navigationController definesPresentationContext="YES" id="Ygm-Ke-Aav" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Schedule" image="Tabbar" id="yOh-0w-RUK"/>
+                    <tabBarItem key="tabBarItem" title="Schedule" image="977-checkbox" id="yOh-0w-RUK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="shL-Ik-f5S">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -627,10 +627,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1018-box" width="28" height="22"/>
         <image name="741-box" width="28" height="26"/>
         <image name="912-gears" width="28" height="28"/>
         <image name="960-pill" width="28" height="12"/>
         <image name="960-pill-selected" width="28" height="12"/>
+        <image name="977-checkbox" width="28" height="28"/>
         <image name="Tabbar" width="28" height="28"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
