@@ -46,9 +46,12 @@
     }
     
 	// Do any additional setup after loading the view, typically from a nib.
-    ExtractPackAppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+    //ExtractPackAppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
     
-    CVLib::PackageInfo& packageInfo=appDelegate->m_packageInfo;
+    //CVLib::PackageInfo& packageInfo=appDelegate->m_packageInfo;
+    
+    
+    
     /*  if (packageInfo.isValid())
      {
      // EXAMPLE: do something useful with the barcode data

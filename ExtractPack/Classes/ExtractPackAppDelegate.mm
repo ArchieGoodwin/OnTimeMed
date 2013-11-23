@@ -100,7 +100,7 @@
 	// Handle the notificaton when the app is running
 	NSLog(@"Recieved Notification %@",notif);
     
-    NSDictionary *infoDict = notif.userInfo;
+   // NSDictionary *infoDict = notif.userInfo;
     /*[[MEDNetworkHelper sharedInstance] postEvent:EVENTTakeMedication packageid:[[infoDict objectForKey:@"packageId"] integerValue] completionBlock:^(BOOL result, NSError *error) {
         NSLog(@"EVENTTakeMedication sent");
     }];*/

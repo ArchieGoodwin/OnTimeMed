@@ -89,8 +89,7 @@
 
 -(void)addPackage
 {
-    
-    
+
     [UIView animateWithDuration:0.4 animations:^{
         
         //self.tabBarController.tabBar.hidden = YES;
@@ -99,10 +98,8 @@
 
         MainViewController *controller = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
         
-        
         [self.navigationController pushViewController:controller animated:YES];
     }];
-    
 
 }
 
@@ -125,8 +122,7 @@
     NSString *xml = [[OTMhelper sharedInstance] returnEventXML:EVENTTakePictureAfter];
     xml = [NSString stringWithFormat:xml, time, date, pack.packageid, pack.barcode, [[OTMhelper sharedInstance] getCurrentUser].userId];
     
-    
-    
+
     [[MEDNetworkHelper sharedInstance] postEvent:EVENTTakePictureAfter packageid:pack.packageid.integerValue xmlString:xml obj:nil completionBlock:^(BOOL result, NSError *error) {
         NSLog(@"EVENTTakePictureAfter sent");
         if(result)

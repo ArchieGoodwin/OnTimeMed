@@ -353,11 +353,16 @@ static int delayParam=0;
                 
                 CGFloat startx=160.0, starty=50.0;
                 CGFloat linegap=40.0;
+                
+                NSMutableParagraphStyle *textStyle = [[NSMutableParagraphStyle defaultParagraphStyle] mutableCopy];
+                textStyle.lineBreakMode = NSLineBreakByWordWrapping;
+                textStyle.alignment = NSTextAlignmentCenter;
+
                 // draw in context, you can use also drawInRect:withFont:
-                [dateString drawAtPoint:CGPointMake(startx, starty) withFont:font];
-                [packageID drawAtPoint:CGPointMake(startx, starty+linegap) withFont:font];
-                [cornerColorString drawAtPoint:CGPointMake(startx, starty+linegap*2) withFont:font];
-                [packageItemID drawAtPoint:CGPointMake(startx, starty+linegap*3) withFont:font];
+                [dateString drawAtPoint:CGPointMake(startx, starty) withAttributes:@{NSFontAttributeName:font, NSParagraphStyleAttributeName:textStyle}];
+                [packageID drawAtPoint:CGPointMake(startx, starty+linegap) withAttributes:@{NSFontAttributeName:font, NSParagraphStyleAttributeName:textStyle}];
+                [cornerColorString drawAtPoint:CGPointMake(startx, starty+linegap*2) withAttributes:@{NSFontAttributeName:font, NSParagraphStyleAttributeName:textStyle}];
+                [packageItemID drawAtPoint:CGPointMake(startx, starty+linegap*3) withAttributes:@{NSFontAttributeName:font, NSParagraphStyleAttributeName:textStyle}];
                 
                 //CGImageRef cimg = UIGraphicsGetCurrentContext();
                 
